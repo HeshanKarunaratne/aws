@@ -108,4 +108,27 @@ Remove Serverless stack and everything provisioned
             - domain as api-gateway url
         - Create another behaviour with path pattern as '/dev/*' 
  
+ 
+4.Enabling gzip compression on S3 websites with Cloudfront
+
+- steps
+    1. If the website is being host through s3 bucket and cached through cloudfront we can inspect the site and check main.js bundle to see the 'Content-Type' of the served application which is 'application/javascript'
+    2. We will enable compression that the website will load fast.
+    3. Navigate to cloudfront
+        - Click behaviour tab
+        - Choose the default route that linked to s3 web application
+        - Choose 'Compress Objects Automatically' and set it to 'Yes'
+    4. Navigate to S3 and click the bucket
+        - Select the Permission tab
+        - Select CORS Configuration
+        - Add below script, otherwise cloudfront will not know the size of the content 
+        ~~~xml
+       <AllowedHeader>Content-Length</AllowedHeader>
+        ~~~
+    5. We can enable compression inside S3 as well.
+        - Navigate to properties of the object.
+        - Click on Metadata
+        - 'Content-Encoding' as 'gzip'
+        - But if you are doing in this manner you need to upload files in gzip format
+ 
 #AWS Theories

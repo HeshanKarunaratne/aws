@@ -131,4 +131,61 @@ Remove Serverless stack and everything provisioned
         - 'Content-Encoding' as 'gzip'
         - But if you are doing in this manner you need to upload files in gzip format
  
+ 
+5.Building Web Apps with AWS Mobile Hub
+
+- AWS Mobile hub supports iOS, Android, Web and React Native
+- Create an app with preconfigured frontend and backend, set up your backend with AWS services configured(generates a cloud configuration file), connect your backend from our client.
+- Features
+    - Secure Authentication with AWS Cognito
+    - Storage: S3
+    - Serverless Functions: Lambda and API Gateway
+    - Database: DynamoDB
+    - Bots: Amazon Lex
+    - Host web sites: CDN
+    
+- Steps
+    1. Generate angular/react app
+    2. Navigate to AWS Mobile Hub
+    3. Setup AWS credentials
+        - awsmobile configure
+    4. Use below scripts
+        - npm install -g awsmobile-cli
+        - awsmobile --version
+        - awsmobile init {token} - to link aws project with the generated app
+    5. Push changes to aws mobile backend and run frontend locally
+        - awsmobile run
+    6. Any changes that are made from awsmobile hub side needs to be pulled back to client side using,
+        - awsmobile pull
+    7. Publish to s3 hosting bucket
+        - awsmobile publish
+
+6.User Authentication for Angular with AWS Cognito & Amplify
+
+- Amazon Cognito Features
+    - Secure and scalable user directory (Managed service)
+    - Social and enterprise identity federation (Social: Google, Facebook, Amazon; Enterprise: Active Directory via SAML)
+    - Supports Oauth2.0, SAML2.0, OpenID Connect
+    - Fine grain access control
+    
+- Cognito Divides into
+    - Cognito User Pools(for authentication: register users in user pool)
+    - Cognito Federated Identities
+
+![Diagram](resources/images/services-3.PNG "Diagram")
+- Steps
+    1. Authentication
+        1. User logs in with Username and Password
+        2. Cognito verifies that and if credentials are correct it sends back response(id_token, access_token, refresh_token)
+        3. These are temporary tokens and saved in the browser
+    2. Authorization
+        1. Sends tokens to Cognito and get temporary credentials from Cognito Federated Identities using STS(Security Token Service)
+        2. STS sends(access_key_id, secret_key) back to the user
+        3. User can use these temporary credentials to access AWS resources
+        4. AWS resources grabs the role out of the credentials and checks the IAM policies attached to that role
+
+- AWS Amplify
+    - npm install --save aws-amplify
+    - npm install --save aws-amplify-angular
+
 #AWS Theories

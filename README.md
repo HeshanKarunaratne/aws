@@ -188,4 +188,96 @@ Remove Serverless stack and everything provisioned
     - npm install --save aws-amplify
     - npm install --save aws-amplify-angular
 
+7.Building a Secure Application on AWS - Cognito - API Gateway - Dynamodb
+
+- Security
+![Diagram](resources/images/services-4.PNG "Diagram")
+
+- Security Layer 1: Authentication Layer
+- Security Layer 2: API Gateway Layer
+    - For every API call jwt tokens that are stored in local storage will be sent as signed tokens
+    - From signed tokens extract credentials and the IAM role.
+    - Check against polices whether that IAM role is accessible to access APIs.
+- Security Layer 3: DynamoDB Layer
+    - Private : Users will not have any access to other users data
+    - Protected: Users will read other users data and will not be allowed to update or delete each others items
+    - Public: Users will read other users data and will be allowed to update or delete each others items
+    - Partition key == users congnito id, so that the logged in user can only see his records from DynamoDB
+    
+Create API with Amazon API Gateway and Lambda
+- awsmobile cloud-api enable --prompt
+
+8.Building a S3 Directory for Your Company - S3 - IAM
+
+- Steps
+    1. Create a bucket for organization and create below directories
+        - my-organization/Home/peter
+        - my-organization/Home/ann
+        - my-organization/Home/henry
+    
+        1. Any user can see all the other directories but cannot see the content
+        2. Any user can only access his/her folder and can see the content
+    2. Navigate to IAM 
+        - Create a user 'Peter' with programmatic access and setup S3 browser with his credentials to S3 bucket
+        - Attach below policy
+            1. List all the buckets
+            2. Get Bucket Locations
+            3. Access to /Home
+            4. Access to his/her bucket using IAM variables
+            5. Allow all the actions
+        ~~~json
+        {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": "s3:ListAllMyBuckets",
+              "Resource": "arn:aws:s3:::*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": "s3:GetBucketLocation",
+              "Resource": "arn:aws:s3:::*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": "s3:ListBucket",
+              "Resource": "arn:aws:s3::my-organization",
+              "Condition": {
+                "StringEquals": {
+                  "s3:prefix": [
+                    "",
+                    "Home/"
+                  ],
+                  "s3:delimeter": [
+                    "/"
+                  ]
+                }
+              }
+            },
+            {
+              "Effect": "Allow",
+              "Action": "s3:ListBucket",
+              "Resource": "arn:aws:s3::my-organization",
+              "Condition": {
+                "StringLike": {
+                  "s3:prefix": [
+                    "Home/${aws:username}/*"
+                  ]
+                }
+              }
+            },
+            {
+              "Effect": "Allow",
+              "Action": "s3:*",
+              "Resource": [
+                "arn:aws:s3::my-organization/Home/${aws:username}",
+                "arn:aws:s3::my-organization/Home/${aws:username/*}"
+              ]
+            }
+          ]
+        }
+        ~~~
+    3. Add unique files to each of the users S3 directories
+
 #AWS Theories

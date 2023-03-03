@@ -280,4 +280,21 @@ Create API with Amazon API Gateway and Lambda
         ~~~
     3. Add unique files to each of the users S3 directories
 
+9. Building a chatbot with Amazon Lex - AWS
+
+![Diagram](resources/images/services-5.PNG "Diagram")
+
+- Creating a conversational chatbot to retrieve weather information for users utterances using natural language.
+- Steps
+    1. Create an intent 'FindWeather'
+    2. Add some sample utterances
+        - "Tell me about the weather today?"
+        - "How is the weather in {City}"
+        - "What is the weather like in {City}"
+    3. Create slots for variables
+        - "Sure, Which city?" with {City} name
+    4. Add Response message
+        - "Temperature in {City} is 25C and Humidity level is 55%"
+    5. Build the bot
+
 #AWS Theories

@@ -287,14 +287,26 @@ Create API with Amazon API Gateway and Lambda
 - Creating a conversational chatbot to retrieve weather information for users utterances using natural language.
 - Steps
     1. Create an intent 'FindWeather'
-    2. Add some sample utterances
-        - "Tell me about the weather today?"
-        - "How is the weather in {City}"
-        - "What is the weather like in {City}"
-    3. Create slots for variables
-        - "Sure, Which city?" with {City} name
-    4. Add Response message
-        - "Temperature in {City} is 25C and Humidity level is 55%"
-    5. Build the bot
+        1. Add some sample utterances
+            - "Tell me about the weather today?"
+            - "How is the weather in {City}"
+            - "What is the weather like in {City}"
+        2. Create slots for variables
+            - "Sure, Which city?" with {City} name
+        3. Add Response message
+            - "Temperature in {City} is 25C and Humidity level is 55%"
+        4. Add AWS Lambda fulfillment
+        5. Build the bot
+    2. Create an intent 'GreetUser'
+        1. Add some sample utterances
+            - "Hi"
+            - "Howdy"
+            - "Hello"
+        2. Create slots for variables
+            - "Hi!! What is your {name}" with {Name} as name
+        3. Add Response message
+            - "Hello {Name}! How can I help you!"
+            - "Hi {Name}! What do you want!"
+        4. Build the bot
 
 #AWS Theories

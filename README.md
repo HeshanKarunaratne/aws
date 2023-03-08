@@ -308,5 +308,49 @@ Create API with Amazon API Gateway and Lambda
             - "Hello {Name}! How can I help you!"
             - "Hi {Name}! What do you want!"
         4. Build the bot
+    3. Generate an angular application for weather app bot.
+        - amplify init
+        - amplify add auth
+        - amplify push
+        - Navigate to cognito and click 'Federated Identities' and find the role id
+        - Navigate to IAM and attach 'AmazonLexFullAccess' policy
+            
+10. Containers on AWS
+- Containers are an isolated resource section in our computer
+- Will be talking about Docker with namespaces
+- Volume mapping: It references original files rather than copying files to the container(e.g: Live reloading) 
+- Steps
+    1. Need to install Docker
+        - docker --version
+        - docker info
+    2. Create Dockerfile
+        ~~~.dockerfile
+           FROM node:alpine
+           WORKDIR '/app'
+           COPY package.json .
+           RUN npm install
+           COPY . .
+           EXPOSE 4200
+           CMD npm run start
+        ~~~
+    3. Build the Dockerfile
+        - docker build .
+        - docker images
+        - -p host_port: container_port
+        - docker run -p 8080:4200
+    4. Volume mapping with docker-compose.yml
+        ~~~yml
+            version: "3"
+            services:
+                myapp:
+                    build: .
+                    ports:
+                        - "8080:4200"
+                    volumes:
+                        - "/app/node_modules"
+                        - ".:/app"
+        ~~~
+    5. Run docker compose
+        - docker-compose up
 
 #AWS Theories

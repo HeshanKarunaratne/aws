@@ -353,4 +353,37 @@ Create API with Amazon API Gateway and Lambda
     5. Run docker compose
         - docker-compose up
 
+11. Deploying a containerized web application to Elastic Beanstalk
+
+- Steps
+    1. Navigate to Elastic Beanstalk(PAAS) - deploy, monitor and scale applications easily
+    2. Create an Environment with docker
+    3. Install EB Cli for relevant O/S
+    4. Create multi step docker file
+    ~~~.dockerfile
+        FROM node:alpine as BUILD
+        WORKDIR '/app'
+        COPY package.json .
+        RUN npm install
+        COPY . .
+        RUN npm run build
+   
+        FROM nginx
+        EXPOSE 80
+        COPY --from=BUILD /app/dist/myapp /usr/share/nginx/html
+    ~~~
+    5. Push to Elastic Beanstalk
+        - docker run -p 80:80 {image_id}
+        - eb --version
+        - aws configure
+        - eb init
+        - Commit all the docker file changes before pushing to Elastic Beanstalk
+        - eb create myapp
+        - eb deploy
+  
+12. Redirect URLs in AWS Using S3 and Cloud Front
+
+
+
+
 #AWS Theories

@@ -381,9 +381,51 @@ Create API with Amazon API Gateway and Lambda
         - eb create myapp
         - eb deploy
   
-12. Redirect URLs in AWS Using S3 and Cloud Front
+12 . Redirect URLs in AWS Using S3 and Cloud front
+- eg: If we type any sub domains(www.mydomain.com or sub.mydomain.com) instead of Apex domain(mydomain.com) we need to redirect to apex domain
+- Steps
+    1. Needs to have an already created S3 bucket for apex domain
+    2. Need to create a redirect bucket
+    3. Select redirect bucket and navigate to properties and static website hosting
+    4. Click 'Redirect requests'
+        - Target bucket: mydomain.com
+        - Protocol: https
+    5. Navigate to CloudFront Distribution
+        - Need to create another distribution for redirect bucket
+        - Create SSL certificate to redirection bucket
+        - For CNAME add 'www.mydomain.com'
+    6. Navigate to route53
+        - We need to create an A record for 'www.mydomain.com' DNS redirection with an ALIAS target for Cloudfront distribution created in step 5(domain name)
+   
+13 . How to Architect and Design Your Application on AWS Cloud    
+- 5 Pillars of Well Architecture Application 
+    1. Security
+    2. Reliablilty: Ability for the system to recover from a certain disturbance, Horizontal scalability
+    3. Performance Efficiency: High performance, hybrid architecture
+    4. Cost Optimization
+    5. Operational Excellence
 
-
-
-
+- Steps
+    1. Frontend
+        - Angular Framework
+        - AWS Amplify Library: Simple and Secure, make signed requests to backend resources
+    2. Frontend Deployment
+        - Host the website in S3 bucket: Reliability, 11 9s durability, cost effective, automatically scalable
+        - Cloudfront in front of the S3 bucket: Performance efficiency, Caching, CDN
+        - SSL certificate from ACM: Enable SSL, Connections will be encrypted
+        - WAF on cloudfront: Security against common web attacks
+        - Route53 as DNS
+    3. Backend
+        - Lambda to run business logic: Will scale automatically, serverless
+        - API Gateway for API: Scales itself
+        - DynamoDB as the database: NoSQL, Managed service, replicate data in different data center
+    4. Search
+        - Amazon ElasticSearch Service: Managed service, text based service, run in private network
+        - AWS Lambda: Asynchronously index documents in ElasticSearch
+    5. Authentication & Authorization
+        - Amazon Cognito User Pool: Decouple users from application and they will serve in a highly scalable user pool
+        - Amazon Cognito Identity Pool: IAM with Cognito users for more granular access
+        
+        
+        
 #AWS Theories

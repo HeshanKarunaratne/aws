@@ -426,6 +426,40 @@ Create API with Amazon API Gateway and Lambda
         - Amazon Cognito User Pool: Decouple users from application and they will serve in a highly scalable user pool
         - Amazon Cognito Identity Pool: IAM with Cognito users for more granular access
         
+14 . Designing the AWS Project Architecture
+
+![Diagram](resources/images/services-6.PNG "Diagram")
+
+- Frontend
+    - WebApplication resides in a S3 bucket
+    - Website is cached through Cloudfront and delivered through CDN
+    - On Cloudfront applied a certificate to enable SSL and HTTPS from Amazon Certificate Manager, Web Application Firewall rules as well
+    - Cognito as Authentication and Authorization provider
+    - If the users are successfully signed in they are routed to Cloudfront via Route53 using DNS
+    - In Cloudfront WAF checks whether they are legitimate requests if not requests are discarded
+    - If legit request then checks whether the cache is available otherwise talk to S3 bucket and get the latest content and delivered
+ 
+- Security considerations
+    - Lambda must not be accessible over the internet
+        - Need to put lambda functions within a VPC
+        - It is our responsibility to handle all the network related task
+            - Design IP ranges
+            - Divide them to sub networks
+            - Create different security groups
+        - Create a different sub network without an internet access - private subnet(Lambdas cannot be accessed over internet)
+        - "A Call Start" time will be longer after we put it inside a VPC
         
+    - Database, ElasticSearch must not be accessible over the internet
+        - Both these services are regional services and called through public endpoint
+        - Lambdas need to connect with these 2 service over internet
+        - DynamoDB and ElasticSearch services provide VPC endpoints
+        - Through that VPC endpoints lambdas can communicate with these 2 services
+        - We need to give access from dynamodb to lambda and vice-versa(for that we need to apply a security group in both places)
         
+15 . Hosting a web application with AWS Amplify
+
+ 
+ 
+ 
+ 
 #AWS Theories

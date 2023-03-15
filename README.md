@@ -458,7 +458,22 @@ Create API with Amazon API Gateway and Lambda
         
 15 . Hosting a web application with AWS Amplify
 
+- Steps
+    1. Create an angular app
+    2. Incorporate Amplify with the angular app
+        - amplify configure and give programmatic access to AdministratorAccess policy
+    3. Initialize Backend
+        - amplify init
+        - amplify will be using cloudformation stack to create the backend 
+        - amplify hosting add
+        - amplify publish
  
+16 . Authentication & Authorization with AWS Amplify
+
+- Steps
+    1. amplify auth add
+    2. Add amplify related changes in angular frontend side
+    
  
  
  

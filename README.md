@@ -473,8 +473,26 @@ Create API with Amazon API Gateway and Lambda
 - Steps
     1. amplify auth add
     2. Add amplify related changes in angular frontend side
+   
     
+17 . Single Sign On (SSO) with Facebook on AWS Cognito
+- We'll be using Amazon Cognito Hosted UI for this
+- Steps
+    1. Navigate to Cognito
+        - Navigate to the correct cognito user pool
+        - Click 'Domain name' under 'App integration'
+        - Check availability for a domain
+        - Add social login with facebook as well
+    2. SSO
+        - When user logins through cognito authentication happens in Cognito user pool
+        - Cognito checks whether the user is available in the pool and sends back access token, id token and refresh token
+        - If the user wants to authenticate with facebook, cognito redirects it to facebook
+        - After successful authentication facebook sends tokens/code to cognito user pool
+        - Cognito checks tokens/code and create a record inside cognito pool and generates its own access, id and refresh token to the user
+        - For any Identity provider we add, cognito will make sure for any authorized requests through these Identity providers it will create its own access, id, refresh tokens, so that the backend or frontend will rely on same set of tokens
  
- 
- 
+
+
+
+
 #AWS Theories

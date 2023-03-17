@@ -491,7 +491,12 @@ Create API with Amazon API Gateway and Lambda
         - Cognito checks tokens/code and create a record inside cognito pool and generates its own access, id and refresh token to the user
         - For any Identity provider we add, cognito will make sure for any authorized requests through these Identity providers it will create its own access, id, refresh tokens, so that the backend or frontend will rely on same set of tokens
  
-
+18 . Authentication with Cognito Hosted UI
+- Steps
+    1. Will go through amazon cognito authentication documentation for configuring Hosted UI
+        - Create an object with configuration
+            - Domain, scope, redirectSignIn, redirectSingOut, responseType, AdvancedSecurityDataCollectionFlag
+        
 
 
 

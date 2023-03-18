@@ -498,6 +498,36 @@ Create API with Amazon API Gateway and Lambda
             - Domain, scope, redirectSignIn, redirectSingOut, responseType, AdvancedSecurityDataCollectionFlag
         
 
-
-
 #AWS Theories
+
+1 . What is Cloud Computing
+- Cloud computing is the on demand delivery of compute power, database storage, applications and other IT resources through a cloud services platform via the internet with pay as you go model.
+
+- Vertical Scalability(Scaling UP)
+~~~txt
+1GB RAM                     Increase of traffic  16GB RAM 
+             --------------------------------->
+500GB HDD   <---------------------------------   1TB HDD
+                            Decrease of traffic                                
+~~~
+- Horizontal Scalability(Scaling OUT)
+~~~txt
+1GB RAM                     Increase of traffic  1GB RAM    1GB RAM    1GB RAM
+             --------------------------------->
+500GB HDD    <---------------------------------  500GB HDD  500GB HDD  500GB HDD
+                            Decrease of traffic                
+~~~
+- Auto Scaling
+~~~txt
+If CPU > 70% -------------------------> Spin 3 more servers
+If CPU < 50% -------------------------> Decrease to 1 server  
+~~~
+
+- Cloud Computing
+    - Converts Capex to Opex(Capital Expenditures to Operational Expenditures)
+    - On demand
+    - Pay as you go
+    - Elastic services
+    - Managed via internet
+    - Fast deployment
+    

@@ -531,3 +531,17 @@ If CPU < 50% -------------------------> Decrease to 1 server
     - Managed via internet
     - Fast deployment
     
+2 . Types of Cloud Computing
+
+- Virtualization
+    - Ability to host multiple clients on the same infrastructure while maintaining isolation among each other
+    
+- Types of Cloud
+    - IAAS: Infrastructure As A Service
+        - All the Infrastructure related changes will be managed by the user(Installation and patches)
+    - PAAS: Platform As A Service
+        - Infrastructure managed by AWS, we only need to focus on code and other stuff
+        - eg: Elastic Beanstalk
+    - SAAS: Software As A Service
+        - Zero administration
+    

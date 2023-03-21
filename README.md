@@ -497,6 +497,20 @@ Create API with Amazon API Gateway and Lambda
         - Create an object with configuration
             - Domain, scope, redirectSignIn, redirectSingOut, responseType, AdvancedSecurityDataCollectionFlag
         
+19 . DynamoDB, API Gateway and Amplify
+
+- In this we'll be calling some API endpoints in API gateway which talks to a Dynamodb database using a lambda function
+- VPC Endpoint will be added in upcoming session
+- Steps
+    1. Adding the API backend
+        - amplify add api
+    2. All the APIs will be generated for the given API endpoint with authentication and all the validation
+    3. Check dynamodb for newly created table and API Gateway console for newly created API and endpoints
+    4. Create home component
+        - ng g c home
+    5. Using Dynamodb streams to index records from dynamodb to ElasticSearch
+
+
 
 #AWS Theories
 

@@ -559,3 +559,41 @@ If CPU < 50% -------------------------> Decrease to 1 server
     - SAAS: Software As A Service
         - Zero administration
     
+3 . AWS VPC - Networking on AWS
+- On Prem Architecture
+    ![Diagram](resources/images/theory-1.PNG "Diagram")
+    - Explanation
+        - IP Range is divided to 2 sub-networks
+        - Web servers are in 1 sub-network and it is protected by a firewall and users can directly talk to the web server
+        - Application server and database server can only be accessed through web servers only
+        
+- AWS Architecture
+    ![Diagram](resources/images/theory-2.PNG "Diagram")
+    - Explanation
+        - When we spin up an EC2 server if we don't specify a network or a VPC it will be assigned to the default VPC
+        - Virtual Private Cloud(VPC) we have full control over network, security, resources and it is isolated from other AWS customers
+        - VPC is only associated with 1 region in AWS(Cannot have a VPC spanning over different regions) and we need to define an IP range for VPC
+        - IRC 1918 standard
+            1. 10.0.0.0/16
+            2. 172.16.0.0/16
+            3. 192.168.0.0/16
+            
+        - CIDR Notation
+            1. eg: 10.0.0.0/16 
+                - Total IP Count: 2^(32-16)=65536
+            2. eg: 192.168.0.0/24 
+                - Total IP Count: 2^(32-24)=256
+            - AWS will reserve 5 addresses from these(first 4 and last address)
+            - Maximum cider that AWS supports is /16 and minimum is /28
+        - Can create multiple sub-networks inside a VPC and it corresponds to an Availability Zone
+        - Subnetwork IP ranges cannot overlap
+        - VPC Router allows communication between sub-networks
+            - eg: Destination: 10.0.0.0/16 Target: local
+            - Web server can communicate to Backend server and vise versa if the ip range falls into the Destination
+        - We need internet access for web server(Need to setup an internet gateway for subnet1)
+        - Internet gateway is a managed service and you dont find any single point of failure
+        - Create another route entry in the route table associated for subnet1 that points out to internet gateway
+            - eg: 0.0.0.0/0 internet-gatewat-id
+        - If any subnetwork doesn't have an internet gateway associated with or any routing rule for internet gateway that subnetwork is a Private subnetwork
+        - Application server and the database server needs to run updates for that we can setup a NAT Gateway in public subnet
+        - We can add a route to the NAT gateway which points to 0.0.0.0/0

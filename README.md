@@ -510,6 +510,29 @@ Create API with Amazon API Gateway and Lambda
         - ng g c home
     5. Using Dynamodb streams to index records from dynamodb to ElasticSearch
 
+20 . Connecting Azure Active Directory with Cognito
+- How to setup Azure Active Directory as a 3rd party Identity provider for the application
+- Steps
+    1. Create a user pool and login with Cognito Hosted UI
+        - Add an app client
+        - Make a note of client ID
+        - Check for a domain prefix
+        - Copy the url format for 'Using the Hosted Domain'
+        - Setup the redirect url
+    2. Azure AD over SAML protocol
+        - Need to provide metadata url and identifiers
+        - Need to provide a user pool in AD
+        - Need to provide configurations from cognito 
+            1. Sign-On url
+            2. Identifier uri
+            3. Logout url
+            4. Reply url
+        - Update the manifest with above values
+        - Need to get Azure metadata document and apply to cognito side
+        - Add attribute mappings
+    3. When user types corporate email they will be redirected to Azure AD
+    4. Authenticate against AD
+    5. If success redirect to application
 
 
 #AWS Theories

@@ -620,3 +620,26 @@ If CPU < 50% -------------------------> Decrease to 1 server
         - If any subnetwork doesn't have an internet gateway associated with or any routing rule for internet gateway that subnetwork is a Private subnetwork
         - Application server and the database server needs to run updates for that we can setup a NAT Gateway in public subnet
         - We can add a route to the NAT gateway which points to 0.0.0.0/0
+        
+4 . Security Groups and NACL in VPC
+- Steps
+    1. We need to define firewall rules so that who can access which resources on which ports
+    ![Diagram](resources/images/theory-3.PNG "Diagram")
+        - Security Groups(Firewall)
+            1. EC2 server communicates with the subnet via ENI(Elastic Network Interface) - virtual network interface card attached to a virtual server
+            2. Security Groups works at ENI level(Instance level)
+            3. Allow or block traffic in and out of EC2 instance
+            4. EC2 instance can have upto 5 security groups
+            5. Stateful
+            6. Can have only 'Allow' rules
+            7. If no rule is defined, traffic is blocked to the instance
+        - NACLs(Network Access Control List)
+            1. NACL works at subnet level
+            2. Stateless
+            3. Both 'Allow' and 'Deny' rules are possible
+            4. Rules are evaluated from Lowest to Highest
+            5. Lower the rule number, higher the priority
+            6. Rules are applied to all the instances within the subnet
+            7. Default NACL -> traffic is allowed for both inbound and outbound
+    ![Diagram](resources/images/theory-4.PNG "Diagram")    
+            

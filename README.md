@@ -534,6 +534,40 @@ Create API with Amazon API Gateway and Lambda
     4. Authenticate against AD
     5. If success redirect to application
 
+21 . Working with DynamoDB and Elasticsearch
+![Diagram](resources/images/services-7.PNG "Diagram")
+ - Steps
+    1. When a product is added to dynamodb stream lambda function will trigger
+        - Need to enable dynamoDB streams in dynamoDB
+    2. It will index the record in ElasticSearch
+    3. This is an asynchronous operation
+    4. Dynamodb streams and lambdas are managed services
+    5. Need to create an ElasticSearch service inside the private subnet of VPC
+    6. Create a lambda function with an IAM role so that it can communicate with ElasticSearch service
+        ~~~json
+        {
+          "Version": "2012-10-17",
+          "Statement": [
+                  {
+                    "Effect":"Allow",
+                    "Action":[
+                      "es:ESHttpPost",
+                      "es:ESHttpPut",
+                      "dynamodb:DescribeStream",
+                      "dynamodb:GetRecords",
+                      "dynamodb:GetShardIterator",
+                      "dynamodb:ListStreams",
+                      "logs:CreateLogGroup",
+                      "logs:CreateLogStream",
+                      "logs:PutLogEvents"
+                    ],
+                    "Resource": "*"
+                  }
+          ]
+        }
+        ~~~
+    7. Create a security group in ElasticSearch domain and apply the same in lambda so that communication can happen
+    
 
 #AWS Theories
 

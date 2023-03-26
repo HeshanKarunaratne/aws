@@ -567,7 +567,20 @@ Create API with Amazon API Gateway and Lambda
         }
         ~~~
     7. Create a security group in ElasticSearch domain and apply the same in lambda so that communication can happen
-    
+
+22 . GraphQL in AWS with AppSync, Amplify and Angular 
+- GraphQL
+    - Fast and flexible compared to REST
+    - GraphQL client decides what data to receive
+    - Operate over HTTP
+    - Fewer HTTP requests
+    - Flexible data querying and less code to maintain    
+
+- Operations
+    - Query: Fetch the data from GraphQL - Get
+    - Mutation: Change data - Create/Update/Delete
+    - Subscription: Watch data for changes in Real time
+        - Happens through web sockets
 
 #AWS Theories
 

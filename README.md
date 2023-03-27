@@ -582,6 +582,43 @@ Create API with Amazon API Gateway and Lambda
     - Subscription: Watch data for changes in Real time
         - Happens through web sockets
 
+23 . Modeling Relationships in GraphQL
+- Relationships
+    - 1:1: Department has a Manager
+    - 1:M: Department has many employees
+    - M:N: Project has many Employees and Employees can be assigned to many projects
+
+- Steps
+    1. 'amplify api add' and choose graphql
+        ~~~graphql
+            type Department @model{
+                id: ID!
+                name: String 
+                manager: Employee @connection
+                employees: [Employee] @connection(name: "DeparmtentEmployees")
+            }
+            type Employee @model{
+                id: ID!
+                name: String 
+                age: Int
+                department: Department @connection(name: "DeparmtentEmployees")
+                projects: [EmployeeProjects] @connection(name: "EmployeeProjects")
+            }
+            type EmployeeProjects @model (queries: null){
+                id: ID!
+                employee: Employee @connection(name: "EmployeeProjects")
+                project: Project @connection(name: "ProjectEmployees")
+            }
+            type Project @model{
+                id: ID!
+                name: String 
+                employees: [EmployeeProjects] @connection(name: "ProjectEmployees")
+            }
+        ~~~
+    2. 'amplify api gql-compile' will recompile the graphql stack in appSync
+
+
+
 #AWS Theories
 
 1 . What is Cloud Computing

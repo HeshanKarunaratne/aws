@@ -617,7 +617,14 @@ Create API with Amazon API Gateway and Lambda
         ~~~
     2. 'amplify api gql-compile' will recompile the graphql stack in appSync
 
+24 . How to send realtime updates with GraphQL subscriptions
+- AppSync is a managed graphQL server
+- Subscription are watching over changes in graphQL
+- Steps
+    1. When have a subscription it will send all the changes to all the clients who are listening
 
+
+25 . 
 
 #AWS Theories
 

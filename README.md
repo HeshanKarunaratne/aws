@@ -733,4 +733,29 @@ If CPU < 50% -------------------------> Decrease to 1 server
             6. Rules are applied to all the instances within the subnet
             7. Default NACL -> traffic is allowed for both inbound and outbound
     ![Diagram](resources/images/theory-4.PNG "Diagram")    
-            
+     
+     
+5 . Amazon Virtual Private Cloud (VPC)   
+    
+![Diagram](resources/images/theory-5.PNG "Diagram")
+
+- Steps
+    1. Spin up a VPC in a selected region
+        - For every region there is a default VPC
+        - Give a cider block for VPC eg: 10.0.0.0/16
+        - You will get a Main Route table, Main Network ACL and DHCP options set
+    2. Allocate subnetworks
+        - Private subnet with cider block of 10.0.0.0/24
+        - 1 subnet should have an availability zone
+        - Public subnet with cider block of 10.0.1.0/24
+    3. Check default NACL created with the VPC
+        - It is associated with 2 subnetworks
+        - Inbound rule and Outbound rule
+            1. ALL Traffic ALLOW for any source(0.0.0.0/0) for all the port ranges and for all the protocols
+    4. Check default Route table associated with the VPC
+        - Click Subnet Associations and edit and add public subnet
+    5. Create an Internet Gateway
+        - Attach the Internet Gateway to the VPC
+        - For public route table add the internet gateway for all 0.0.0.0/0 destination
+        - Create a private route table but dont attach the internet gateway because private subnet should not be directly accessed through internet
+        

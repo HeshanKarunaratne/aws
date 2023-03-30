@@ -758,4 +758,24 @@ If CPU < 50% -------------------------> Decrease to 1 server
         - Attach the Internet Gateway to the VPC
         - For public route table add the internet gateway for all 0.0.0.0/0 destination
         - Create a private route table but dont attach the internet gateway because private subnet should not be directly accessed through internet
-        
+    
+6 . Security Groups and Launching EC2 Instances
+- Steps
+    1. Launch EC2 instances in both private and public subnet
+        - WebServer
+            - Enable http, https and ssh(only my ip) for the 'webserver' instance that resides in public subnet
+            - Add public ip while configuring so that the instance can be accessed via internet
+            - When you restart the instance public ip address will be changed to a different address from aws ipv4 pool
+            - If we want to mitigate earlier issue we need an elastic IP
+            - Permission Levels
+                - chmod 777(owner, group, public)
+                    - 1: execute
+                    - 2: write
+                    - 4: read
+        - Backend
+            - Do not add public ip while configuring
+            - To talk from web-server to backend allow access for 'web-server-security-group' as the source
+            - Still we cannot ssh into backend server from web-server bacause we do not have the pem file there
+            - Its not a security best practice to copy private .pem file to webserver
+            - Best practice is to use SSH agent forwarding
+            

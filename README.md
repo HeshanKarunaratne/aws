@@ -778,4 +778,15 @@ If CPU < 50% -------------------------> Decrease to 1 server
             - Still we cannot ssh into backend server from web-server bacause we do not have the pem file there
             - Its not a security best practice to copy private .pem file to webserver
             - Best practice is to use SSH agent forwarding
-            
+
+7 . SSH Agent Forwarding - Connecting to EC2 Instances
+- Steps
+    1. Navigate to local machine
+        - For windows use 'putty' and for MAC use terminal
+        - Mac
+            - Add .pem file to ssh agent
+                - eg: ssh-add -K my-private-key.pem
+            - Connect to web server
+                - eg: ssh -A ec2-user@35.123.48.34
+            - After you connect to webserver ssh to database server using the forwarded ssh agent 
+    - Even though we connected to database server we cannot communicate with the internet(NAT gateway or Instance)

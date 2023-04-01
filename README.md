@@ -790,3 +790,8 @@ If CPU < 50% -------------------------> Decrease to 1 server
                 - eg: ssh -A ec2-user@35.123.48.34
             - After you connect to webserver ssh to database server using the forwarded ssh agent 
     - Even though we connected to database server we cannot communicate with the internet(NAT gateway or Instance)
+    
+    
+# Exam Guides
+- Define solutions using architectural design principals based on customer requirements
+- Provide implementations based on best practices to the organization throughout the lifecycle of the project

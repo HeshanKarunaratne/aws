@@ -780,6 +780,7 @@ If CPU < 50% -------------------------> Decrease to 1 server
             - Best practice is to use SSH agent forwarding
 
 7 . SSH Agent Forwarding - Connecting to EC2 Instances
+- To connect to an instance that resides in a private subnet through an instance in public subnetwork
 - Steps
     1. Navigate to local machine
         - For windows use 'putty' and for MAC use terminal
@@ -789,8 +790,26 @@ If CPU < 50% -------------------------> Decrease to 1 server
             - Connect to web server
                 - eg: ssh -A ec2-user@35.123.48.34
             - After you connect to webserver ssh to database server using the forwarded ssh agent 
-    - Even though we connected to database server we cannot communicate with the internet(NAT gateway or Instance)
+    - Even though we connected to database server we cannot communicate with the internet to download updates(for that we need NAT gateway or Instance)
     
+8 . Nat Gateway vs NAT Instance
+- Steps
+    1. We need to place a NAT gateway or an instance in public subnetwork(NAT will have internet connectivity)
+    2. Add a new route to private subnet
+    3. Comparison
+        ![Diagram](resources/images/theory-6.PNG "Diagram")
+        ![Diagram](resources/images/theory-7.PNG "Diagram")
+    
+        - NAT Gateway
+            ![Diagram](resources/images/theory-8.PNG "Diagram")
+            1. Need to setup NAT gateway in public subnet
+            2. Need to assign an Elastic IP for NAT gateway.(public IP that use to connect to internet)
+            3. Update route table of private subnet to allow for Destination -> 0.0.0.0/0 and Target -> nat-gateway-id 
+        - NAT Instance
+            1. Can have an Elastic IP or the Public IP to communicate
+            ![Diagram](resources/images/theory-9.PNG "Diagram")
+            2. We need to disable source/destination check for the NAT instance
+            
     
 # Exam Guides
 - Define solutions using architectural design principals based on customer requirements

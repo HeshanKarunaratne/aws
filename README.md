@@ -624,7 +624,20 @@ Create API with Amazon API Gateway and Lambda
     1. When have a subscription it will send all the changes to all the clients who are listening
 
 
-25 . 
+25 . Let's Build an Offline Web App
+- AWS AppSync SDK with Offline mode
+- GraphQL uses Apollo Client which gives offline support
+- Steps
+    1. Install below dependencies
+        ~~~text
+           npm install -g @aws-amplify/cli
+           npm install --save aws-amplify
+           npm install --save aws-amplify-angular
+           npm install --save aws-appsync graphql-tag
+        ~~~      
+       
+
+
 
 #AWS Theories
 

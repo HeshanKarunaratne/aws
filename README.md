@@ -636,7 +636,11 @@ Create API with Amazon API Gateway and Lambda
            npm install --save aws-appsync graphql-tag
         ~~~      
        
-
+26 . FullStack WebApp with AWS Amplify and Angular
+- Navigate to https://enlear.academy/lets-build-a-profile-app-with-aws-amplify-part-01-bb596e682d3a
+- Steps
+    1. Using Angular with Amplify using App Sync for API layer
+    2. 
 
 
 #AWS Theories

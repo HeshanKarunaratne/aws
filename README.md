@@ -640,8 +640,22 @@ Create API with Amazon API Gateway and Lambda
 - Navigate to https://enlear.academy/lets-build-a-profile-app-with-aws-amplify-part-01-bb596e682d3a
 - Steps
     1. Using Angular with Amplify using App Sync for API layer
-    2. 
-
+   
+   
+27 . Let's Build a Talking App! - (Amazon Polly, S3, Lambda, Angular)
+- Steps
+    1. Amazon Polly: Turn text into lifelike speech
+        - Extract the text what the user has typing in and the selected voice id 
+        - Call in SynthesizeSpeech API and store it, inside a S3 bucket
+        - Get a signed url for that particular audio stream
+        - Sends back to the application
+    2. Create the backend using serverless framework
+        ~~~text
+        npm install serverless -g
+        serverless create --template aws-nodejs --path backend
+        npm i aws-sdk
+        npm i uuid
+        ~~~
 
 #AWS Theories
 

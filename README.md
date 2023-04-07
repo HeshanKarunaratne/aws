@@ -657,6 +657,12 @@ Create API with Amazon API Gateway and Lambda
         npm i uuid
         ~~~
 
+28 . Sentiment Analysis with AWS Comprehend
+- AWS Comprehend: Is a NLP(Natural Language Processing) service to discover insights and relationships in text.
+- The sentiment can be either Positive, Negative or Neutral
+
+29 . 
+
 #AWS Theories
 
 1 . What is Cloud Computing

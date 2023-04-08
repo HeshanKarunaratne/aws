@@ -661,7 +661,26 @@ Create API with Amazon API Gateway and Lambda
 - AWS Comprehend: Is a NLP(Natural Language Processing) service to discover insights and relationships in text.
 - The sentiment can be either Positive, Negative or Neutral
 
-29 . 
+
+29 . Secure Static Hosting with S3, CloudFront and OAI(Module 1)
+- Using S3, CloudFront, Cloud 9 IDE
+- S3
+    - ![Diagram](resources/images/services-8.PNG "Diagram")
+    - Types of Storage
+        - Object Storage: Any static content eg: CSS, JS, Audio, Video, Images, HTML
+        - Block Storage: Apache or Nginx which needs an Operating System eg: EBS attached to EC2
+    - Access Control
+        1. Resource Based Policies
+            - Bucket Policy
+            - ACL
+        2. User Based Policies(Applied to IAM users)
+    - Consistency Models
+        1. Strong consistency/Immediate/Read-after-Write
+        2. Eventual consistency
+        
+- Amazon CloudFront
+    - AWS have edge locations around the world
+    
 
 #AWS Theories
 

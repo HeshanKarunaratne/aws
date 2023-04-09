@@ -680,7 +680,11 @@ Create API with Amazon API Gateway and Lambda
         
 - Amazon CloudFront
     - AWS have edge locations around the world
-    
+    - When we configure a cloudfront we must block direct requests to the S3 bucket by bypassing CloudFront distribution
+    - We can do this by using OAI(Origin Access Identity): Treat Cloudfront as a User
+    - Only ALLOW that user to talk to the S3 bucket
+    - S3 bucket is not publicly readable
+    - Use Signed Url or Signed cookies together with OAI to the S3 bucket
 
 #AWS Theories
 

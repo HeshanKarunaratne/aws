@@ -686,6 +686,13 @@ Create API with Amazon API Gateway and Lambda
     - S3 bucket is not publicly readable
     - Use Signed Url or Signed cookies together with OAI to the S3 bucket
 
+30 . Cloud9 IDE Setup
+- Steps
+    1. Create an environment
+    2. Clone specific branch
+        - git clone -b {branch_name} {https_url}
+
+
 #AWS Theories
 
 1 . What is Cloud Computing

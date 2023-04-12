@@ -692,6 +692,37 @@ Create API with Amazon API Gateway and Lambda
     2. Clone specific branch
         - git clone -b {branch_name} {https_url}
 
+31 . Secure Static Web Hosting with CloudFront and S3 with Origin Access Identity
+- Steps
+    1. Create S3 bucket
+        - aws s3 mb s3://{bucket_name}
+    2. Give access to cloudfront oai user to access S3 bucket
+        ~~~text
+        {
+          "Id": "PolicyForCloudFrontPrivateContent",
+          "Version": "2008-10-17",
+          "Statement": [
+            {
+              "Sid": "1",
+              "Effect": "Allow",
+              "Principal": {
+                   "AWS": arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity {oai_id}
+               },
+              "Action": "s3:GetObject",
+              "Resource": "arn:aws:s3:::{bucket_name}/*"
+            }
+          ]
+        }
+        ~~~
+    3. Create OAI in cloudfront
+        - aws cloudfront create-cloud-front-origin-access-identity --cloud-front-origin-access-identity-config CallerReference=Mysfits,Comment=Mysfits
+    4. Adding bucket policy for the created S3 bucket
+        - aws s3api put-bucket-policy --bucket {bucket_name} --policy {location_in_my_pc}
+    5. Create a cloudFront distribution
+        - Origin: S3 bucket
+        - aws cloudfront create-distribution --distribution-config {path_to_distribution_config}
+    6. Upload content to S3
+        - aws s3 cp {path_to_index.html} s3://{bucket_name}/index.html
 
 #AWS Theories
 

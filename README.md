@@ -724,6 +724,23 @@ Create API with Amazon API Gateway and Lambda
     6. Upload content to S3
         - aws s3 cp {path_to_index.html} s3://{bucket_name}/index.html
 
+32 . Setting up a VPC & Networking to Run Fargate Containers(Module 2)
+- Containerized Applications will,
+    - Maximize the resource utilization
+    - Run multiple containers inside the same server
+    - Enable load balancing
+    
+- Steps
+    1. Setting up a private network (VPC) on AWS
+        - VPCs are logically isolated from other virtual networks in AWS
+        - A subnet that has a route out to the internet is called a "Public Subnet" else it is called "Private Subnet"
+        - VPC Endpoints allows VPC to connect to resources privately to other AWS services without using internet. Traffic never leaves the AWS network
+        - 2 types of VPC endpoints
+            1. Interface endpoints: Network interface(ENI) that points to the other AWS service
+            2. Gateway endpoints: A gateway that can be set as a target in the route table
+    2. Deploying a service in ECS inside the VPC
+
+
 #AWS Theories
 
 1 . What is Cloud Computing

@@ -738,9 +738,40 @@ Create API with Amazon API Gateway and Lambda
         - 2 types of VPC endpoints
             1. Interface endpoints: Network interface(ENI) that points to the other AWS service
             2. Gateway endpoints: A gateway that can be set as a target in the route table
-    2. Deploying a service in ECS inside the VPC
-
-
+    
+33 . Load balancing on ECS Cluster Powered by AWS Fargate
+- Steps
+    1. Deploying a service in ECS(Elastic Container Service)
+        - AWS Fargate: Without having to manage the cluster or server
+        - We will be using AWS Fargate launch type instead of EC2 launch type
+        - Will deploy multiple containers of the backend for High Availability
+        - Services are exposed via a Load Balancer
+        - Load balancer directs traffic to tasks of the service
+        
+        - ECS Cluster
+            - Cluster provides compute, memory and storage for tasks
+            - If we use Fargate AWS will manage cluster resources
+            - Task definition is like the blueprint of the application
+            - Task/Container is an instantiation of a task definition
+            - It is a json document which describes tasks
+            - A service launches specified number of tasks/containers from a task definition
+            - Service can run behind a Load Balancer to distribute traffic across its task
+            
+        - Task Networking
+            - Tasks that uses Fargate launch type requires 'awsvpc' network mode
+            - 'awsvpc' network mode provides an ENI for each task
+            - You need to specify which subnets, the ENI should be attached
+            - Need to specify the security group for the ENI
+            - If the ENI is attached to a public subnet it will receive a public IP or else a private IP
+            - Tasks in private subnet will use NAT gateway to access internet and pull docker images to run the containers
+        
+        - Load Balancing
+            - To configure a load balancer you need to create target groups
+            - Target groups can be either instances or ip addresses
+            - Load balancer has listeners configured with a port and a protocol
+            - Listeners have rules that will direct traffic to target groups if matched
+            
+             
 #AWS Theories
 
 1 . What is Cloud Computing

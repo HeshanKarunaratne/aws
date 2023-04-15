@@ -771,6 +771,32 @@ Create API with Amazon API Gateway and Lambda
             - Load balancer has listeners configured with a port and a protocol
             - Listeners have rules that will direct traffic to target groups if matched
             
+34 . Microservice Implementation on AWS with ECS, Fargate, ECR and NLB
+- Steps
+    1. Create cloudformation stack(Refer 'core.yml')
+        - aws cloudformation create-stack --stack-name {stack_name} --capabilities CAPABILITY_NAMED_IAM --template-body file://~/environment/aws-modern-application-workshop/module-2/cfn/core.yml
+    2. Describe stack
+        - aws cloudformation describe-stacks --stack-name {stack_name}
+    3. Build docker image
+        - docker build . -t {account_id}.dkr.ecr.{region}.amazonaws.com/{repo_name}:latest
+    4. Create ECR(Elastic Container Registry: like docker hub)
+        - aws ecr create-repository --repository-name {repo_name}
+    5. Create ECS cluster
+        - aws ecs create-cluster --cluster-name {cluster_name}
+    6. Create log group
+        - aws logs create-log-group --log-group-name {log_group_name}
+    7. Create a task definition: Refer "task-definition.json"
+        - aws ecs register-task-definition --cli-input-json file://~/environment/aws-modern-application-workshop/module-2/aws-cli/task-definition.json
+    8. Create a network load balancer
+        - aws elbv2 create-load-balancer --name {load_balancer_name} --scheme internet-facing --type network --subnets {public_subnet1_id} {public_subnet2_id} > ~/environment/nlb-output.json
+    9. Create a target group
+        - aws elbv2 create-target-group --name {target_group_name} --port 8080 --protocol TCP --target-type ip --vpc-id {vpc_id} --health-check-interval-seconds 10 --health-check-path / --health-check-protocol HTTP --healthy-threshold-count 3 --unhealthy-threshold-count 3 > ~/environment/target-group-output.json  
+    10. Create Listener
+        - aws elbv2 create-listener --default-actions TargetGroupArn={target_group_arn},Type=forward --load-balancer-arn {load_balancer_arn} --port 80 --protocol TCP         
+    11. Create ECS iam role
+        - aws iam create-service-linked-role --aws-service-name ecs.amazonaws.com
+    12. Create ECS service(refer 'service-definition.json')
+        - aws ecs create-service --cli-input-json file://~/environment/aws-modern-application-workshop/module-2/aws-cli/service-definition.json
              
 #AWS Theories
 

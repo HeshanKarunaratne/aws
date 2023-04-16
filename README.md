@@ -797,7 +797,17 @@ Create API with Amazon API Gateway and Lambda
         - aws iam create-service-linked-role --aws-service-name ecs.amazonaws.com
     12. Create ECS service(refer 'service-definition.json')
         - aws ecs create-service --cli-input-json file://~/environment/aws-modern-application-workshop/module-2/aws-cli/service-definition.json
-             
+   
+35 . ECS Container Networking & Load Balancing Architecture
+- Steps
+    - Frontend is hosted inside a S3 bucket
+    - Any request that generated from the frontend will first hit Load Balancer
+    - Load Balancers have multiple rules defined for it and if any rule matches it will redirect requests to a Logical grouping called 'Target Groups'
+    - These targets can be either EC2 instances or IP addresses
+    - Since we are using AWS Fargate mode and using 'awsvpc' network mode each an every container will receive private IP address from the range of private subnet
+    - In order to launch containers in our cluster we need to define 'services'(task definition and desired count)
+    - We can associate target groups through services
+           
 #AWS Theories
 
 1 . What is Cloud Computing

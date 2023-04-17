@@ -807,6 +807,18 @@ Create API with Amazon API Gateway and Lambda
     - Since we are using AWS Fargate mode and using 'awsvpc' network mode each an every container will receive private IP address from the range of private subnet
     - In order to launch containers in our cluster we need to define 'services'(task definition and desired count)
     - We can associate target groups through services
+    
+36 . Docker CI_CD Pipeline on AWS
+- Steps
+    - What is CI/CD
+        - Automating the release process
+        - Four stages of release process
+            1. Source Code: Use a centralized code repository, peer review the code before merging
+            2. Build: Compile the code, run unit test, create container images eg: AWS Code build, Jenkins
+            3. Test: Integration tests, UI tests, load, testing
+            4. Deploy: Deploy to production environment, monitor code in production environment to detect errors
+        ![Diagram](resources/images/services-9.PNG "Diagram")
+     
            
 #AWS Theories
 

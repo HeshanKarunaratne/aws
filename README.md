@@ -819,6 +819,32 @@ Create API with Amazon API Gateway and Lambda
             4. Deploy: Deploy to production environment, monitor code in production environment to detect errors
         ![Diagram](resources/images/services-9.PNG "Diagram")
      
+37 . Docker CI_CD pipeline on AWS - Part 2
+- Steps
+    1. Source Code resides in a centralized code repository: AWS CodeCommit
+    2. Build process uses AWS CodeBuild
+        - Will provision a small server and then pull the code from the given branch
+        - Docker image(container image) created from the Dockerfile
+        - Images will be pushed to ECR(Elastic Container Registry)
+        - All these commands are stored in 'buildspec.yml'
+            1. PreBuild: Logging in to ECR
+            2. Build: Build the docker image and tag
+            3. PostBuild: Push the image to ECR
+    3. Create S3 bucket to store the artifacts
+        - aws s3 mb s3://{artifact_s3_bucket_name}
+    4. Push the bucket policy to S3(Refer artifacts-bucket-policy.json)
+        - aws s3api put-bucket-policy --bucket {artifact_s3_bucket_name} --policy file://~/environment/aws-modern-application-workshop/module-2/aws-cli/artifacts-bucket-policy.json
+    5. Create AWS CodeCommit Repository
+        - aws codecommit create-repository --repository-name {code_commit_repo_name}
+    6. Create a CodeBuild Project(Refer 'code-build-project.json')
+        - aws codebuild create-project --cli-input-json file://~/environment/aws-modern-application-workshop/module-2/aws-cli/code-build-project.json
+    7. Create a CodePipeline pipeline(Refer 'code-pipeline.json')
+        - aws codepipeline create-pipeline --cli-input-json file://~/environment/aws-modern-application-workshop/module-2/aws-cli/code-pipeline.json
+    8. Enable access to ECR(Refer 'ecr-policy.json')
+        - aws ecr set-repository-policy --repository-name mythicalmysfits/service --policy-text file://~/environment/aws-modern-application-workshop/module-2/aws-cli/ecr-policy.json
+    
+         
+         
            
 #AWS Theories
 

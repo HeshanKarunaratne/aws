@@ -843,8 +843,11 @@ Create API with Amazon API Gateway and Lambda
     8. Enable access to ECR(Refer 'ecr-policy.json')
         - aws ecr set-repository-policy --repository-name mythicalmysfits/service --policy-text file://~/environment/aws-modern-application-workshop/module-2/aws-cli/ecr-policy.json
     
+38 . Introduction to Lambda Resolvers with AWS Amplify  
+- Directives: @model, @key, @connection, @auth, @versioned, @searchable, @function
          
-         
+- @function: Creates Lambda resolvers
+- amplify add function
            
 #AWS Theories
 

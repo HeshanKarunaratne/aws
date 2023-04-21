@@ -848,7 +848,30 @@ Create API with Amazon API Gateway and Lambda
          
 - @function: Creates Lambda resolvers
 - amplify add function
-           
+    
+39 . S3 web hosting with CloudFront and OAI
+
+![Diagram](resources/images/services-10.PNG "Diagram")
+- Steps
+    1. Create S3 bucket and give a unique name(Give public access to S3 bucket)
+    2. Enable static web hosting
+    3. Apply a bucket policy
+    ~~~json
+             {
+          "Version":"2012-10-17",
+          "Statement":[
+            {
+              "Sid":"AddPerm",
+              "Effect":"Allow",
+              "Principal": "*",
+              "Action":["s3:GetObject"],
+              "Resource":["arn:aws:s3:::{bucket_name}/*"]
+              }
+          ]
+        }
+    ~~~
+    4. Create a Cloudfront distribution with Origin as the S3 bucket
+
 #AWS Theories
 
 1 . What is Cloud Computing

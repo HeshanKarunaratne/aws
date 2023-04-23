@@ -872,6 +872,12 @@ Create API with Amazon API Gateway and Lambda
     ~~~
     4. Create a Cloudfront distribution with Origin as the S3 bucket
 
+40 . Learn AWS Amplify Console
+- Steps
+    1. React + Amplify implementation 
+30.36
+
+
 #AWS Theories
 
 1 . What is Cloud Computing

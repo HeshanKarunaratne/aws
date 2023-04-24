@@ -875,7 +875,8 @@ Create API with Amazon API Gateway and Lambda
 40 . Learn AWS Amplify Console
 - Steps
     1. React + Amplify implementation 
-30.36
+    2. Checkout to amplify dev branch
+        - amplify env checkout dev
 
 
 #AWS Theories

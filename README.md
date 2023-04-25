@@ -1062,8 +1062,33 @@ If CPU < 50% -------------------------> Decrease to 1 server
             1. Can have an Elastic IP or the Public IP to communicate
             ![Diagram](resources/images/theory-9.PNG "Diagram")
             2. We need to disable source/destination check for the NAT instance
-            
-    
+       
+9 . AWS IAM
+- AWS IAM provide access to,
+    1. Users
+    2. Groups
+    3. Roles
+
+- AWS Polices
+    1. Managed polices: Managed by AWS
+    2. Custom policies: Managed by customer
+ 
+- Access Key ID and Secret Access Key is used when using AWS cli api
+- Password is needed to access AWS Console
+
+- IAM Roles
+    - Roles have 2 parts. Permission policy and Trust policy
+    - Permission policy describes the permission of the role
+    - Trust policy describes who can assume that role(who can do what on which resource)
+    - Once the role is assumed by an allowed entity, AWS STS(Security Token Service) provides temporary security credentials to the entity
+    - It contains
+        1. Session Tokens
+        2. Access Key Id
+        3. Secret Access Key
+        4. Expiration
+   
+   
+   
 # Exam Guides
 - Define solutions using architectural design principals based on customer requirements
 - Provide implementations based on best practices to the organization throughout the lifecycle of the project

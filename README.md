@@ -1086,8 +1086,17 @@ If CPU < 50% -------------------------> Decrease to 1 server
         2. Access Key Id
         3. Secret Access Key
         4. Expiration
+- Main Policy types
+    1. SCPs(Service Control Policies)
+        - In AWS Organization there can be multiple Organizational units under root or there can be multiple accounts inside an Organizational unit
+        - We can attach SCPs directly to Organizational Unit or account
+    2. Identity Based Policies
+        - In Identity Based Policies we dont need to define a Principal
+    3. Resource Based Policies   
+        - We need to define a Principal(IAM user or role)
    
-   
+- Identity Federation
+
    
 # Exam Guides
 - Define solutions using architectural design principals based on customer requirements

@@ -1096,8 +1096,21 @@ If CPU < 50% -------------------------> Decrease to 1 server
         - We need to define a Principal(IAM user or role)
    
 - Identity Federation
-
-   
+    1. SAML Based Identity Federation
+        - IAM allows 5000 users per account(hard limit)
+        - Identity Federation is based on trust
+        - Manage Identites or users externally to the AWS for SAML it is Active Directory of on premises organization
+        - Setup trust between on premises Active Directory and AWS
+        - Two types of SAML Based Identity Federation
+            1. AWS Console Access
+                ![Diagram](resources/images/theory-10.PNG "Diagram")
+            2. AWS API Access 
+                ![Diagram](resources/images/theory-11.PNG "Diagram")
+        
+    2. Web Identity Federation
+        - Identities are maintained in external identity providers like Facebook, Google, Twitter
+            ![Diagram](resources/images/theory-12.PNG "Diagram")
+            
 # Exam Guides
 - Define solutions using architectural design principals based on customer requirements
 - Provide implementations based on best practices to the organization throughout the lifecycle of the project

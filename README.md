@@ -878,6 +878,12 @@ Create API with Amazon API Gateway and Lambda
     2. Checkout to amplify dev branch
         - amplify env checkout dev
 
+41 . Realtime and Offline API Design
+- Steps
+    1. amplify init
+    2. amplify add api
+    3. amplify add storage
+
 
 #AWS Theories
 

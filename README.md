@@ -884,6 +884,15 @@ Create API with Amazon API Gateway and Lambda
     2. amplify add api
     3. amplify add storage
 
+42 . Serving Multiple Websites with AWS CloudFront & Lambda at Edge
+- Steps
+    1. Create 2 S3 buckets to hold new and old front end application code with public access
+    2. Add static web hosting for both buckets
+    3. Add a bucket policy for anonymous users
+    4. Create a cloudfront distribution to support old code
+    5. Create lambda@edge function to navigate to different domain based on the cookie value
+    6. Whitelist cookie in cloudfront distribution cache for forward requests
+
 
 #AWS Theories
 

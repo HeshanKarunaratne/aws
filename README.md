@@ -893,6 +893,14 @@ Create API with Amazon API Gateway and Lambda
     5. Create lambda@edge function to navigate to different domain based on the cookie value
     6. Whitelist cookie in cloudfront distribution cache for forward requests
 
+43 . Building a CICD pipeline for Serverless Apps with UI Testing
+- Steps
+    1. Create CodeBuild pipeline
+    2. Add Github to the Source stage
+    3. Create new code build project for frontend
+    4. Create new code build project for backend
+
+44 . yt5s.com-Continuous Delivery with AWS Fargate - Part 01(720p)
 
 #AWS Theories
 

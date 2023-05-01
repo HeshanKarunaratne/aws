@@ -900,7 +900,20 @@ Create API with Amazon API Gateway and Lambda
     3. Create new code build project for frontend
     4. Create new code build project for backend
 
-44 . yt5s.com-Continuous Delivery with AWS Fargate - Part 01(720p)
+44 . Continuous Delivery with AWS Fargate
+- Steps
+    1. Build Docker image\
+        - docker build -t cicd-local:latest .
+    2. Run container locally
+        - docker run -it -p 80:3000 {container_id}
+    3. Push to Remote repository
+        - Login to AWS
+        - Build the image
+        - Push to repo
+            - docker tag {image_name} {ecr_url}/{name}:latest
+            - docker push {ecr_url}/{name}:latest
+            
+            
 
 #AWS Theories
 

@@ -912,7 +912,11 @@ Create API with Amazon API Gateway and Lambda
         - Push to repo
             - docker tag {image_name} {ecr_url}/{name}:latest
             - docker push {ecr_url}/{name}:latest
-            
+    4. Setup network
+        - Create a VPC
+        - Create public and private subnets
+        - Create an internet gateway
+        - Attach Internet Gateway to public subnet
             
 
 #AWS Theories

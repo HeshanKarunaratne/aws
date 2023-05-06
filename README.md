@@ -917,8 +917,12 @@ Create API with Amazon API Gateway and Lambda
         - Create public and private subnets
         - Create an internet gateway
         - Attach Internet Gateway to public subnet
-            
-
+    5. Create ECS cluster
+        - Create Task Definition
+        - Create Services
+        - Create Application Load Balancer
+        - Create Nat Gateway
+              
 #AWS Theories
 
 1 . What is Cloud Computing

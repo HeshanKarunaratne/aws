@@ -922,6 +922,13 @@ Create API with Amazon API Gateway and Lambda
         - Create Services
         - Create Application Load Balancer
         - Create Nat Gateway
+      
+![Diagram](resources/images/services-11.PNG "Diagram")  
+- Steps
+    - Automating the whole process
+    1. Create CodePipeline pipeline and connect to github as the source and map the github repository
+    2. Create CodeBuild project
+    
               
 #AWS Theories
 

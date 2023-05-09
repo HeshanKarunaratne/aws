@@ -928,8 +928,29 @@ Create API with Amazon API Gateway and Lambda
     - Automating the whole process
     1. Create CodePipeline pipeline and connect to github as the source and map the github repository
     2. Create CodeBuild project
+ 
+45 . 5 Steps to Design Your DynamoDB Database
+- Data modeling is how an application stores data in a given database related to the real world entities
+
+- Relational Databases
+    1. Optimized for storage with data normalization
+    2. Each table has a strict schema
+    3. Need more compute power to retrieve data from multiple tables
+    4. Performance may degrade as the database scales
     
-              
+- NoSQL Databases
+    1. Optimized for compute
+    2. Flexible schema
+    3. Designed for highly scalable application(Horizontal)
+    
+- For caching on DynamoDB use DAX(DynamoDB Accelerator)
+- 5 Step Process
+    1. Draw an entity diagram
+    2. Identify the relationships between entities
+    3. List down all the access patterns for each entity
+    4. Identify the primary key for each entity
+    5. Identify secondary indexes for additional access patterns
+       
 #AWS Theories
 
 1 . What is Cloud Computing

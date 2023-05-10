@@ -946,11 +946,32 @@ Create API with Amazon API Gateway and Lambda
 - For caching on DynamoDB use DAX(DynamoDB Accelerator)
 - 5 Step Process
     1. Draw an entity diagram
+        ![Diagram](resources/images/services-12.PNG "Diagram")  
     2. Identify the relationships between entities
     3. List down all the access patterns for each entity
+        - Organization
+            1. All CRUD operations
+            2. Find all the projects of an organization
+            3. Find all the employees of an organization
+            4. Find all the projects and employees of an organization
+            5. Find an organization by name
+        - Project
+            1. All CRUD operations
+            2. Find a project by name
+            3. Find the employees assigned to a project'
+            4. Find agile /fixed-bid projects
+            5. Find on-hold projects
+        - Employee
+            1. All CRUD operations
+            2. Find all the projects an employee is part of
+            3. Find an employee by name
     4. Identify the primary key for each entity
+        ![Diagram](resources/images/services-13.PNG "Diagram")  
     5. Identify secondary indexes for additional access patterns
-       
+     
+
+         
+
 #AWS Theories
 
 1 . What is Cloud Computing

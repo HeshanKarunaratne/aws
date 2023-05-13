@@ -958,7 +958,7 @@ Create API with Amazon API Gateway and Lambda
         - Project
             1. All CRUD operations
             2. Find a project by name
-            3. Find the employees assigned to a project'
+            3. Find the employees assigned to a project
             4. Find agile /fixed-bid projects
             5. Find on-hold projects
         - Employee
@@ -969,7 +969,10 @@ Create API with Amazon API Gateway and Lambda
         ![Diagram](resources/images/services-13.PNG "Diagram")  
     5. Identify secondary indexes for additional access patterns
      
-
+46 . Additional Access Patterns
+- Inverted Index
+- GSI Overloading
+- Sparse Index
          
 
 #AWS Theories

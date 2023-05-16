@@ -973,7 +973,10 @@ Create API with Amazon API Gateway and Lambda
 - Inverted Index
 - GSI Overloading
 - Sparse Index
-         
+     
+47 . AWS Amplify DataStore          
+- DataStore with Amplify is a powerful combination that provides a seamless way to handle data synchronization and offline functionality in your applications
+
 
 #AWS Theories
 

@@ -976,7 +976,7 @@ Create API with Amazon API Gateway and Lambda
      
 47 . AWS Amplify DataStore          
 - DataStore with Amplify is a powerful combination that provides a seamless way to handle data synchronization and offline functionality in your applications
-
+- When testing locally all the data is saved in Indexed DB
 
 #AWS Theories
 

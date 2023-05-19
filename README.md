@@ -978,6 +978,15 @@ Create API with Amazon API Gateway and Lambda
 - DataStore with Amplify is a powerful combination that provides a seamless way to handle data synchronization and offline functionality in your applications
 - When testing locally all the data is saved in Indexed DB
 
+48 . Encrypting Data with AWS KMS
+- Implement encryption for both data-in-transit(SSL) and data-at-rest
+- Steps
+    - Client Side Encryption
+        - You encrypt your data and manage your own keys
+    - Server Side Encryption
+        - AWS encrypts your data and manages the key for you
+
+
 #AWS Theories
 
 1 . What is Cloud Computing

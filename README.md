@@ -996,6 +996,11 @@ Create API with Amazon API Gateway and Lambda
     - AWS Encryption SDK
         - If we need to encrypt data in general in client side use AWS Encryption SDK
 
+49 . AWS Lambda Layers - Sharing Code Between Lambda Functions
+- Lambda layer is an archive that can contain additional code or other content. A layer can contain libraries, a custom runtime, data, or configuration files.
+- Local development doesn't have access to lambda layers
+- When lambda layer is updated we need to change the version number as well. Need a solution to overcome that as well
+
 #AWS Theories
 
 1 . What is Cloud Computing

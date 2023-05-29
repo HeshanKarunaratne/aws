@@ -1001,6 +1001,16 @@ Create API with Amazon API Gateway and Lambda
 - Local development doesn't have access to lambda layers
 - When lambda layer is updated we need to change the version number as well. Need a solution to overcome that as well
 
+50 . Upload Large Payloads - AWS Lambda and S3
+
+![Diagram](resources/images/services-14.PNG "Diagram")  
+- API Gateway can only supports 10MB of payloads
+- Lambda invocation maximum payload is 6MB
+
+- According to the architecture S3 bucket will send an event to Lambda function
+- We need to upload to S3 using a S3 presigned url and trigger a lambda asynchronously
+- To get a presigned url there will be a method added to API gateway
+
 #AWS Theories
 
 1 . What is Cloud Computing

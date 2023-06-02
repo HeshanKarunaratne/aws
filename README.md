@@ -1015,7 +1015,13 @@ Create API with Amazon API Gateway and Lambda
 
 ![Diagram](resources/images/services-15.PNG "Diagram")  
 
-
+52 . Kibana Dashboard with AWS ElasticSearch and Cloud Watch
+- Steps
+    1. Navigate to Cloud watch log group and select the log group
+    2. Create an ElasticSearch subscription filter
+    3. We need to have IAM role that index logged data to ES using a lambda function
+    4. Configure a filter pattern so that it will limit the data that gets indexed to ES
+    5. Create an index pattern in kibana
 
 #AWS Theories
 

@@ -1023,6 +1023,13 @@ Create API with Amazon API Gateway and Lambda
     4. Configure a filter pattern so that it will limit the data that gets indexed to ES
     5. Create an index pattern in kibana
 
+53 . Gatsby on AWS - Building A Complete Project
+- Steps
+    1. npm i -g gatsby-cli@2.12
+    2. npm i -g @aws-amplify/cli@4.21
+    3. Generate gatsby new project from template
+    4. Add amplify as well
+
 #AWS Theories
 
 1 . What is Cloud Computing

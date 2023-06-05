@@ -1030,6 +1030,24 @@ Create API with Amazon API Gateway and Lambda
     3. Generate gatsby new project from template
     4. Add amplify as well
 
+54 . How to Built an Online Store
+- Steps
+    ![Diagram](resources/images/services-16.PNG "Diagram")  
+    1. Add amplify library 
+        - npm i -g @aws-amplify/cli@4.24
+    2. Config AWS
+        - amplify configure(administrator access is default selected)
+    3. amplify init: to generate an amplify project
+    4. Add authentication
+        - amplify add auth
+    5. Add storage
+        - amplify add storage
+    6. Add 2 lambda function
+        - amplify add function
+    7. Add graphql api
+        1 amplify add graphql
+
+
 #AWS Theories
 
 1 . What is Cloud Computing

@@ -1046,6 +1046,7 @@ Create API with Amazon API Gateway and Lambda
         - amplify add function
     7. Add graphql api
         1 amplify add graphql
+    8. Always estimate your cloud cost as well
 
 
 #AWS Theories

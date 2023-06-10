@@ -1048,6 +1048,13 @@ Create API with Amazon API Gateway and Lambda
         1 amplify add graphql
     8. Always estimate your cloud cost as well
 
+55 . Amazon Honeycode
+- Can build 3 Tier business applications without coding
+- Runs on Web and mobile
+- Share data in real time
+- Send notifications 
+- Manage business workflows
+
 
 #AWS Theories
 

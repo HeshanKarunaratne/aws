@@ -1055,6 +1055,12 @@ Create API with Amazon API Gateway and Lambda
 - Send notifications 
 - Manage business workflows
 
+56 . How to add custom domains with HTTPS
+- Attach SSL certificate
+    1. Cloudfront distribution layer
+    2. Application Load Balancer layer
+    3. Elastic Beanstalk layer
+    4. Using amplify console
 
 #AWS Theories
 

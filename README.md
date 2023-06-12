@@ -1062,6 +1062,16 @@ Create API with Amazon API Gateway and Lambda
     3. Elastic Beanstalk layer
     4. Using amplify console
 
+57 . Continuous Deployment with AWS Amplify
+- Creating multiple braches to point to different environments
+    1. master -> prod
+    2. develop -> dev
+    3. test -> qa
+- Steps
+    1. Connect all the remaining branches
+    2. Navigate to Domain Management and click manage subdomains
+    3. Create dev-{naked-domain} -> dev repo and qa-{naked-domain} -> test
+
 #AWS Theories
 
 1 . What is Cloud Computing

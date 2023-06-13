@@ -1063,7 +1063,7 @@ Create API with Amazon API Gateway and Lambda
     4. Using amplify console
 
 57 . Continuous Deployment with AWS Amplify
-- Creating multiple braches to point to different environments
+- Creating multiple branches to point to different environments
     1. master -> prod
     2. develop -> dev
     3. test -> qa
@@ -1071,6 +1071,10 @@ Create API with Amazon API Gateway and Lambda
     1. Connect all the remaining branches
     2. Navigate to Domain Management and click manage subdomains
     3. Create dev-{naked-domain} -> dev repo and qa-{naked-domain} -> test
+
+58 . AWS Amplify Console - Password Protect Websites
+- If you want to send an unreleased version to a stakeholder you can use the password protection to an environment using amplify
+- Navigate to Access control and select the branch and select "Password Required"
 
 #AWS Theories
 

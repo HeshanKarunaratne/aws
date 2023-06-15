@@ -1083,6 +1083,27 @@ Create API with Amazon API Gateway and Lambda
     2. Link a github project and select the branch and deploy
     3. Click on previews
     
+60 . Web Content Compression with AWS CloudFront - Brotli vs GZip
+- Steps
+    1. Create a serverless app
+        - serverless create --template aws-nodejs
+    2. Deploy api
+        - sls deploy --stage dev
+    3. Create cloudfront 
+    4. Compression applying at cloudfront level(Create behaviours for all the endpoints separately)
+        1. Not applying compression
+            - set cache policies
+            - uncheck cache gzip and cache brotli objects
+            - select no as compression
+        2. Applying GZip compression
+            - set cache policies
+            - check only gzip
+            - select yes as compression
+        3. Applying Brotli compression
+            - set cache policies
+            - check only brotli
+            - select yes as compression
+
 
 #AWS Theories
 

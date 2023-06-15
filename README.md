@@ -1076,6 +1076,14 @@ Create API with Amazon API Gateway and Lambda
 - If you want to send an unreleased version to a stakeholder you can use the password protection to an environment using amplify
 - Navigate to Access control and select the branch and select "Password Required"
 
+59 . AWS Amplify DevOps - Building Pull Requests
+- PR reviews work only for private repositories
+- Steps
+    1. Navigate to aws amplify and click deploy
+    2. Link a github project and select the branch and deploy
+    3. Click on previews
+    
+
 #AWS Theories
 
 1 . What is Cloud Computing

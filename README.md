@@ -1340,3 +1340,72 @@ If CPU < 50% -------------------------> Decrease to 1 server
 # Exam Guides
 - Define solutions using architectural design principals based on customer requirements
 - Provide implementations based on best practices to the organization throughout the lifecycle of the project
+
+
+# Cloud Practitioner
+
+1 . Which AWS services should be used for read/write of constantly changing data?
+- Amazon Glacier is used for archiving and infrequently accessing
+- Amazon Redshift is an OLAP transaction and for analytical purposes only
+- Snowball is a petabyte scale data transport solution that used to transfer large amounts of data into and out of cloud
+- Amazon RDS is an OLTP transactions and can achieve this scenario
+- Amazon EFS is a file system and can be used for the scenario
+
+2 . What is the advantage of RDS?
+- 99.99999999999% reliability and durability is an S3 feature
+- Amazon Aurora scales databases for load
+- You cannot dynamically adjust CPU and RAM
+- It simplifies relational administrative overhead
+    
+3 . How to run MySQL database that scales easily
+- Redshift is used for data warehousing
+- DynamoDB is a NoSQL database
+- ElastiCache is a caching service
+- Aurora can be a good fit for MySQL and PostgreSQL
+    
+4 . Which of the following components of the AWS Global infrastructure consists of the one or more discrete data centers interconnected through low latency links?
+- Edge Locations are closer to users than Regions or Availability Zones
+- Region consists of multiple AZ and AZ consists of multiple data centers
+- Availability Zone consists of one or more discrete data centers interconnected through low latency links
+    
+5 . Which is shared control between the customer and AWS
+- Providing a key for S3 client side encryption - customer only
+- Configuring EC2 instance - customer only
+- Environmental controls of physical AWS data centers - AWS 
+- Awareness for customers and training provide by AWS
+    
+6 . Minimum of 2 AZ is needed to achieve High Availability and there are 99 AZ in total as of now
+
+7 . Advantage of moving infrastructure from an on premises to AWS cloud is?
+- IT bills are not eliminated, but reduced, Pay as you go model. Capital expenditures are major purchases that a company makes, which are used over the long term. Operating expenses, on the other hand, are the day-to-day expenses that a company incurs to keep its business running.
+- Business needs to apply patches when ever an update is necessary
+- It allows the business to focus on business activities
+
+8 . What is the lowest cost, durable storage option for retaining backups for immediate retrieval?
+- Glacier is not used for immediate retrieval
+- EBS is an elastic Block Store for EC2, but it is costly
+- EC2 instance store is identical to a RAM or memory and it is temporary and only upto 1TB of data can be accommodate
+- S3 is an option for scenario
+    
+9 . Which is a fast and reliable NoSQL database service?
+- Redshift is SQL based
+- RDS is SQL based
+- S3 is Object storage based
+- DynamoDB matches
+    
+10 . Which service should a customer use to consolidate and centrally manage multiple AWS accounts?
+- AWS IAM is for Identity and Access Management of users, groups and roles
+- AWS Config monitor the config changes that happen to aws resources over the time and logs it
+- AWS Organizations
+    
+11 . What approach is used to transcoding many individual video files adheres to AWS architecture principles?
+- Using a single large instance during off-peak hours is not an appropriate way
+- Dedicated hardware will not complete the job, need degree of parallelism
+- Using a large GPU instance type is good but many instances running parallel is much better
+- Using many instances in parallel is the solution
+    
+12 . Which auditing process does AWS have sole responsibility?
+- IAM policies - customer
+- S3 bucket policies - customer
+- CloudTrail Logs - customer
+- Physical security - AWS

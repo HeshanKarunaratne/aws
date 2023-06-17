@@ -1104,6 +1104,11 @@ Create API with Amazon API Gateway and Lambda
             - check only brotli
             - select yes as compression
 
+61. How to Create a Highly Secure MongoDB and Lambda Connection
+- Steps
+    ![Diagram](resources/images/services-17.PNG "Diagram")  
+    - When a VPC peering is enabled all the traffic are traversed through AWS backbone network, so it is not vulnerable to internet attacks
+    
 
 #AWS Theories
 

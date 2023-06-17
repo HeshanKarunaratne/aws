@@ -1414,3 +1414,43 @@ If CPU < 50% -------------------------> Decrease to 1 server
 - S3 bucket policies - customer
 - CloudTrail Logs - customer
 - Physical security - AWS
+
+13 . Which feature of the AWS cloud will support an international company's requirement for low latency to all of its customers?
+- Fault tolerance is the ability of a workload to remain operational with zero downtime or data loss in the event of a disruption
+- Highly availability protect against data center, availability zone, server, network and storage subsystem failures to keep your business running without downtime
+- Global reach is the solution
+
+14 . What is customers responsibility?
+- Patching underline hardware - AWS
+- Patching network infrastructure - AWS
+- Physical security - AWS
+- Patching AWS EC2 instances - customer only
+
+15 . A customer is using multiple AWS accounts with seperate billing. How can the customer take advantage of volume discounts with minimal impact to the AWS resources?
+- Signing up for three years of RI pricing will help to reduce cost but will not help for this scenario
+- If you purchase Enterprise version support plan comes with it
+- Consolidate billing feature from AWS Organizations is the solution
+
+16 . Features of CloudWatch Logs?
+- Summaries of SNS, Amazon ElasticSearch service analytic are not features of CloudWatch logs
+- Custom matrices charges and this is not a feature
+- Real time monitoring, adjustable retention is a feature
+
+17 . AWS Managed DNS web service?
+- Amazon Neptune: graph database
+- Amazon SageMaker: Machine Learning tool
+- Amazon Route 53 is the solution
+
+18 . A customer is deploying a new application and needs to choose an AWS Region. Which of the following factor could influence the customer's decision?
+- Proximity to the customers office for on site visit, cooling costs in hotter climates are not solutions
+- Reduced latency to users, data sovereignty compliance are solutions
+
+19 . Low cost option for hosting static websites?
+- Glacier, DynamoDB, EFS are not solutions
+- S3 is a solution
+
+20 . Which EC2 instance pricing model can provide discounts up to 90%?
+- Dedicated hosts - entire hardware will be allocated for you and this is the most expensive and this is not a solution
+- On demand - Less expensive than dedicated hosts and this is not a solution
+- Reserved Instances - Less expensive than on demand and need to pay upfront for 1-3 years and this is not a solution 
+- Spot instances is the solution but this not good for hosting critical application

@@ -1108,8 +1108,29 @@ Create API with Amazon API Gateway and Lambda
 - Steps
     ![Diagram](resources/images/services-17.PNG "Diagram")  
     - When a VPC peering is enabled all the traffic are traversed through AWS backbone network, so it is not vulnerable to internet attacks
+
+62 . Stop Lambda Cold Starts in your Serverless Apps
+- What is cold start?
+![Diagram](resources/images/services-21.PNG "Diagram")
+
+- Lambda Ping(CloudWatch event that pings the lambda)
+![Diagram](resources/images/services-22.PNG "Diagram")
+
+- Steps
+    1. CloudWatch will issue a schedule event and it will ping the lambda so that it will keep the execution environment active
+    2. Lambda will try to remove this execution environment probably after 1 hour
+    3. Add npm i serverless-plugin-warmup dependency
+    4. Add customer warmup block in serverless.yml
     
-62 . How did we reduce costs by 30% using AWS Shared VPC
+- Lambda Provision concurrency
+![Diagram](resources/images/services-23.PNG "Diagram")
+
+- Steps
+    1. For an AWS account you get 1000 provision concurrencies
+    2. It will generate x number of pre warmed environments
+    3. Add provisionedConcurrency variable in serverless.yml    
+
+63 . How did we reduce costs by 30% using AWS Shared VPC
 - Steps
     ![Diagram](resources/images/services-18.PNG "Diagram")  
     1. AWS Transit Gateway

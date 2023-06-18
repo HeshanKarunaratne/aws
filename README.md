@@ -590,7 +590,7 @@ Create API with Amazon API Gateway and Lambda
 
 - Steps
     1. 'amplify api add' and choose graphql
-        ~~~graphql
+        ~~~text
             type Department @model{
                 id: ID!
                 name: String 
@@ -1104,11 +1104,20 @@ Create API with Amazon API Gateway and Lambda
             - check only brotli
             - select yes as compression
 
-61. How to Create a Highly Secure MongoDB and Lambda Connection
+61 . How to Create a Highly Secure MongoDB and Lambda Connection
 - Steps
     ![Diagram](resources/images/services-17.PNG "Diagram")  
     - When a VPC peering is enabled all the traffic are traversed through AWS backbone network, so it is not vulnerable to internet attacks
     
+62 . How did we reduce costs by 30% using AWS Shared VPC
+- Steps
+    ![Diagram](resources/images/services-18.PNG "Diagram")  
+    1. AWS Transit Gateway
+        - AWS Transit Gateway connects your Amazon Virtual Private Clouds (VPCs) and on-premises networks through a central hub
+        - We can manage routing logics, VPC to VPC, VPC to VPN
+    ![Diagram](resources/images/services-19.PNG "Diagram")  
+    2. However, if we have 1 VPC that spans across all the AWS accounts then all the network will be managed by 1 VPC
+    ![Diagram](resources/images/services-20.PNG "Diagram")  
 
 #AWS Theories
 
@@ -1454,3 +1463,162 @@ If CPU < 50% -------------------------> Decrease to 1 server
 - On demand - Less expensive than dedicated hosts and this is not a solution
 - Reserved Instances - Less expensive than on demand and need to pay upfront for 1-3 years and this is not a solution 
 - Spot instances is the solution but this not good for hosting critical application
+
+21 . Web servers running on EC2 access a legacy application running in a corporate data center. What term describe this model?
+- Cloud native - Everything is on AWS, not a solution
+- Partner network - not a solution
+- Hybrid Architecture - Cloud and on premise mix - solution
+
+22 . Benefits of using AWS managed services, Amazon ElastiCache and Amazon RDS?
+- SQL server on EC2 - Needs to monitor and replace failing instances, since it is RDS you dont need to do patching and updating 
+- They have better performance than customer managed services is the solution
+
+23 . Which service provides unlimited amount of online highly durable object storage?
+- Redshift is a data warehouse, OLAP for analytical
+- EFS is a file store
+- ECS is a container service for microservices
+- S3 is the solution
+
+24 . Which of the following IAM entities are associated with an access key id and secret access key when using AWS CLI?
+- IAM group - list of users added to a group, not a solution
+- IAM role - tells what are the things that the user with role can do and cant do, not a solution
+- IAM user is the solution
+
+25 . Which of the following security related services does AWS offer?
+- Data encryption and AWS trusted advisor security checks are solutions
+
+26 . Which AWS managed service is used to host databases?
+- AWS Data pipeline - For migration
+- AWS batch - Create batch and schedule tasks
+- Amazon RDS is the solution
+
+27 . Which service provides a simple and scalable shared file storage solution for use with linux based AWS and on premises servers?
+- S3 - Object store, not a solution
+- Glacier - Part of S3, not a solution
+- Amazon EBS - Block storage and part of EC2
+- Amazon EFS - is a file based service(does not work with microsoft, works with linux) and the solution
+
+28 . When architecting cloud applications, which of the following are a key design principle?
+- Using the largest instance, provision capacity for peak load, use scrum development process are not the solutions
+- Implement elasticity is the solution
+
+29 . Which AWS service should be used for long term, low cost storage of data backups?
+- AWS Snowball - Way of migrating data from on premises to cloud
+- AWS EBS - Storage for EC2 instances, costlier than S3 and glacier
+- Amazon Glacier is the solution
+
+30 . What is shared responsibility between AWS and the customer?
+- Patch management is the solution
+
+31 . Which AWS service allows companies to connect an AWS VPC to an on-premise data center?
+- AWS VPN - Can use to securely access resources within both AWS and on-premise business networks
+- API Gateway - acts as a gateway for routing API and not the solution
+- Direct Connect is the solution and supports encryption to the connection between on premises and VPC
+
+32 . Which service reduce the physical compute footprint by enabling serverless architectures?
+- AWS CodeCommit - Repository to storing code
+- AWS Lambda is the solution
+
+33 . Which task is AWS responsible for in the shared responsibility model for security and compliance?
+- Grating access to individuals and services using IAM - customer
+- Encrypting data in transit - customer
+- Updating operating system - shared
+- Updating EC2 host firmware - AWS
+
+34 . Where should a company go to search software listings from independent software vendors to find, test and deploy software that runs in AWS?
+- AWS artifact is for compliance reports and stuff eg: HIPAA
+- Amazon Cloudsearch - Simple and cost-effective to set up, manage, and scale a search solution for your website or application
+- AWS Marketplace when creating EC2 instances is the solution
+
+35 . Which of the following is a benefit of using AWS cloud?
+- Control over cloud network, choice of specific cloud hardware vendors, permissive security removes the administrative burden are not the solutions
+- Ability to focus on revenue generating activities is the solution
+
+36 . Which model supports physical isolation of a customer workload?
+- Dedicated Host is the answer
+
+37 . Which AWS service provides the ability to manage infrastructure as a code?
+- AWS Codepipeline - Create a pipeline for CICD purpose
+- AWS CodeDeploy - Auto Deployment once you commit to CodeCommit or similar github repo
+- AWS Cloudformation is the solution, terraform is also possible
+
+38 . If a customer needs to audit the change management of AWS resources which of the following AWS services should the customer use?
+- AWS Cloudwatch monitor metrices and logs
+- AWS Trusted Advisor provides recommendations that help you follow AWS best practices
+- AWS Inspector - Automated vulnerability management service that continually scans AWS workloads for software vulnerabilities
+- AWS Config is the solution
+
+39 . Which service allows a company with multiple AWS accounts to combine its usage to obtain volume discounts?
+- AWS Server Migration Service is used to migrate servers
+- AWS Budgets is the simplest way to monitor your AWS spend and be alerted when you exceed or are forecasted to exceed your desired spending limit
+- AWS Organizations is the solution
+
+40 . Which of the following services could be used to deploy application server to servers running on-premise?
+- Elastic BeanStalk only within AWS only, not a solution
+- AWS batch only for AWS Compute only, not a solution
+- AWS X-Ray is used to analyze and debug application, not a solution
+- AWS CodeDeploy will deploy to on-premise severs and is a solution
+- AWS Opswork use Chef and Puppet and can deploy to on-premise servers and is a solution
+
+41 . Which amazon EC2 pricing model adjust based on supply and demand of EC2 instances?
+- Spot instances is the solution and always use non critical workloads along, can get upto 90% discounts with compared to on demand instances
+
+42 . What principles to check when re-architecting a large monolithic application?
+- Using fixed servers, rely on individual components, use manual monitoring are not solutions
+- Design for scalability, implement loose coupling are the solutions
+
+43 . Which is the minimum AWS support plan that allows for one hour target response time for support cases?
+- For Business and Enterprise level you get support within 1 hour. Since the question asked minimum Business is the solution
+
+44 . What is AWS Certificate Manager?
+- ACM is used to provision, manage, and deploy public and private SSL(Secure Socket Layer)/TLS(Transport Layer Security) certificates for use with AWS services and your internal connected resources
+
+45 . Advantage of using consolidated billing on AWS?
+- Volume pricing qualification is the solution yet you need to tag the resources
+
+46 . Which of the following AWS feature enables the user to launch a pre configured Amazon EC2 instance?
+- Amazon Appstream is a fully managed non persistent application and desktop streaming service, not a solution
+- AMI is the solution
+
+47 . How would an AWS customer easily apply common access controls to a large set of users?
+- Apply an IAM policy to an IAM group is the solution
+
+48 . What technology enables compute capacity to adjust as load changes?
+- Auto scaling
+
+49 . What services are global?
+- AWS IAM, Organization, CloudFront, Route53, Global Accelerator, Direct Connect, WAF, Firewall Manager are global resources
+
+50 . Which of the following are customers responsibility?
+- Ensuring that application data is encrypted at rest, ensures that users have received training in the use of AWS services are the solutions
+
+51 . Which AWS service can be used to manually launch instance based on resource requirement?
+- AWS EBS is a storage EC2 uses
+- AWS EC2 is the solution
+ 
+52 . Financial benefit of using AWS?
+- Reduced Total Cost of Ownership(TCO)
+- Decrease capital expenditures
+- Decrease operational expenditures
+
+53 . Which AWS Cost management tool allows you to view the most granular data about your AWS bill?
+- AWS Budgets give you forecasted value of the cost, alerts when the cost exceeds the expected cost value and not a solution
+- AWS Billing dashboard is also correct but here we need the most granular data, so this is also not a solution
+- AWS Cost and Usage report is the solution
+
+54 . Which of the following can a customer use to launch new RDS cluster?
+- AWS Concierge is a senior support consultant
+- CloudFormation, AWS Management console are the solution
+
+55 . Which of the following is a design principle of AWS?
+- Implement loose coupling is the solution
+
+56 . Which of the following security measures protect access to AWS account?
+- Enabling cloudTrail,create one IAM user and share it with many users, enabling cloudfront are not solutions
+- Grant least privilege to IAM user, enabling multi factor authentication for privilege users are solutions
+
+57 . Which service provides a hybrid storage service that enables on-premise applications to seamlessly use cloud storage?
+- Glacier is not a hybrid option hence not a solution
+- Snowball is a hybrid option but it cannot seamlessly use cloud storage hence not a solution
+- AWS EBS is only for EC2 storage and only works in AWS hence not a solution
+- AWS Storage gateway is the solution

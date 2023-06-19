@@ -1643,3 +1643,225 @@ If CPU < 50% -------------------------> Decrease to 1 server
 - Snowball is a hybrid option but it cannot seamlessly use cloud storage hence not a solution
 - AWS EBS is only for EC2 storage and only works in AWS hence not a solution
 - AWS Storage gateway is the solution
+
+58 . Which of the following services falls under the responsibility of the customer to maintain operating system configuration, security patching and network?
+- AWS Fargate, RDS, ElastiCache are managed services and hence not the solution
+- AWS EC2 is the solution
+
+59 . Which of the following is an important architectural design principal when designing cloud application?
+- Use multiple AZ is the solution
+
+60 . Which plan includes a Dedicated Technical Account Manager?
+- Enterprise is the solution
+
+61 . RDS offers which of the following benefits over traditional database management?
+- AWS manages data stored in RDS tables, AWS automatically scales up instance types on demand, AWS manages the database types are not solutions
+- AWS Manages the maintenance of the Operating System is the solution
+
+62 . Which service is best for storing common database query results?
+- Amazon ElastiCache is the solution
+
+63 . Which of the following is a component of the shared responsibility model managed entirely by AWS?
+- Patching OS software - customer
+- Encrypting data - customer
+- Enforcing multi factor authentication - customer
+- Auditing physical data center assets - AWS - solution
+
+64 . If each department within the company has its own AWS account, what is one way to consolidate billing?
+- Using AWS budgets on each account to pay only the budget, contacting AWS support for a monthly bill are not solutions
+- Create an AWS Organization from the payer account and invite the other accounts to join is the solution 
+
+65 . Which AWS services can be used to gather information about AWS account activity?
+- AWS Cloud9 is a cloud-based integrated development environment and not a solution
+- AWS CloudHSM is a cryptographic service for creating and maintaining hardware security modules and not a solution
+- AWS CloudTrail(Mostly used for auditing purposes) and CloudWatch are the solutions
+
+66 . In which scenario should AWS EC2 spot instances be used?
+- Any critical job should not be used as spot instances
+- A company has a number of infrequent, interruptible jobs that are currently using on demand instances is the solution
+
+67 . Which AWS feature should a customer leverage to achieve HA of an application?
+- Direct connect is to establish a secure connection from on-premise to AWS and not a solution 
+- Availability Zones is a solution
+
+68 . Which is the minimum AWS support plan that includes infrastructure Event Management without additional costs?
+- Business and Enterprise plans support it since it is asking for the minimum Business is the solution
+
+69 . Which AWS service can serve a static website?
+- AWS QuickSight - ML powered business intelligence (BI) tool build for cloud and not a solution
+- AWS X-Ray - Analyze and debug production and distributed applications and not a solution
+- S3 is the solution
+
+70 . How does AWS shorten the time to provision IT resources?
+- AWS Proton automates management for container and serverless deployments
+- It provides the ability to programmatically provision existing resources is the solution
+
+71 . What can AWS edge locations be used for?
+- Not used for hosting applications, running NOSQL database caching(DAX - DynamoDB Accelerator) services, sending notification messages to end users
+- Delivering content closer to users, reducing traffic on the server by caching responses are the solutions
+
+72 . Which of the following can limit S3 bucket access to specific users?
+- Bucket policy, AWS IAM policies are the solutions
+
+73 . A solution that is able to support growth in users, traffic or data size with no drop in performance aligns with which cloud principle?
+- Implement Elasticity is the solution
+
+74 . A company will be moving from on premises data center to the AWS Cloud. What will be one financial difference after the move?
+- Moving from upfront capital expense to variable operational expense
+
+75 . How should a customer forecast the future costs for running a new web application?
+- Amazon Aurora Backtrack is to restore to a point in time hence not a solution
+- CloudWatch Billing Alarms are to setup alarms hence not a solution
+- AWS Cost and usage report contains most comprehensive set of data available including additional metadata hence not a solution
+- AWS Simple Monthly calculator is the solution
+
+76 . Which is the minimum AWS plan that provides technical support through phone calls?
+- Business and enterprise and hence asking for minimum Business is the solution
+
+77 . Which of the following tasks is the responsibility of AWS?
+- Encrypting client side data - customer, not a solution
+- Configuring IAM roles - customer, not a solution
+- Setting user password policies - customer, not a solution
+- Securing the EC2 hypervisor - AWS and the solution
+
+78 . One benefit of on demand EC2 pricing is?
+- Paying only for the time used ins the solution
+
+79 . An administrator needs to rapidly deploy a popular IT solution and start using it immediately. Where can the administrator find assistance?
+- AWS well-Architected framework documentation(How best practices can be leveraged) is not the solution
+- AWS Quick start reference deployments is the solution
+
+80 . Which of the following services is in the category of AWS serverless platform?
+- AWS EMR - Elastic MapReduce(Easily run and scale Apache Spark, Hive, Hadoop and other big data workloads)
+- AWS Lambda is the solution
+
+81 . Which services are parts of the AWS serverless platform?
+- AWS Step functions, Amazon DynamoDB, Amazon SNS, AWS Lambda, Fargate, AWS EventBridge,AWS SQS, 
+Api Gateway, AppSync, S3, EFS, Aurora Serverless, Redshift Serverless, OpenSearch Serverless are all serverless services provided by AWS
+
+82 . According to the AWS shared responsibility model, what is the sole responsibility of AWS?
+- Application security - customer, not the solution
+- Patch Management - customer, not the solution
+- Client side data - customer, not the solution
+- Edge Location management - AWS, the solution
+
+83 . Which AWS IAM feature is used to associate a set of permission with multiple users?
+- Groups is the solution
+
+84 . Which of the following are benefits of the AWS cloud?
+- Elasticity, Agility are the solution
+
+85 . Which of the following can a customer use to enable single sign on to the AWS cloud?
+- Amazon Pinpoint to send push notifications, in-app notifications, emails, text messages, voice messages, and messages over custom channels
+- Amazon Rekognition is an image recognition service that detects objects, scenes, activities, landmarks, faces, dominant colors, and image quality
+- Amazon Directory Service - For active directory purposes and the solution
+
+86 . What are the multiple isolated locations within an AWS Region that are connected by low latency networks called?
+- AWS VPC is a logically isolated virtual network in the cloud and not a solution
+- Availability Zones is the solution
+
+87 . Which of the following benefits does the AWS Compliance program provide to AWS customers?
+- It verifies that hosted workloads are automatically compliant with the controls of supported compliance frameworks
+- AWS is responsible for the maintenance of common framework documentation
+
+88 . Which of the following services provides on demand access to AWS compliance reports?
+- AWS KMS create and control the keys used to encrypt or digitally sign your data
+- AWS GuardDuty protects your AWS accounts, workloads and data with intelligent threat detection and continuous monitoring
+- AWS Artifact is the solution
+
+89 . When comparing AWS Cloud with on-premises Total Cost of Ownership, which expenses must be considered?
+- Storage hardware and Physical servers are the solution
+
+90 . Which of the following tasks are the responsibility of the customer?
+- Maintaining the underlying EC2 hardware - AWS
+- Replacing failed hard disk drives - AWS
+- Deploying hardware in different AZ - AWS
+- Encrypting data in transit and at rest - customer
+- Managing the VPC network access control list - customer
+
+91 . Which scenarios represent the concept of elasticity on AWS?
+- Scaling the number of EC2 instances based on traffic
+- Resizing RDS instances as business needs change are the solutions
+
+92 . When is it beneficial for a company to use a spot instance?
+- When there is flexibility in when an application needs to run is the solution
+
+93 . How does AWS charge for AWS Lambda?
+- Users pay based on the number of requests and consumed compute resources is the solution
+
+94 . What function do security groups serve related to EC2 instance security?
+- AWS Shield provide protection against DDOS and not a solution
+- Act as a virtual firewall for the EC2 instance is the solution
+
+95 . Which disaster recovery scenario offers the lowest probability of down time?
+- Multi site active-active which is very cost expensive but lowest probability of down time is the solution
+
+96 . What will help a company perform a cost benefit analysis of migrating to AWS cloud?
+- AWS Cost Explorer - Easy to use interface that lets you visualize and manage AWS costs and usage over time and not a solution
+- AWS Trusted advisor is an online tool that provides you real time guidance and recommendation to provision your AWS resources and not a solution
+- AWS Simple Monthly Calculator - Enables you to estimate the monthly cost of AWS services for your use case based on your expected usage and not a solution
+- AWS Total Cost Ownership(TCO) of running workloads in the cloud as it compares to running them on-premises is the solution
+
+97 . Which of the following provides the ability to share the cost benefits of RI across AWS account?
+- Linked accounts and consolidated billing is the solution
+
+98 . A company has multiple AWS accounts and want sto simplify and consolidate its billing process. Which AWS service will achieve this?
+- AWS Organizations is the solution
+
+99 . A company is designing an application hosted in a single AWS region serving end users spread across the world. The company wants to provide the end users low latency access to the application data. Which of the following services will help fulfill this requirement?
+- S3 Transfer Acceleration enables fast easy and secure transfers of files over long distances between your client and S3 bucket
+- AWS CloudFront is the solution
+
+100 . Which of the following deployment models enables customers to fully trade their capital IT expenses for operational expenses?
+- PAAS is not the solution we need to make sure the PAAS is in cloud environment 
+- Cloud is the solution
+
+101 . How is asset management on AWS easier than asset management in a physical data center?
+- AWS Config assess, audit and evaluate your AWS resources and not the solution and this doesn't work for on-premises
+- AWS performs infrastructure discovery scans on the customers behalf is the solution
+
+102 . What feature of RDS helps to create globally redundant(duplicate) databases?
+- Snapshots are used for DR and not a solution
+- Cross Region read replicas is the solution
+
+103 . Using AWS IAM to grant access only to the resources needed to perform a task is a concept known as?
+- Least privilege access is the solution
+
+104 . Which methods can be used to identify AWS costs by departments?
+- Use tags to associate each instance with a particular department is a solution
+- Create separate accounts for each department is a solution
+
+105 . Which of the following is a customer responsibility?
+- Securing the hardware, software, facilities and networks that run all products and services - AWS
+- Providing certificates, reports and other documentation directly to AWS customers under NDA - AWS
+- Obtaining industry certifications and independent third party attestations - AWS
+- Configuring the OS/network and firewall - customer and the solution
+
+106 . Which managed AWS service provides real time guidance on AWS security best practices?
+- AWS Systems manager provides a unified interface so you can view operational data from multiple AWS services and allow you to automate operational tasks across AWS resources and not the solution
+- AWS Trusted Advisor is the solution
+
+107 . Which feature adds elasticity to EC2 instances to handle the changing demand for workloads?
+- EC2 Auto scaling is the solution
+
+108 . Customers are responsible for which of the following in aspect of security?
+- Firewall - customer is a solution
+- Encryption - customer is a solution
+
+109 . Which AWS hybrid storage service enables on premises applications to seamlessly use AWS Cloud storage through standard file storage protocols?
+- AWS Storage Gateway is the solution
+
+110 . What is the responsibility of AWS in the shared responsibility model?
+- Updating the network ACLs to block traffic to vulnerable ports - customer
+- Patching OS running on EC2 instances - customer
+- Updating the security groups rules to block traffic to the vulnerable ports - customer
+- Updating the firmware on the underlying EC2 hosts - AWS is the solution
+
+111 . Which architectural principle is used when deploying an RDS instance in Multiple AZ mode?
+- Design for failure is the solution
+
+112 . What is a benefit of loose coupling as a principle of cloud architecture design?
+- It prevents cascading failures between different components is the solution
+
+113 . Which service will facilitate private hybrid connectivity?
+- Direct connect is the solution when it is private and hybrid

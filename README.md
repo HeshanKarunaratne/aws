@@ -1140,6 +1140,28 @@ Create API with Amazon API Gateway and Lambda
     2. However, if we have 1 VPC that spans across all the AWS accounts then all the network will be managed by 1 VPC
     ![Diagram](resources/images/services-20.PNG "Diagram")  
 
+64 . AWS Shared VPC
+- Steps
+    ![Diagram](resources/images/services-23.PNG "Diagram")  
+    1. We have 2 AWS account(Using AWS Organization)
+        a. Account A - Production
+        b. Account B - Dev
+    2. Add separate Roles and tags for both accounts         
+    3. Create a VPC with CIDR block 10.0.0.0/16 and enable DNS resolution for the VPC
+    4. Create a private subnet with CIDR block 10.0.1.0/24 
+    5. Create a public subnet with CIDR block 10.0.2.0/24
+    6. Create an Internet Gateway and attach to the VPC
+    7. Create a NAT Gateway and assign it to the public subnet and allocate an Elastic IP as well
+    8. Create private Route table
+        - 0.0.0.0/0 directed to NAT Gateway
+    9. Create public Route table
+        - 0.0.0.0/0 directed to internet Gateway
+    10. Navigate to public subnet and navigate to route table and associate to the public route table
+    11. Navigate to private subnet and navigate to route table and associate to the private route table
+    12. Create an ElasticSearch cluster from production account and select Allow open access to the domain
+    
+
+
 #AWS Theories
 
 1 . What is Cloud Computing

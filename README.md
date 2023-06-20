@@ -1887,3 +1887,103 @@ Api Gateway, AppSync, S3, EFS, Aurora Serverless, Redshift Serverless, OpenSearc
 
 113 . Which service will facilitate private hybrid connectivity?
 - Direct connect is the solution when it is private and hybrid
+
+114 . Which mechanism allows developers to access AWS services from application code?
+- AWS SDK is the solution
+
+115 . Which EC2 pricing model is the most cost efficient for an uninterruptible workload that runs once a year for 24 hours?
+- Spot instance is not suitable since it needs to be uninterruptible and not a solution
+- Reserved instance is not suitable since it needs to run once a year for 24 hours and not a solution
+- On demand instances is the solution
+
+116 . Which of the following services is a MYSQL compatible database that automatically grows storage as needed?
+- RDS also MySQL compatible but it doesn't grow storage automatically
+- Amazon Aurora is the solution
+
+117 . Which AWS VPC feature enables users to connect two VPCs together?
+- VPC Peering is the solution
+
+118 . Which services primary purpose is software version control?
+- AWS CodeStar quickly develop, build and deploy applications on AWS
+- AWS CodeCommit is the solution
+
+119 . Which AWS service provides a secure, fast and cost effective way to migrate or transport exabyte-scale datasets into AWS?
+- AWS Migration Hub simplify and accelerate migrations to AWS and not the solution
+- AWS Snowmobile is the solution
+
+120 . Which of the following best describe the AWS pricing model?
+- Pay as you go, variable cost are the solutions
+
+121 . Why should a company choose AWS instead of a traditional data center?
+- AWS does not require long term contracts and provides a pay as you go model is the solution
+
+122 . What solution provides the fastest application response times to frequent accessed data to users in multiple AWS regions?
+- Amazon CloudTrail enable operational and risk auditing, governance, and compliance of your AWS account
+- Amazon CloudFront to edge locations is the solution
+
+123 . What exclusive benefit is provided to users with Enterprise Support?
+- Access to a Technical Account Manager is the solution
+
+124 . How can a user protect against AWS service disruptions if a natural disaster affects an entire geographic area?
+- Deploy applications across multiple AWS Regions is the solution
+
+125 . How does AWS most effectively reduce computing costs for a growing start up company?
+- It provides on demand resources for peak usage is the solution
+
+126 . A startup is working on a new application that needs to go to market quickly. The application requirements may need to be adjusted in the near future. Which of the characteristic of the AWS cloud would meet this specific need?
+- Elasticity, Performance, Reliability are not the solutions
+- Agility is the solution
+
+127 . Which AWS Support plan provides a full set of AWS Trusted Advisor checks?
+- Business and Enterprise is the solution
+
+128 . Which of the following services have DDoS mitigation features?
+- AWS WAF and AWS CloudFront are the solution
+
+129 . When building a cloud TCO model which cost elements should be considered for workloads running on AWS?
+- Compute cost, Storage cost and Network Infrastructure costs are the solutions
+
+130 . What time savings advantage is offered with the use of Amazon Rekognition?
+- Provides automatic detection of objects appearing in pictures is the solution
+
+131 . When comparing AWS with on premises TCO what costs are included?
+- Data center security is the solution
+
+132 . What is AWS responsible for?
+- Configuring VPC - customer
+- Managing application code - customer
+- Maintaining application traffic - customer
+- Managing network infrastructure - AWS is the solution
+
+133 . Which AWS tool will identify SG that grant unrestricted internet access to a limited list of ports?
+- AWS Trusted Advisor provides real time guidance and best practices hence the solution
+
+134 . Which AWS service can be used to generate alerts based on an estimated monthly bill?
+- AWS Config log the configuration changes over the span of time
+- AWS CloudTrail enable operational and risk auditing, governance, and compliance of your AWS account
+- Amazon CloudWatch is the solution
+
+135 . Which pricing model gives the most significant discount when compared to on demand instances?
+- All upfront Reserved instances for a 3 year term is the solution
+
+136 . Which of the following is the responsibility of AWS?
+- Setting up AWS IAM users and groups - customer
+- Patching guest OS - customer
+- Configuring security settings on EC2 - customer
+- Physically destroying storage media at end of life - AWS is the solution
+
+137 . Which of the following is an advantage of using AWS?
+- AWS manages compliance needs is the solution
+
+138 . Which AWS service would a customer use with a static website and lower latency and high transfer speeds?
+- AWS cloudfront is the solution
+
+139 . Which services manage and automate application deployments on AWS?
+- AWS CodeCommit manages code repositories
+- AWS Elastic BeanStalk is used to deploy and scale web application
+- AWS CloudFormation and AWS Elastic BeanStalk are the solution
+
+140 . A user wants guidance On possible savings when migrating from on premises to AWS. Which tool is suitable for this scenario?
+- AWS Well architected toll helps you to review the state of your workloads and compares them to the latest AWS architectural best practices
+- AWS Total Cost of Ownership Calculator is the solution
+

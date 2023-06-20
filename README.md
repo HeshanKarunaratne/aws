@@ -1987,3 +1987,150 @@ Api Gateway, AppSync, S3, EFS, Aurora Serverless, Redshift Serverless, OpenSearc
 - AWS Well architected toll helps you to review the state of your workloads and compares them to the latest AWS architectural best practices
 - AWS Total Cost of Ownership Calculator is the solution
 
+141 . Which principles are used to architect applications for reliability on the AWS cloud?
+- Design for automated failure recovery and use multiple Availability Zones are the solutions
+
+142 . What tasks should a customer perform when that customer suspects an AWS account has been compromised?
+- Rotate passwords and access keys and contact AWS support are the solutions
+
+143 . Which AWS security service protects application from distributed denial of service attacks with always on detection and automatic incline mitigations?
+- AWS Shield is a managed DDoS protection service that safeguards applications running on AWS and it is the solution
+
+144 . A company wants to monitor the CPU usage of its AWS EC2 resources.Which AWS service should the company use?
+- AWS CloudWatch is the solution
+
+145 . What is and AWS IAM role?
+- An entity that defines a set of permissions for use with an AWS resources is the solution
+
+146 . What are the advantage of Reserved Instances?
+- They provide a discount over on demand pricing, customers can reserve capacity in an AZ are the solutions
+
+147 . How do EC2 auto scaling groups help achieve high availability for a web application?
+- They automatically add or remove instances across multiple AZ when the application needs it is the solution
+
+148 . How can one AWS account use RI from another AWS account?
+- By using AWS Organizations consolidated billing
+
+149 . A customer runs an on demand EC2 instance for 3 hours, 5 minutes and 6 seconds. For how much time will the customer be billed?
+- Per second billing 3 hours 5 minutes and 6 seconds is the solution
+
+150 . Which of the following AWS services provide compute resources?
+- AWS Lambda and ECS are solutions
+
+151 . Under the shared responsibility model which of the following areas are the customers responsibility?
+- Firmware upgrades - AWS
+- Patching underlying hypervisor - AWS
+- Physical security of data centers - AWS
+- Patching of OS - customer
+- Configuring the security group - customer
+
+152 . Which service enables customers to audit and monitor changes in AWS resources?
+- AWS Config is the solution
+
+153 . According to the AWS shared responsibility model who is responsible for configuration management?
+- AWS Opswork is a configuration management service that provides managed instances of Chef and Puppet
+- It is shared responsibility of customer and AWS is the solution
+
+154 . Which benefit of the AWS Cloud supports matching the supply of resources with changing workload demands?
+- Elasticity is the solution
+
+155 . Whom should you contact first if there is a DDOS attack?
+- AWS Abuse team is the solution
+
+156 . Which of the following are benefits of hosting infrastructure in the AWS cloud?
+- There are no upfront commitments and users have the ability to provision resources on demand are the solutions
+
+157 . What AWS service would be used to centrally manage AWS access policies across multiple accounts?
+- AWS Organizations is the solution
+
+158 . Which AWS service or feature allows a company to visualize understand and manage AWS costs and usage over time?
+- AWS Cost Explorer is the solution
+
+159 . Which AWS services can host a Microsoft SQL Server database?
+- AWS EC2 and AWS RDS are the solutions
+
+160 . Which AWS characteristics make AWS cost effective for a workload with dynamic user demand?
+- Elasticity and Pay as you go pricing are the solutions
+
+161 . Which of the following are characteristics of S3?
+- An Object storage and a global file system are the solutions
+
+162 . Which services can be used across hybrid AWS Cloud architectures?
+- Amazon Route53 and Virtual Private Gateway are the solutions
+
+163 . AWS supports which of the following methods to add security to IAM users?
+- Using MFA and Enforcing password strength and expiration
+
+164 . Which AWS services should be used for read/write of constantly changing data?
+- AWS RDS and EFS are the solutions
+
+165 . Which of the following are features of CloudWatch Logs?
+- Real time monitoring and Adjustable retention are the solutions
+
+166 . Which of the following AWS services can be used to serve large amounts of online video content with the lowest possible latency?
+- Amazon Cloudfront and S3 are the solutions
+
+167 . Which of the following security related services does AWS offer?
+- AWS Trusted Advisor security checks and Data encryptions are the solutions
+
+168 . Which of the following are categories of AWS Trusted Advisor?
+- Fault tolerance, Cost optimization, security, service limits and Performance are the solutions
+
+169 . Which of the following services could be used to deploy and application to servers running on premise?
+- AWS OpsWork and AWS CodeDeploy are the solutions
+
+170 . Which of the following AWS services should a client utilize to audit the change management of AWS resources?
+- Amazon Inspector is for vulnerability management at scale and not a solution
+- Amazon Config is the solution
+
+171 . What is raised when a business deploys web servers across serveral AWS Regions?
+- Availability is the solution
+
+172 . Which of the following is a shared responsibility of AWS and customer?
+- Patch management is the solution
+
+173 . According to the AWS Shared responsibility model, which job is shared between AWS and the customer?
+- Patch Management and configuration management is the solution
+
+174 . Which of the following is not a duty of the client under the AWS shared responsibility model?
+- Decommissioning of physical storage devices and controlling physical access to data centers are the solution
+
+175 . What attributes of an AWS account can AWS Trusted Advisor monitor and advise on?
+- Performance with services, compliance with security best practices and cost optimization are the solutions
+
+176 . Which feature enables EC2 instances to be more elastic in response to changing workload demand?
+- Virtualization Management is the solution
+
+177 . What is the unique advantage that Enterprise Support customers receive?
+- Access to a Technical Account Manager is the solution
+
+178 . What are the advantages of AWS cloud elasticity?
+- Automatically adjust the required compute capacity to maintain consistent performance is the solution
+
+179 . Which of the following are capabilities of the AWS Cost Management tools?
+- Break down AWS cost by day, service and linked AWS account and create budgets and receive notifications if current of forecasted usage exceeds the budgets are the solutions
+
+180 . Which cost components should be addressed when developping a cloud TCO model for AWS workloads?
+- Compute costs, storage costs, Data transfer costs are the solutions
+
+181 . How should an EC2 instance be granted access to an S3 bucket in accordance with best practices?
+- Have the EC2 instance assume a role to obtain the priviledges to upload the files is the solution
+
+182 . Which of the following price options would result in the highest reduction after making an EC2 dedicated host reservation?
+- All upfront payment is the solution
+
+183 . Which AWS services and/or features increase availability and mitigate the effect of failures while constructing a typical 3 tier web application?
+- AWS Auto scaling for EC2 instances and distributed resources across multiple AZ are the solutions
+
+184 . Which of the following IT responsibilities AWS relieve a company's IT team of?
+- Patching database software and storage capacity planning are the solution
+
+185 . Which of the following describes the root user of an AWS account?
+- The root user is the first sign in identity that is available when an AWS account is created is the solution
+ 
+186 . A business wishes to be alerted when its AWS cloud expenses or usage surpass certain limits. Which AWS offering will meet these requirements?
+- AWS Macie discovers a variety of sensitive data types, evaluate and monitor data for security and access control and not a solution
+- AWS Budgets is the solution
+
+187 . Which AWS services enables customers to establish a network connection between two VPCs?
+- VPC Peering and AWS Transit Gateway is the solution

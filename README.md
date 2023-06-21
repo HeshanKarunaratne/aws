@@ -1159,8 +1159,14 @@ Create API with Amazon API Gateway and Lambda
     10. Navigate to public subnet and navigate to route table and associate to the public route table
     11. Navigate to private subnet and navigate to route table and associate to the private route table
     12. Create an ElasticSearch cluster from production account and select Allow open access to the domain
-    
-
+    13. Navigate to Resource Access Manager(RAM) and select private and public subnet
+    14. Make sure to add Dev account id as Principal and add some tags as well
+    15. Go to AWS Organizations from master account and enable resource sharing
+    16. Create a lambda function and make sure to add elasticsearch inside the VPC private subnet
+    17. Create a production user for production and deploy the lambda to stage prod
+    18. Create a separate SG for dev account that associated with the lambda
+    19. Navigate to production account and find the SG that allows access for ES and add a new inbound path for all the traffic from dev SG as well
+    20. Create a dev user for development account
 
 #AWS Theories
 

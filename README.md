@@ -2260,3 +2260,52 @@ Api Gateway, AppSync, S3, EFS, Aurora Serverless, Redshift Serverless, OpenSearc
 
 225 . A user needs to summarise AWS accounts major security checks with following. Permissions on S3 buckets are now inactive. Whether or not MFA is enabled for the root user of the AWS account. If any SG are set to enable unlimited access, this will be shown.
 - AWS Trusted Advisor report is the solution
+
+226 . Which AWS service enables you to swiftly conduct one-time queries on S3 data?
+- Amazon Athena is the solution
+
+227 . Which AWS service or functionality involves the implementation of an ISP and a colocation facility?
+- AWS Direct Connect is the solution
+
+228 . A business must monitor its AWS accounts and determine when an API request is performed against its AWS resources. Which AWS product or service is most appropriate for meeting these requirements?
+- AWS Cloud Trail is the solution
+
+229 . Which AWS service or feature gives information about planned events that are now occuring or may occur in the near future and may impact an AWS account?
+- AWS Config assess, audit and evaluate configurations of AWS resources and not a solution
+- AWS Personal Health Dashboard is the solution
+
+230 . Which AWS service or feature can help to improve network security by restricting requests for a web application hosted on AWS from a certain network?
+- AWS WAF and Network ACLs are the solutions
+
+231 . Which components are necessary to configure an AWS site-to-site VPN connection successfully?
+- AWS Transit Gateway and Virtual Private Gateway are the solutions
+
+232 . A business need security against increased DDoS assaults on its website, as well as help from AWS professionals in the case of such an attack. Which AWS managed service will satisfy these criteria?
+- AWS Firewall Manager centrally configure and manage firewall rules across AWS accounts and not a solution
+- AWS WAF protect web applications from common exploits and not a solution
+- AWS Shield Advanced is the solution
+
+233 . Which AWS service or functionality allows customers to encrypt data stored in S3 during storage process?
+- Server side encryption is the solution
+
+234 . Which AWS service or feature can be used to create a custom rule that blocks SQL injection attacks?
+- AWS WAF is the solution
+
+235 . What are the advantages of reconfiguring the single account into multiple AWS accounts?
+- It allows for administrative isolation between different workloads and having multiple accounts reduces the risk associated with malicious activity targeted at a single account are the solutions
+
+236 . What type of database is DynamoDB?
+- Neptune is a graph database and not the solution
+- Key-value is the solution
+
+237 . A company is migrating to S3. The company needs to transfer 60TB of data from an on premise data center to AWS within 10 days. Which AWS service should the compnay use to accomplish this migration?
+- AWS Direct connect can do this in about 3 days so not a solution
+- AWS Snowball is the solution
+
+238 . A company wants to perform sentiment analysis on customer service email messages that it receives. Which AWS service should the company use to perform this analysis?
+- Amazon Textract automatically extract printed text handwriting and data from any document and not a solution
+- Amazon Translate fluent and accurate machine translation and not a solution
+- Amazon Comprehend is the solution
+
+239 . Which actions can a system administrator take to connect to the EC2 instance?
+- Use amazon E2 Instance Connect and use the AWS Systems Manager Session Manager are the solutions

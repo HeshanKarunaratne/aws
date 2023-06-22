@@ -2140,3 +2140,123 @@ Api Gateway, AppSync, S3, EFS, Aurora Serverless, Redshift Serverless, OpenSearc
 
 187 . Which AWS services enables customers to establish a network connection between two VPCs?
 - VPC Peering and AWS Transit Gateway is the solution
+
+188 . How can consolidated billing benefit a business with many AWS accounts?
+- It aggregates usage across accounts so that the company can reach volume discounts threshold sooner is the solution
+
+189 . AWS's pay as you go pricing model?
+- Reduces capital expenditures is the solution
+
+190 . What AWS feature relates to customers flexibility to scale up and down applications to meet changeable demand?
+- Scalability is the solution
+
+191 . What AWS feature enables resource supply to be matched to changing workload demands?
+- Elasticity is the solution
+
+192 . A business has chosen to shift its production workloads to the AWS cloud. What activities may assist in lowering operation expenses associated with the migration?
+- Reduce over provisioned instances and use managed services are the solutions
+
+193 . A business want to provide a single user complete access to S3 bucket. Which element in the S3 bucket policy contains information about the users who need access to the S3 bucket?
+- Resource doesn't contain user details hence not a solution
+- Action is the set of permissions you define in the policy hence not a solution
+- Principal species the user, account, service or other entity that is allowed or denied access to the resource is the solution
+
+194 . Which of the following procedures should a client perform while doing penetration testing on AWS?
+- Request and wait for approval from AWS support, and then conduct testing is the solution
+
+195 . Which Amazon EC2 price option is appropriate for applications that need intermittent, spiky or unexpected workloads?
+- For RI and Dedicated hosts you need predictable workloads and not a solution
+- On demand instances is the solution
+
+196 . Which of the following is a duty of the client under the AWS shared responsibility model?
+- Application security is the solution
+
+197 . What strategy contributes to the cost optimization of consumers migrating to the AWS cloud?
+- Paying only for what is used is the solution
+
+198 . Which AWS service can be used to monitor illegal API calls?
+- AWS CloudTrail is the solution
+
+199 . Which AWS service or functionality enables dynamic resource adjustment in response to this change in demand?
+- Amazon EC2 auto scaling is the solution
+
+200 . What enables a business to give a low latency experience to its worldwide users?
+- Using edge locations to put content closer to all users is the solution
+
+201 . A business has optimized its workload by using certain AWS services in order to increase efficiency and minimize costs. Which cost management best practice does this case demonstrate?
+- Architecture optimization is the solution
+
+202 . A customer with an AWS Basic Support subscription has discovered that their AWS resources are being used for unauthorized purposes. What is the preferred mechanism for the user to notify AWS of the activity?
+- Contact AWS Abuse(Trust and Safety) team is the solution
+
+203 . You want to move Microsoft SQL server instance and is transferring its application to AWS. Which database service is most capable of meeting these requirement?
+- Amazon RDS for SQL Server is the solution
+
+204 . What is an example of AWS cloud agility?
+- Decreased acquisition time for new compute resources is the solution
+
+205 . The business wishes to protect its website against SQL injection and Cross site scripting. Which AWS service should the business use?
+- AWS GuardDuty protect your AWS accounts with intelligent threat detection and not a solution
+- AWS WAF is the solution
+
+206 . To enhance customer service, the firm want to establish a phone number that would enable it to handle the growth of calls received by its support employees. Which AWS service should be utilized to fulfill this requirement?
+- AWS Connect is the solution
+
+207 . A business want to evaluate streaming user data and reply in real time to consumer inquiries?
+- AWS KDA is the solution
+
+208 . How should a web application be deployed in the AWS cloud to guarantee high availability?
+- Deploy multiple instances of the application in multiple AZ is the solution
+
+209 . For a developer who requires AWS credentials which security best practices should be adhered to?
+- Grant the developer access to only the AWS resources needed to perform the job and ensure the account password policy requires a minimum length are the solutions
+
+210 . A business has a 500 TB image that has to be moved to AWS for processing. Which AWS service is the most cost effective way to import this data?
+- AWS snowball is the solution
+
+211 . A workload hosted on AWS will continue to operate indefinitely by using a steady number of EC2 instances. Which pricing strategy will decrease costs while assuming the availability of computational resources?
+- RI is the solution
+
+212 . A business is developping an application that will need the capacity to transmit, save and receive messages across its component components. Additionally the corporate requires that communications be processed in FIFO sequence. Which AWS service should the business use?
+- AWS SQS is the solution
+
+213 . What is the function of a VPCs IG?
+- To allows communication between the VPC and the internet is the solution
+
+214 . The AWS IAM recommended practice for providing the fewest possible privileges is as follows?
+- Apply an IAM policy only to IAM users who require it is the solution
+
+215 . A business is relocating and need an encrypted connection to AWS. Which AWS service will assist you in fulfilling this requirement?
+- AWS VPN is the solution
+
+216 . A major corporation has a workload that demands on premises hardware. The organization want to continue using the same management and control plane services as it does on AWS. Which AWS offering should the business employ to achieve these requirements?
+- AWS Device Farm improves the quality of your web and mobile apps by testing across desktop browsers and real mobile devices hosted in the AWS cloud and not a solution
+- AWS Outpost(Runs AWS infrastructure and services on premises for a consistent hybrid experience) is the solution
+
+217 . Which of the following is not a recommended approach for IAM user management?
+- Recommend that the same password be used on AWS and other sites, require IAM user to store their passwords in raw text, disable MFA for IAM users are the solutions
+
+218 . Which AWS services feature assists in identifying harmful or illegal activity in AWS accounts and workloads?
+- Amazon GuardDuty(Protect AWS accounts with intelligent threat detection) is the solution
+
+219 . Which AWS service enables you to get AWS security and compliance information on demand?
+- AWS artifact is the solution
+
+220 . Which AWS service makes use of edge location?
+- AWS Global Accelerator is the solution
+
+221 . Which of the following AWS capabilities allows a user to deploy an EC2 instance that has already been configured?
+- AMI is the solution
+
+222 . A business wishes to send its traffic directly and confidentially to a VPC rather than through the public internet. Which mode of connection enables this capability?
+- VPN uses internet to securely connect to AWS from on premises network and not a solution
+- AWS Direct Connect is the solution
+
+223 . What can be utilized to automate and manage AWS setups that are safe, well architected and multi account?
+- AWS Control Tower(controls multiple AWS accounts and teams, cloud setup and governance) is the solution
+
+224 . Which AWS hybrid storage offering allows users to effortlessly integrate on premises applications with AWS Cloud storage?
+- AWS Storage Gateway is the solution
+
+225 . A user needs to summarise AWS accounts major security checks with following. Permissions on S3 buckets are now inactive. Whether or not MFA is enabled for the root user of the AWS account. If any SG are set to enable unlimited access, this will be shown.
+- AWS Trusted Advisor report is the solution

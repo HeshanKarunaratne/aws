@@ -1142,7 +1142,7 @@ Create API with Amazon API Gateway and Lambda
 
 64 . AWS Shared VPC
 - Steps
-    ![Diagram](resources/images/services-23.PNG "Diagram")  
+    ![Diagram](resources/images/services-24.PNG "Diagram")  
     1. We have 2 AWS account(Using AWS Organization)
         a. Account A - Production
         b. Account B - Dev
@@ -1168,6 +1168,11 @@ Create API with Amazon API Gateway and Lambda
     19. Navigate to production account and find the SG that allows access for ES and add a new inbound path for all the traffic from dev SG as well
     20. Create a dev user for development account
 
+65 . Amazon SQS for Async Processing
+- Steps
+    ![Diagram](resources/images/services-25.PNG "Diagram")  
+    
+    
 #AWS Theories
 
 1 . What is Cloud Computing

@@ -2314,3 +2314,39 @@ Api Gateway, AppSync, S3, EFS, Aurora Serverless, Redshift Serverless, OpenSearc
 
 239 . Which actions can a system administrator take to connect to the EC2 instance?
 - Use amazon E2 Instance Connect and use the AWS Systems Manager Session Manager are the solutions
+
+240 . Which of the following are VPC resources?
+- Subnets and IG are the solution
+
+241 . Which AWS service of tool helps to centrally manage billing and allow controlled access to resources across AWS accounts?
+- AWS Organization is the solution
+
+242 . A company needs to implement identity management for a fleet of mobile apps that are running in the AWS Cloud. Which AWS service will meet this requirement?
+- AWS Security Hub is used to centralize security checks and not a solution
+- Cognito is the solution
+
+243 . A company needs to build an application that uses AWS services. The application will be delivered to residents in European countries. The company must abide by regional regulatory requirements. Which AWS service or program should the company use to determine which AWS services meet the regional requirements?
+- AWS Compliance Program is the solution
+
+244 . Which design principle is achieved by following the reliability pillar of the AWS well architected framework?
+- Testing recovery procedures is the solution
+
+245 . A user is able to set up a master payer account to view consolidated billing reports through?
+- AWS Organizations is the solution
+
+246 . Which AWS service or feature is used to send both text and email messages from distributed applications?
+- AWS SNS is the solution
+
+247 . A company is using Amazon EC2 auto scaling to scale its Amazon EC2 instances. Which benefit of the AWS Cloud does this example illustrate?
+- Elasticity is the solution
+
+248 . What are the five pillars of AWS well architected framework?
+- Operation Excellence, Reliability, Performance Efficiency, Security and Cost Optimization
+
+249 . An ecommerce company has migrated its IT infrastructure from an on premises data center to the AWS cloud. Which cost is the companys direct responsibility?
+- Cost of application software licenses is the solution
+
+250 . Which of the following is a cloud benefit that AWS offers to its users?
+- The ability to deploy to AWS on a global scale is the solution
+
+251 . 

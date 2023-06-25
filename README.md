@@ -2349,4 +2349,64 @@ Api Gateway, AppSync, S3, EFS, Aurora Serverless, Redshift Serverless, OpenSearc
 250 . Which of the following is a cloud benefit that AWS offers to its users?
 - The ability to deploy to AWS on a global scale is the solution
 
-251 . 
+251 . Which AWS Organizations feature can be used to track charges across multiple accounts and report the combined cost?
+- Service Control Policies are a type of organization policy that you can use to manage permissions in your organization and not a solution
+- Consolidated billing is the solution
+
+252 . Which task is the responsibility of the customer according to the shared responsibility model?
+- Patch the guest operating system of an EC2 instance is the solution
+
+253 . Which benefits does a company gain when the company moves from on prem IT architecture to the AWS cloud?
+- Reduced or eliminated tasks for hardware troubleshooting, capacity planning, and procurement and faster deployment of new features and applications are solutions
+
+254 . Which AWS service should be used to migrate a companys on premises MySQL database to AWS RDS?
+- AWS Athena analyze petabyte scale data where it lives with ease and flexibility
+- AWS DMS is the solution
+
+255 . A bank needs to store recordings of calls made to its contact center for 6 years. The recordings should be accessed within 48 hours from the time they are requested. Which AWS service will provide a secure and cost effective solution for retaining these files?
+- S3 Glacier is the solution
+
+256 . Which of the following are shared controls that apply to both AWS and the customer, according to the AWS shared responsibility model?
+- Resource configuration management and employee awareness and training are the solutions
+
+257 . Which of the following actions are controlled with AWS IAM?
+- Control access to AWS service APIs and to other specific resources and protect the AWS environment using MFA are the solutions
+
+258 . A company is generating large sets of critical data in its on prem data center. The company needs to securely transfer the data to AWS for processing. These transfers must occur daily over a dedicated connection. Which AWS service should the company use to meet these requirements?
+- AWS Direct Connect is the solution
+
+259 . Which AWS service or feature should the company use to handle the load for its application during high periods of high demand?
+- Auto scaling group is the solution
+
+260 . Which AWS service or feature or tool uses machine learning to continuously monitor cost and usage for unusual cloud spending?
+- AWS Cost anamoly Detection is the solution
+
+261 . Which controls does the customer fully inherits from AWS in the AWS shared responsibility model?
+- Physical and environment controls is the solution
+
+262 . The report must identify operating system vulnerabilities on those instances. Which AWS service or feature should the company us eto meet this requirement?
+- Amazon Inspector is the solution
+
+263 . Which AWS service or feature a company use to store docker images?
+- Amazon ECR is the solution
+
+264 . Which AWS service or feature provides threat detection monitoring for malicious activities and unauthorized actions to protect AWS account, workloads and data that is stored in Amazon S3?
+- Amazon GuardDuty is the solution
+
+265 . Which cloud computing benefit does AWS demonstrate with its ability to offer lower variables costs as a result of high purchase volumes?
+- Economies of scale is the solution
+
+266 . Which AWS service provides the capability to view end to end performance metrics and troubleshoot distributed application?
+- AWS Cloud Map helps with service discovery and not a solution
+- AWS X-Ray is the solution
+
+267 . A company needs to evaluate its AWS environment and provide best practice recommendations in five categories. Cst, performance, service limits, fault tolerance and security. Which AWS service can the company use to meet these requirement?
+- AWS Trusted advisor is the solution
+
+268 . The company wants access to technical support during business hours. The company also wants general architectural guidance as teams build and test new applications. Which AWS support plan will meet these requirements at the lowest cost?
+- AWS Developer Support is the solution
+
+269 . Which tasks are companys responsibility according to the AWS shared responsibility model?
+- Patch the guest OS and configure a SG on deployed EC2 are the solutions
+
+270 . 

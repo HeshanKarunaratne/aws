@@ -1171,7 +1171,10 @@ Create API with Amazon API Gateway and Lambda
 65 . Amazon SQS for Async Processing
 - Steps
     ![Diagram](resources/images/services-25.PNG "Diagram")  
-    
+    1. Navigate to SQS and create a standard queue 'WeatherRequest' and 'WeatherRequestDLQ'
+    2. Add 'WeatherRequestDLQ' to 'WeatherRequest' as a Dead Letter Queue
+    3. Set Maximum receives to 3(Retry count is 3, otherwise it will be moved to DLQ)
+    4. Create enqueue and dequeue Lambda functions 
     
 #AWS Theories
 

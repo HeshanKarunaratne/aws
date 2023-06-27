@@ -2412,4 +2412,97 @@ Api Gateway, AppSync, S3, EFS, Aurora Serverless, Redshift Serverless, OpenSearc
 269 . Which tasks are companys responsibility according to the AWS shared responsibility model?
 - Patch the guest OS and configure a SG on deployed EC2 are the solutions
 
-270 . 
+270 . Which AWS service is a fully hosted version control service?
+- AWS CodeCommit is the solution
+
+271 . Which AWS service provides automated backups by default?
+- AWS Aurora is the solution
+
+272 . A company wants you to setup a DNS record for its application with a failover routing policy that is based on health checks. 
+Which AWS service or resource should the company use to achieve this goal?
+- Route 53 is the solution
+
+273 . A company is migrating to the cloud. The company requires consultative review and guidance for its application during migration. After the migration is complete the company requires a response within 30 mins if business critical systems go down. Which AWS support plans meet these requirements?
+- AWS Enterprise support and AWS Enterprise On Ramp support are the solution
+
+274 . Which AWS service or feature checks access policies and offers actionable recommendations to help users set secure and functional policies?
+- AWS IAM Access Analyzer is the solution
+
+275 . A company needs to install an application in a Docker container. Which AWS service eliminates the need to provision and manage containers?
+- AWS Fargate is the solution
+
+276 . A manufacturing company has a critical application that runs at a remote site that has a slow internet connection. The company wants to migrate the workload to AWS. The application is sensitive to latency and interruptions in connectivity. The company wants a solution that can host this application with minimum latency. Which AWS service or feature will meet this requirement?
+- AWS Local Zones is the solution
+
+277 . Which AWS service uses ML to help discover, monitor and protect sensitive data that is stored in S3?
+- Amazon Macie is the solution
+
+278 . A company wants to improve the overall availability and performance of its applications that are hosted on AWS. Which AWS service should the company use?
+- AWS Lightsail is used to build applications and websites fast with low cost pre confiured cloud resources and not a solution
+- AWS Global Accelerator is the solution
+
+279 . Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM role has been shared with an external entity?
+- AWS Service catalog create, share , organize and govern your curated (IaC)Infrastructure as Code templates and not a solution
+- AWS IAM Access Analyzer helps identify resources in your organization and accounts that are shared with an external entity, validates IAM policies, generates IAM policies based on access activity in your AWS cloudTrail logs and hence the solution
+
+280 . A company does not want to rely on elaborate forecasting to determine its usage of compute resources. The company wants to pay only for the resources that it uses. The company also needs the ability to increase or decrease its resource usage to meet business requirements. Which pillar of AWS well architected framework align with these requirements?
+- Cost Optimization is the solution
+
+281 . A company wants to launch its workload on AWS and requires the system to automatically recover from failover. Which pillar of the AWS well architected framework includes this requirement?
+- Reliability is the solution
+
+282 . A large enterprise with multiple VPCs in several AWS regions around the world needs to connect and centrally manage network connectivity between its VPCs. Which AWS feature or service meets these requirements?
+- AWS Transit Gateway is the solution
+
+283 . Which AWS service supports the creation of visual reports from AWS Cost and Usage data?
+- Amazon QuickSight is the solution
+
+284 . Which AWS service should be used to monitor EC2 instances CPU and network utilization?
+- Amazon CloudWatch is the solution
+
+285 . A company is preparing to launch a new web store that is expected to receive high traffic for an upcoming event. The web store runs only in AWS, and the company has an AWS Enterprise support plan. Which AWS resource will provide guidance about how the company should scale its architecture and operational during the event?
+- AWS Infrastructure Event management is the solution
+
+286 . What should a user do if the user loses an IAM secret access key?
+- Rotate the secret access key is the solution
+
+287 . A company wants to deploy a docker application to the AWS Cloud. However the company does not want to manage the underlying servers. Which combination of AWS services should the company use to meet these requirements?
+- AWS Elastic BeanStalk and AWS Fargate are the solution
+
+288 . A company needs to transfer 60 TB of data to the AWS cloud in a secure manner. Which of the following should the company use to meet these requirements?
+- AWS Snowball Edge device is the solution
+
+289 . A gaming company wants to move its on premises environment to AWS. The company needs its resources to be highly available. Which benefit does the AWS cloud provide to meet this requirement?
+- Reliability is the solution
+
+290 . A company a needs stateless network filtering for its VPC. Which AWS service, tool or feature will meet this requirement?
+- ACL is the solution
+
+291 . A company needs fully managed, highly reliable and scalable file storage that is accessible over the SMB protocol?
+- Amazon FSx for Windows file server is the solution
+
+292 . A company needs an AWS support plan that provides programmatic case management through the AWS support API. Which support plan will meet this requirement most cost effectively?
+- AWS Business support is the solution
+
+293 . A company that operates in the AWS cloud wants to test workloads and team responses to simulated events. The company will conduct an exercise to identify potential issues that needs to be addressed. Which design principle of the AWS well architected framekwork does this exercise represent?
+- Anticipate failure is the solution
+
+294 . Which AWS services provide high availability across multiple AZ by default?
+- AWS EFS and S3 are the solution
+
+295 . A company needs to perform queries and interactively search and analyze log data. Which AWS service or feature will meet this requirement?
+- Amazon CloudWatch Logs Insight is the solution
+
+296 . A company is running EC2 instance in a VPC. Which of the following can the company use to route and filter incoming network requests for the EC2 instance?
+- SG and Route Table is the solution
+
+297 . A company is using AWS RDS. Which task is the company's responsibility according to the AWS shared responsibility model?
+- Apply encryption options for the database is the solution
+
+298 . A company recently created its first AWS account. Which AWS services will require the use of a VPC?
+- Amazon EC2 and Amazon EFS are the solution
+
+299 . A user has an AWS account with a Business level AWS Support plan and needs assistance with handling a production service disruption. Which action should the user take?
+- Open a production system down support case is the solution
+
+300 . 

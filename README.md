@@ -2505,4 +2505,88 @@ Which AWS service or resource should the company use to achieve this goal?
 299 . A user has an AWS account with a Business level AWS Support plan and needs assistance with handling a production service disruption. Which action should the user take?
 - Open a production system down support case is the solution
 
-300 . 
+300 . Which AWS service provides encryption at rest for RDS and EBS volumes?
+- AWS KMS is the solution
+
+301 . Which AWS service is deployed to VPCs and provides protection from common network threats?
+- AWS WAF focuses on protecting web applications and filtering HTTP/HTTPS traffic and not a solution
+- AWS Network Firewall provide protection at the network layer filtering traffic based on protocols,ports and IP addresses and hence the solution
+
+302 . A company has an environment that includes EC2 instances, Amazon LightSail and on prem servers. The company wants to automate the security updates for its OS and applications. Which solution will meet these requirements with the least operational effort?
+- Use the AWS Systems Manager Patch Manager capability is the solution
+
+303 . Which design principles are included in the reliability pillar of the AWS well architected framework?
+- Automatically recover from failure and stop guessing capacity are the solution
+
+304 . A company wants to query its server logs to gain insights about its customers experiences. Which AWS service will store this data most cost effectively?
+- Amazon S3 is the solution
+
+305 . A company needs to control inbound and outbound traffic for an EC2 instance. Which AWS service or feature can the company associate with the EC2 instance to meet this requirement?
+- SG is the solution
+
+306 . A company seeks cost savings in exchange for a commitment to use a specific amount of an AWS service or category of AWS services for 1 year or 3 years. Which AWS pricing model or offering will meet these requirements?
+- Savings Plan is the solution
+
+307 . A company is migrating to the AWS cloud and wants to optimize the use of its current software licenses. Which AWS services, features or purchasing options can the company use to meet these requirements?
+- Amazon EC2 Dedicated hosts and AWS License Manager are the solution
+
+308 . A company wants guidance to optimize the cost and performance of its current AWS environment. Which AWS service or toll should the company use to identify areas for optimization?
+- AWS Trusted Advisor is the solution
+
+309 . Which AWS solution provides the ability for a company to run AWS services in the companys on premises data center?
+- AWS Direct connect creates a dedicated network connection to AWS and not a solution
+- AWS Outposts is the solution
+
+310 . Which AWS service is designed to help users build conversational interfaces into applications using voice and text?
+- AWS Transcribe automatically convert speech to text and not a solution
+- AWS Lex is the solution
+
+311 . Which tasks are customer responsibilities according to the AWS shared responsibility model?
+- Configure the AWS provided security group firewall and classify company assets in the AWS cloud are the solution
+
+312 . Which scenarios represent the concept of elasticity on AWS?
+- Scaling the number of EC2 instances based on traffic and resizing tRDS instances as business needs changes are the solutions
+
+313 . A company encourages its teams to test failure scenarios regularly and to validate their understanding of the impact of potential failures. Which pillar of the AWS well architected framework does this philosophy represent?
+- Operational Excellence is the solution
+
+314 . A company distributes traffic evenly among a fleet of EC2 instances. The EC2 instances must accommodate unpredictable increases in traffic. Which benefit does the AWS cloud provide to meet this requirement?
+- Scalability is the solution
+
+315 . A company wants to automatically set up and govern a multi account AWS environment. Which AWS service provides this functionality?
+- AWS Control Tower is the solution
+
+316 . A company is planning a migration to the AWS cloud and wants to examine the costs that are associated with different workloads. Which AWS tool will meet these requirements?
+- AWS Cost Explorer is the solution
+
+317 . A company has an application server that runs on an Amazon EC2 instance. The application server needs to access contents within a private Amazon S3 bucket. What is the recommended approach to meet this requirement?
+- Create an IAM role with the appropriate permissions. Associate the role with the EC2 instance is the solution
+
+318 . Which of the following are advantages of the AWS Cloud?
+- AWS manages capacity planning for physical servers and AWS manages the maintenance of the cloud infrastructure are the solutions
+
+319 . A company wants a dedicated private connection to the AWS Cloud from its on-premises operations. Which AWS service or feature will provide this connection?
+- AWS VPN establishes secure connections between your on-premises networks, remote offices, client devices, and the AWS global network and it is not a dedicated connection, hence not the solution
+- AWS PrivateLink is used when you want to use services offered by another VPC securely within the AWS network. With PrivateLink, all network traffic stays on the global AWS backbone and never traverses the public internet. PrivateLink does not connect to on-premises operations and hence not a solution
+- A VPC endpoint enables private connections between your VPC and supported AWS services and VPC endpoint services powered by PrivateLink. A VPC endpoint does not connect to on-premises operations and hence not a solution
+- AWS Direct Connect is the solution
+
+320 .Which Amazon EC2 pricing model adjusts based on supply and demand of EC2 instances?
+- Spot instances is the solution
+
+321 . Which AWS services or features support data replication across AWS Regions? 
+- S3 and RDS are the solution
+
+322 . A company requires physical isolation of its Amazon EC2 instances from the instances of other customers. Which instance purchasing option meets this requirement?
+- Dedicated Hosts is the solution
+
+323 . Which AWS Cloud architecture design principle supports the distribution of workloads across multiple Availability Zones?
+- When you design for agility, you can provision resources more quickly. Agility is not related to the number of Availability Zones and hence not a solution
+- Elasticity is the ability to activate resources as you need them and return resources when you no longer need them and hence not a solution
+- AWS recommends that you distribute workloads across multiple Availability Zones. This distribution will ensure continuous availability of your application, even if the application is unavailable in one single Availability Zone and the solution
+
+324 . Which recommendations are included in the AWS Trusted Advisor checks?
+- Amazon S3 bucket permissions and Multi-factor authentication (MFA) use on the AWS account root user are the solutions
+
+325 . Which security-related services or features does AWS offer?
+- AWS Trusted Advisor security checks and data encryption are the solutions

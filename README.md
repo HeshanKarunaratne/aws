@@ -2590,3 +2590,38 @@ Which AWS service or resource should the company use to achieve this goal?
 
 325 . Which security-related services or features does AWS offer?
 - AWS Trusted Advisor security checks and data encryption are the solutions
+
+326 . AWS Support Plans
+
+| Service                             | Developer                                               | Business                                                    | Enterprise On-Ramp                                          | Enterprise                                                          |
+|-------------------------------------|---------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------------------|
+| Enhanced Technical Support          | Business hours** web access to Cloud Support Associates | 24/7 phone, web, and chat access to Cloud Support Engineers | 24/7 phone, web, and chat access to Cloud Support Engineers | 24/7 phone, web, and chat access to Cloud Support Engineers         |
+| Programmatic Case Management        |                                                         | AWS Support API                                             | AWS Support API                                             | AWS Support API                                                     |
+| AWS Incident Detection and Response |                                                         |                                                             |                                                             | Access to AWS Incident Detection and Response for an additional fee |
+| Technical Account Management        |                                                         |                                                             | Yes                                                         | Yes                                                                 |
+| Training                            |                                                         |                                                             |                                                             | Access to online self-paced labs                                    |
+| Account Assistance                  |                                                         |                                                             | Concierge Support Team                                      | Concierge Support Team                                              |
+
+327 . A company wants to move its IOS application development and build activites to AWS. Which AWS service or resource should the company use for these activities?
+- AWS App Runner deploy containerized web applications and APIs at scale and not a solution
+- AWS Amplify is the solution
+
+328 . A company is running an application on AWS. The company wants to identify and prevent the accidental download of malware. Which AWS service or feature will meet these requirements?
+- Amazon GuardDuty is the solution
+
+329 . Which of the following are benefits of VPC endpoints?
+- A VPC endpoint makes private connections possible between a VPC and supported AWS services and a VPC endpoint does not require an IG, Virtual Private Gateway, NAT device, VPN connection or AWS direct connect connection are the solutions
+
+330 . Which option is an AWS cloud Adoption framework perspective?
+- Security is the solution
+
+331 . A company wants to securely store RDS database credentials and automatically rotate user passwords periodically. Which AWS service or capability will meet these requirements?
+- AWS Secret Manager is the solution
+
+332 . Trusted Advisor checks?
+- Amazon EBS Public Snapshots
+- Amazon RDS Public Snapshots
+- Amazon S3 Bucket Permissions
+- IAM Use
+- MFA on Root Account
+- Security Groups – Specific Ports Unrestricted are the solution

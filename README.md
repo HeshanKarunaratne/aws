@@ -2625,3 +2625,51 @@ Which AWS service or resource should the company use to achieve this goal?
 - IAM Use
 - MFA on Root Account
 - Security Groups – Specific Ports Unrestricted are the solution
+
+333 . What AWS tool lets you to view and analyze your costs and usage?
+- AWS Cost Explorer is the solution
+
+334 . Which one of the following features is normally present in all AWS Support plans?
+- 24/7 access to Customer Service
+ 
+335 . When using On-Demand instances in AWS, which of the following statements is false regarding the cost for the Instance?
+- You have to pay the termination fees if you terminate the instance and You pay upfront costs for the instance
+
+336 . There is a requirement to move a 10 TB data warehouse to the AWS cloud. Which of the following is an ideal service which can be used to move this amount of data to the AWS Cloud?
+- AWS Snowcone SSD
+
+337 . Which of the following are attributes to the costing for using the Simple Storage Service. Choose 2 answers from the options given below?
+- The total size in gigabytes of all objects stored and The storage class used for the objects stored
+
+338 . If you want to develop an application in Java, which of the following tools would you use?
+- AWS SDK is the solution
+
+339 . What AWS service has built-in DDoS mitigation?
+- Cloudfront is the solution
+
+340 . What is the service provided by AWS that allows developers to easily deploy and manage applications on the cloud?
+- AWS Elastic Beanstalk is the solution
+
+341 . In AWS, which security aspects are the customer’s responsibility?
+- Encryption of EBS (Elastic Block Storage) volumes
+- Security Group and ACL (Access Control List)settings
+- Patch management on the EC2 instance’s guest operating system
+- Life-cycle management of IAM credentials
+
+342 . Which of the following options of AWS RDS allows for AWS to failover to a secondary database in case the primary one fails?
+- AWS Multi AZ
+
+343 . Which of the following are benefits of the AWS's Relational Database Service?
+- You can resize the capacity accordingly and Automated patches and backups are the solutions
+
+344 . Six advantages of cloud?
+- Trade capital expense for variable expense
+- Benefit from massive economies of scale
+- Stop guessing capacity
+- Increase speed and agility
+- Stop spending money on running and maintaining data centers
+- Go global in minutes
+
+### Notes
+
+- AWS Budgets: Set custom budgets that alert you when you exceed your budgeted threshold

@@ -2673,3 +2673,31 @@ Which AWS service or resource should the company use to achieve this goal?
 ### Notes
 
 - AWS Budgets: Set custom budgets that alert you when you exceed your budgeted threshold
+- AWS Local Zones are data centers located very close to a densely populated area to provide single digit millisecond low latency performance
+- AWS Wavelength Zones allows for edge computing on 5G Networks
+
+- Cloud Terminologies
+    1. High Availability - No single point of failure eg: Load Balancer
+    2. High Scalability - Ability to increase capacity based on the increasing demand of traffic, memory and computing eg: Vertical or Horizontal
+    3. High Elasticity - Automatically increase or decrease capacity based on the current demand of traffic, memory and compute eg: Horizontal, Auto Scaling groups
+    4. Fault Tolerance - Failovers when you plan to shift traffic to a redundant system in case the primary system fails eg: RDS Multi AZ
+    5. High Durability - Ability to recover from a disaster and to prevent the loss of data
+ 
+- BCP(Business Continuity Plan)
+~~~text
+      RPO(Recovery Point Objective)     RTO(Recovery Time Objective)
+      |         |  Disaster  |          |
+------------------------------------------------
+      {Data Loss}            { Downtime }
+~~~
+
+- Disaster Recovery Options
+~~~text
+
+Cold                                                                         Hot
+<------------------------------------------------------------------------------->
+
+   |                  |                 |               |
+   Backup & Restore   Pilot Light       Warm Standby     Multi Site Active/Active
+~~~
+

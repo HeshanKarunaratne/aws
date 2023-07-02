@@ -2670,6 +2670,44 @@ Which AWS service or resource should the company use to achieve this goal?
 - Stop spending money on running and maintaining data centers
 - Go global in minutes
 
+345 . Which pillar of the AWS Well-Architected Framework refers to the ability of a system to recover from infrastructure or service disruptions and dynamically acquire computing resources to meet demand?
+- Reliability is the solution
+
+346 . Which of the following are benefits of migrating to the AWS Cloud?
+- Operational resilience and business agility are the solutions
+
+347 . A company is planning to replace its physical on-premises compute servers with AWS serverless compute services. The company wants to be able to take advantage of advanced technologies quickly after the migration. Which pillar of the AWS Well-Architected Framework does this plan represent?
+- Performance Efficiency is the solution
+
+348 . Which component of the AWS global infrastructure is made up of one or more discrete data centers that have redundant power, networking, and connectivity?
+- Availability Zone is the solution
+
+349 . Which duties are the responsibility of a company that is using AWS Lambda? 
+- Security inside of code and Writing and updating of code are the solutions
+
+350 . Which AWS services or features provide disaster recovery solutions for Amazon EC2 instances?
+- Amazon EBS and AMI are the solutions
+
+351 . A company wants to review its monthly costs of using Amazon EC2 and Amazon RDS for the past year. Which AWS service or tool provides this information?
+- Cost Explorer is the solution
+
+352 . A company plans to create a data lake that uses Amazon S3. Which factor will have the MOST effect on cost?
+- Selection of the storage tiers is the solution
+
+353 . Which AWS service or feature can a company use to determine which business unit is using specific AWS resources?
+- Cost allocation tags is the solution
+
+354 . A company wants to migrate its workloads to AWS, but it lacks expertise in AWS Cloud computing. Which AWS service or feature will help the company with its migration?
+- AWS managed services is the solution
+
+355 . Which AWS service or tool should a company use to centrally request and track service limit increases?
+- Service Quotas is the solution
+
+356 . Which task requires using AWS account root user credentials?
+- Changing AWS Support plan is the solution
+
+357 . 
+
 ### Notes
 
 - AWS Budgets: Set custom budgets that alert you when you exceed your budgeted threshold

@@ -2706,7 +2706,58 @@ Which AWS service or resource should the company use to achieve this goal?
 356 . Which task requires using AWS account root user credentials?
 - Changing AWS Support plan is the solution
 
-357 . 
+357 . A company is using a central data platform to manage multiple types of data for its customers. The company wants to use AWS services to discover, transform and visualize the data. Which combination of services should the company use to meet the requirements?
+- AWS Glue and QuickSight are the solutions
+
+358 . A company wants to monitor for misconfigured SG that are allowing unrestricted access to specific ports. Which AWS service meet the requirement?
+- AWS GuardDuty is the solution
+
+359 . A company is launching a mobile app. The company wants customers to be able to use the app without upgrading their mobile devices. Which pillar of the AWS well architected framework does this goal represent?
+- Reliability is the solution
+
+360 . A company wants to estimate its expected monthly AWS costs. The company also wants to find out the cost of a new set of instances and services. Which AWS service or tool can the company use to meet these requirements?
+- AWS Cost explorer is the solution
+
+361 . What is the scope of a VPC within the AWS network?
+- A VPC can span all Availability Zones within an AWS Region is the solution
+
+362 . Which of the following are components of an AWS Site-to-Site VPN connection?
+- Virtual Private Gateway and Customer Gateway
+
+363 . What are some advantages of using Amazon EC2 instances to host applications in the AWS Cloud instead of on premises?
+- EC2 has a flexible, pay-as-you-go pricing model and EC2 integrates with Amazon VPC, AWS CloudTrail, and AWS Identity and Access Management (IAM) are the solutions
+
+364 . A company's on-premises application deployment cycle was 3-4 weeks. After migrating to the AWS Cloud, the company can deploy the application in 2-3 days. Which benefit has this company experienced by moving to the AWS Cloud?
+- Agility is the solution
+
+365 . Which of the following are included in AWS Enterprise Support?
+- AWS technical account manager and support of third party software integrations to AWS
+
+366 . A global media company uses AWS Organizations to manage multiple AWS accounts. Which AWS service or feature can the company use to limit the access to AWS services for member accounts?
+- SCP is the solution
+
+367 . A company wants to limit its employees' AWS access to a portfolio of predefined AWS resources. Which AWS solution should the company use to meet this requirement?
+- AWS Service Catalog allows organizations to create and manage catalogs of IT services that are approved for use on AWS is the solution
+
+368 . A company needs to graphically visualize AWS billing and usage over time. The company also needs information about its AWS monthly costs. Which AWS Billing and Cost Management tool provides this data in a graphical format?
+- Cost Explorer is the solution
+
+369 . A manufacturing company has a critical application that runs at a remote site that has a slow internet connection. The company wants to migrate the workload to AWS. The application is sensitive to latency and interruptions in connectivity. The company wants a solution that can host this application with minimum latency. Which AWS service or feature should the company use to meet these requirements?
+- AWS Outposts is the solution
+
+370 . Which AWS service or feature checks access policies and offers actionable recommendations to help users set secure and functional policies?
+- AWS IAM Access Analyzer
+
+371 . A company has a fleet of cargo ships. The cargo ships have sensors that collect data at sea, where there is intermittent or no internet connectivity. The company needs to collect, format, and process the data at sea and move the data to AWS later. Which AWS service should the company use to meet these requirements?
+- AWS Snowball Edge
+
+372 . Which AWS service or tool can be used to capture information about inbound and outbound traffic in an Amazon VPC?
+- VPC Flow Logs is the solution
+
+373 . In which situations should a company create an IAM user instead of an IAM role?
+- When the company creates AWS access credentials for individuals and When the company needs to add users to IAM groups are the solutions
+
+374 . 
 
 ### Notes
 

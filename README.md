@@ -1175,6 +1175,14 @@ Create API with Amazon API Gateway and Lambda
     2. Add 'WeatherRequestDLQ' to 'WeatherRequest' as a Dead Letter Queue
     3. Set Maximum receives to 3(Retry count is 3, otherwise it will be moved to DLQ)
     4. Create enqueue and dequeue Lambda functions 
+
+66 . AWS Amplify Admin UI
+- Steps
+    1. Navigate to AWS Amplify and click on develop and create a new project
+    2. Click Backend environment and Open Admin UI(You can invite people without AWS access from Admin UI Management page)
+    3. Anything that you can do with Amplify CLI that can be done through Admin UI as well
+
+    
     
 #AWS Theories
 

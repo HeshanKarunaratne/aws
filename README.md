@@ -1182,6 +1182,11 @@ Create API with Amazon API Gateway and Lambda
     2. Click Backend environment and Open Admin UI(You can invite people without AWS access from Admin UI Management page)
     3. Anything that you can do with Amplify CLI that can be done through Admin UI as well
 
+67 . ECR public and ECR public Gallery
+- Steps
+    1. Navigate to ECR and create a public repository
+    2. You can change the default alias using Registry and request for a custom alias
+    3. Can pull without credentials but need AWS credentials to push
     
     
 #AWS Theories

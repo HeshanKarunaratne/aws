@@ -2604,16 +2604,8 @@ Which AWS service or resource should the company use to achieve this goal?
 325 . Which security-related services or features does AWS offer?
 - AWS Trusted Advisor security checks and data encryption are the solutions
 
-326 . AWS Support Plans
-
-| Service                             | Developer                                               | Business                                                    | Enterprise On-Ramp                                          | Enterprise                                                          |
-|-------------------------------------|---------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------------------|
-| Enhanced Technical Support          | Business hours** web access to Cloud Support Associates | 24/7 phone, web, and chat access to Cloud Support Engineers | 24/7 phone, web, and chat access to Cloud Support Engineers | 24/7 phone, web, and chat access to Cloud Support Engineers         |
-| Programmatic Case Management        |                                                         | AWS Support API                                             | AWS Support API                                             | AWS Support API                                                     |
-| AWS Incident Detection and Response |                                                         |                                                             |                                                             | Access to AWS Incident Detection and Response for an additional fee |
-| Technical Account Management        |                                                         |                                                             | Yes                                                         | Yes                                                                 |
-| Training                            |                                                         |                                                             |                                                             | Access to online self-paced labs                                    |
-| Account Assistance                  |                                                         |                                                             | Concierge Support Team                                      | Concierge Support Team                                              |
+326 . Which AWS services can use AWS WAF to protect against common web exploitations?
+- AWS CloudFront and API Gateway are the solutions
 
 327 . A company wants to move its IOS application development and build activites to AWS. Which AWS service or resource should the company use for these activities?
 - AWS App Runner deploy containerized web applications and APIs at scale and not a solution
@@ -2770,7 +2762,131 @@ Which AWS service or resource should the company use to achieve this goal?
 373 . In which situations should a company create an IAM user instead of an IAM role?
 - When the company creates AWS access credentials for individuals and When the company needs to add users to IAM groups are the solutions
 
-374 . 
+374 . A company is designing its AWS workloads so that components can be updated regularly and so that changes can be made in small, reversible increments. Which pillar of the AWS Well-Architected Framework does this design support?
+- Operational Excellence is the solution
+
+375 . A company launched an Amazon EC2 instance with the latest Amazon Linux 2 Amazon Machine Image (AMI). Which actions can a system administrator take to connect to the EC2 instance?
+- Use Amazon EC2 Instance Connect and Use AWS Systems Manager Session Manager are the solutions
+
+376 . Which AWS service provides a feature that can be used to proactively monitor and plan for the service quotas of AWS resources?
+- AWS Trusted Advisor is the solution
+
+377 . Which AWS services offer gateway VPC endpoints that can be used to avoid sending traffic over the internet?
+- Amazon S3 and DynamoDB are the solutions
+
+378 . Which of the following is the customer responsible for updating and patching, according to the AWS shared responsibility model?
+-  Amazon WorkSpaces virtual Windows desktop is the solution
+
+379 . Who has the responsibility to patch the host operating system of an Amazon EC2 instance, according to the AWS shared responsibility model?
+- Customer(Guest OS) and not a solution
+- AWS(Host OS) only is the solution
+
+380 . A company is using an Amazon RDS DB instance for an application that is deployed in the AWS Cloud. The company needs regular patching of the operating system of the server where the DB instance runs. What is the company's responsibility in this situation, according to the AWS shared responsibility model?
+- Establish a regular maintenance window that tells AWS when to patch the DB instance operating system is the solution 
+
+381 . Under the AWS shared responsibility model, which task is the customer's responsibility when managing AWS Lambda functions?
+- Creating versions of Lambda functions is the solution
+
+382 . What does the AWS Concierge Support team provide?
+- A primary point of contact for AWS Billing and AWS Support is the solution
+
+383 . A company has a serverless application that includes an Amazon API Gateway API, an AWS Lambda function, and an Amazon DynamoDB database. Which AWS service can the company use to trace user requests as they move through the application's components?
+- AWS X ray(used for tracing) is the solution
+
+384 . A company wants to deploy some of its resources in the AWS Cloud. To meet regulatory requirements, the data must remain local and on premises. There must be low latency between AWS and the company resources. Which AWS service or feature can be used to meet these requirements?
+- AWS Outposts is the solution
+
+385 . A company wants to improve its security and audit posture by limiting Amazon EC2 inbound access. What should the company use to access instances remotely instead of opening inbound SSH ports and managing SSH keys?
+- AWS Systems Manager Session Manager is the solution
+
+386 . A company has refined its workload to use specific AWS services to improve efficiency and reduce cost. Which best practice for cost governance does this example show?
+- Architecture Optimization is the solution
+
+387 . A company is using Amazon EC2 Auto Scaling to scale its Amazon EC2 instances. Which benefit of the AWS Cloud does this example illustrate?
+- Elasticity is the solution
+
+388 . A company wants to migrate a small website and database quickly from on-premises infrastructure to the AWS Cloud. The company has limited operational knowledge to perform the migration. Which AWS service supports this use case?
+- Amazon LightSail is the solution
+
+389 . Which design principle is achieved by following the reliability pillar of the AWS Well-Architected Framework?
+- Testing recovery procedures is the solution
+
+390 . Which responsibility belongs to AWS when a company hosts its databases on Amazon EC2 instances?
+- Operating System installation is the solution
+
+391 . A company wants to use Amazon S3 to store its legacy data. The data is rarely accessed. However, the data is critical and cannot be recreated. The data needs to be available for retrieval within seconds. Which S3 storage class meets these requirements MOST cost-effectively?
+- S3 Standard-Infrequent Access (S3 Standard-IA) is the solution
+
+392 . A company needs to build an application that uses AWS services. The application will be delivered to residents in European Counties. The company must abide by regional regulatory requirements. Which AWS service or program should the company use to determine which AWS services meet the regional requirements?
+- AWS Compliance Program is the solution
+
+393 . A company is starting to build its infrastructure in the AWS Cloud. The company wants access to technical support during business hours. The company also wants general architectural guidance as teams build and test new applications. Which AWS Support plan will meet these requirements at the LOWEST cost?
+- Developer Support is the solution
+
+394 . Which AWS service provides the capability to view end-to-end performance metrics and troubleshoot distributed applications?
+- AWS Xray is the solution
+
+395 . A company needs an automated security assessment report that will identify unintended network access to Amazon EC2 instances. The report also must identify operating system vulnerabilities on those instances. Which AWS service or feature should the company use to meet this requirement?
+- AWS Inspector is the solution
+
+396 . A global company is building a simple time-tracking mobile app. The app needs to operate globally and must store collected data in a database. Data must be accessible from the AWS Region that is closest to the user. What should the company do to meet these data storage requirements with the LEAST amount of operational overhead?
+- DynamoDB global tables is the solution
+
+397 . Which controls does the customer fully inherit from AWS in the AWS shared responsibility model?
+- Physical and environmental controls is the solution
+
+398 . What information is found on an AWS Identity and Access Management (IAM) credential report?
+- The date and time when an IAM user's password was last used to sign in to the AWS Management Console and Whether multi-factor authentication (MFA) has been enabled for an IAM user are the solutions
+
+399 . What is the LEAST expensive AWS Support plan that contains a full set of AWS Trusted Advisor best practice checks?
+- AWS Business Plan is the solution
+
+400 . An ecommerce company has migrated its IT infrastructure from an on-premises data center to the AWS Cloud. Which cost is the company's direct responsibility?
+- Cost of application software licenses is the solution
+
+401 . A company needs to set up user authentication for a new application. Users must be able to sign in directly with a user name and password, or through a third- party provider. Which AWS service should the company use to meet these requirements?
+- AWS Congnito is the solution
+
+402 . A company wants to forecast future costs and usage of AWS resources based on past consumption. Which AWS service or tool will provide this forecast?
+- AWS Cost Explorer is the solution
+
+403 . Which AWS services use cloud-native storage that provides replication across multiple Availability Zones by default?
+- AWS Neptune and Amazon Redshift are the solutions
+
+404 . A company wants the ability to quickly upload its applications to the AWS Cloud without needing to provision underlying resources. Which AWS service will meet these requirements?
+- AWS Elastic BeanStalk
+
+405 . A user has been granted permission to change their own IAM user password. Which AWS services can the user use to change the password?
+- AWS CLI and AWS Management Console are the solutions
+
+406 . Which of the following describes AWS Local Zones?
+- An extension of an AWS Region to more granular locations is the solution
+
+407 . A retail company is migrating its IT infrastructure applications from on premises to the AWS Cloud. Which costs will the company eliminate with this migration?
+- Cost of data center operations and cost of physical server hardware are the solutions
+
+408 . A company has a complex AWS architecture. The company needs assistance from a dedicated technical professional who can suggest strategies regarding incidents, trade-offs, support, and risk management. Which AWS Support plan will provide the required support?
+- AWS Enterprise Support is the solution
+
+409 . A company manages global applications that require static IP addresses. Which AWS service would enable the company to improve the availability and performance of its applications?
+- AWS Global Accelerator is the solution
+
+410 . A company needs to report on events that involve the specific AWS services that the company uses. Which AWS service or resource can the company use with Amazon CloudWatch to meet this requirement?
+- AWS CloudTrail is the solution
+
+411 . A company wants to set up an entire development and continuous delivery toolchain for coding, building, testing, and deploying code. Which AWS service will meet these requirements?
+- AWS CodeStar is the solution
+
+412 . Which AWS service provides intelligent recommendations to improve code quality and identify an application's most expensive lines of code?
+- AWS CodeGuru is the solution
+
+413 . A company is reviewing the current costs of running its own infrastructure on premises. The company wants to compare these on-premises costs to the costs of running infrastructure in the AWS Cloud.
+- Use Migration Evaluator is the solution
+
+414 . A company wants to accelerate migration from its data center to the AWS Cloud. Which combination of AWS services should the company use to meet this requirement?
+- AWS Direct Connect and AWS Server Migration Service are the solutions
+
+415 . 
 
 ### Notes
 
@@ -2803,3 +2919,13 @@ Cold                                                                         Hot
    Backup & Restore   Pilot Light       Warm Standby     Multi Site Active/Active
 ~~~
 
+- AWS Support Plans
+
+| Service                             | Developer                                               | Business                                                    | Enterprise On-Ramp                                          | Enterprise                                                          |
+|-------------------------------------|---------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------------------|
+| Enhanced Technical Support          | Business hours** web access to Cloud Support Associates | 24/7 phone, web, and chat access to Cloud Support Engineers | 24/7 phone, web, and chat access to Cloud Support Engineers | 24/7 phone, web, and chat access to Cloud Support Engineers         |
+| Programmatic Case Management        |                                                         | AWS Support API                                             | AWS Support API                                             | AWS Support API                                                     |
+| AWS Incident Detection and Response |                                                         |                                                             |                                                             | Access to AWS Incident Detection and Response for an additional fee |
+| Technical Account Management        |                                                         |                                                             | Yes                                                         | Yes                                                                 |
+| Training                            |                                                         |                                                             |                                                             | Access to online self-paced labs                                    |
+| Account Assistance                  |                                                         |                                                             | Concierge Support Team                                      | Concierge Support Team                                              |

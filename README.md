@@ -2886,7 +2886,30 @@ Which AWS service or resource should the company use to achieve this goal?
 414 . A company wants to accelerate migration from its data center to the AWS Cloud. Which combination of AWS services should the company use to meet this requirement?
 - AWS Direct Connect and AWS Server Migration Service are the solutions
 
-415 . 
+415 . Which AWS services provide high availability across multiple Availability Zones by default?
+- AWS EFS and S3 are the solutions
+
+416 . Which AWS service provides automated backups of data by default?
+- Amazon Aurora is the solution
+
+417 . Which AWS service provides alerts when an AWS event may impact a company's AWS resources?
+- AWS Personal Health Dashboard is the solution
+
+418 . Which of the following are design principles of the reliability pillar of the AWS Well-Architected Framework?
+- Stop guessing capacity and make changes to infrastructure by using automation are the solutions
+
+419 . A company needs to perform data processing once a week that typically takes about 5 hours to complete. Which AWS service should the company use for this workload?
+- AWS EC2 is the solution
+
+420 . According to the AWS shared responsibility model, which activities are the customer's responsibility for security in the AWS Cloud?
+- Amazon EC2 operating system patching and API access control for AWS resources are the solutions
+
+421 . A user is a new AWS account owner who has no special access requirements. What should this user do with the AWS account root user access keys?
+- Delete the keys and create IAM users is the solution
+
+422 . Which AWS service or tool lists all the users in an account and reports on the status of account details, including passwords, access keys, and multi-factor authentication (MFA) devices?
+- AWS credential report is the solution
+
 
 ### Notes
 

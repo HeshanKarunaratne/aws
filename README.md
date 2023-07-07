@@ -2910,6 +2910,20 @@ Which AWS service or resource should the company use to achieve this goal?
 422 . Which AWS service or tool lists all the users in an account and reports on the status of account details, including passwords, access keys, and multi-factor authentication (MFA) devices?
 - AWS credential report is the solution
 
+423 . A company is running a standard PostgreSQL database on premises. The company is migrating the database to the AWS Cloud and does not want to change the queries that access the database. The company must maximize the query performance.
+- RDS for Postgres is the solution
+
+424 . A company wants to run Amazon EC2 instances in locations that are near the company’s global users. Which aspect of the AWS environment will support this requirement?
+- AWS Region is the solution
+
+425 . A company wants to build a data analytics application that uses Amazon Redshift. The company needs a cost estimate for its future Amazon Redshift usage. Which AWS tool will provide a high-level cost estimation?
+- Cost Explorer is the solution
+
+426 . A company is using Amazon EC2 instances. Which tasks are the company's responsibility, according to the AWS shared responsibility model?
+- Identify which users can access the EC2 instances, and manage their permissions in the operating system and identify and manage the users who are allowed to create or delete EC2 instances are the solutions
+
+427 . 
+
 
 ### Notes
 
@@ -2952,3 +2966,29 @@ Cold                                                                         Hot
 | Technical Account Management        |                                                         |                                                             | Yes                                                         | Yes                                                                 |
 | Training                            |                                                         |                                                             |                                                             | Access to online self-paced labs                                    |
 | Account Assistance                  |                                                         |                                                             | Concierge Support Team                                      | Concierge Support Team                                              |
+
+- Design Principles
+1. Operational Excellence
+    - Perform operations as code eg: CloudFormation
+    - Make frequent, small, reversible changes eg: CICD, Blue/Green, rollbacks, incremental changes
+    - Anticipate failure eg: Kill prod servers to test recovery
+2. Security
+    - Implement a strong identity foundation
+    - Enable traceability
+    - Apply security at all layers
+    - Protect data in transit and at rest
+    - Automate security best practices
+    - Prepare for security events
+3. Reliability
+    - Automatically recover from failure
+    - Test recovery procedures
+    - Scale horizontally to increase aggregate system availability
+    - Stop guessing capacity
+4. Performance Efficiency
+    - Go global in minutes
+    - Use serverless architecture
+    - Democratize advanced technologies
+5. Cost Optimization
+    - Implement Cloud Financial Management
+    - Adopt a consumption model
+    - Measure overall efficiency

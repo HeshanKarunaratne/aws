@@ -2922,8 +2922,17 @@ Which AWS service or resource should the company use to achieve this goal?
 426 . A company is using Amazon EC2 instances. Which tasks are the company's responsibility, according to the AWS shared responsibility model?
 - Identify which users can access the EC2 instances, and manage their permissions in the operating system and identify and manage the users who are allowed to create or delete EC2 instances are the solutions
 
-427 . 
+427 . Where can AWS users review answers to frequently asked questions about security in the AWS Cloud?
+- AWS Knowledge Center is the solution
 
+428 . A company simulates workflows to review and validate that all processes are effective and that staff are familiar with the processes. Which design principle of the AWS Well-Architected Framework is the company following with this practice?
+- Refine operation procedures frequently is the solution
+
+429 . Which design principles are enabled by the AWS Cloud to improve the operation of workloads?
+- Disposable resources and loose coupling are the solutions
+
+430 . Which perspective of the AWS Cloud Adoption Framework encourages the development of well architected, cloud focused applications?
+- Platform is the solution
 
 ### Notes
 
@@ -2962,6 +2971,7 @@ Cold                                                                         Hot
 |-------------------------------------|---------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------------------|
 | Enhanced Technical Support          | Business hours** web access to Cloud Support Associates | 24/7 phone, web, and chat access to Cloud Support Engineers | 24/7 phone, web, and chat access to Cloud Support Engineers | 24/7 phone, web, and chat access to Cloud Support Engineers         |
 | Programmatic Case Management        |                                                         | AWS Support API                                             | AWS Support API                                             | AWS Support API                                                     |
+| Advisor Checks                      | 7 Checks                                                | All Checks                                                  | All Checks                                                  | All Checks                                                          |
 | AWS Incident Detection and Response |                                                         |                                                             |                                                             | Access to AWS Incident Detection and Response for an additional fee |
 | Technical Account Management        |                                                         |                                                             | Yes                                                         | Yes                                                                 |
 | Training                            |                                                         |                                                             |                                                             | Access to online self-paced labs                                    |

@@ -2934,6 +2934,19 @@ Which AWS service or resource should the company use to achieve this goal?
 430 . Which perspective of the AWS Cloud Adoption Framework encourages the development of well architected, cloud focused applications?
 - Platform is the solution
 
+431 . How does the AWS Cloud help companies build agility into their processes and cloud infrastructure?
+- Companies can access a range of technologies to experiment and innovate quickly is the solution
+
+432 . Which fully managed AWS service assists with the creation, testing, and management of custom Amazon EC2 images?
+- EC2 image builder is the solution
+
+433 . Which AWS service supports the analysis, investigation, and identification of the root cause of security events and suspicious activities in an AWS account?
+- AWS Detective is the solution
+
+434 . A company plans to run its IT infrastructure in the AWS Cloud. The infrastructure must be highly available. The company also must minimize the network latency between servers. Which deployment scenario will meet these requirements?
+-  Deploy in multiple Availability Zones in one AWS Region is the solution
+ 
+
 ### Notes
 
 - AWS Budgets: Set custom budgets that alert you when you exceed your budgeted threshold

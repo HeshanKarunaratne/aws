@@ -2946,6 +2946,9 @@ Which AWS service or resource should the company use to achieve this goal?
 434 . A company plans to run its IT infrastructure in the AWS Cloud. The infrastructure must be highly available. The company also must minimize the network latency between servers. Which deployment scenario will meet these requirements?
 -  Deploy in multiple Availability Zones in one AWS Region is the solution
  
+435 . Which pillar of the AWS well architected framework includes the AWS shared responsibility model?
+- Security is the solution
+
 
 ### Notes
 

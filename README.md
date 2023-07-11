@@ -2949,6 +2949,9 @@ Which AWS service or resource should the company use to achieve this goal?
 435 . Which pillar of the AWS well architected framework includes the AWS shared responsibility model?
 - Security is the solution
 
+436 . All AWS users have access to which AWS Trusted advisor check?
+- Core checks is the solution
+
 
 ### Notes
 

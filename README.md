@@ -2952,6 +2952,26 @@ Which AWS service or resource should the company use to achieve this goal?
 436 . All AWS users have access to which AWS Trusted advisor check?
 - Core checks is the solution
 
+437 . Which scenarios should a user report to the AWS abuse team?
+- A DDOS attack is made on AWS resource and AWS resources are being used to host illegal content are the solution
+
+438 . What may be associated to an EC2 instance through AWS IAM to initiate service requests?
+- Role is the solution
+
+439 . Which AWS services or functionalities enable failover across several AWS Regions to ensure HA and low latency?
+- Route 53 and Global Accelerator are the solutions
+
+440 . Which AWS services are natively supported by AWS snowball edge?
+- Supports S3, EC2 is the solution
+
+441 . When utilizing AWS CLI which of the following IAM entities is connected with an Access key ID and secret access Key?
+- IAM user is the solution
+
+442 . Which AWS service or functionality can assist a business in determining if it has publicly accessible S3 bucket?
+- AWS Trusted Advisor is the solution
+
+443 . An ELB enables online traffic to be distributed across multiple?
+- AZ is the solution
 
 ### Notes
 

@@ -2973,6 +2973,23 @@ Which AWS service or resource should the company use to achieve this goal?
 443 . An ELB enables online traffic to be distributed across multiple?
 - AZ is the solution
 
+444 . A business must keep its data near to its core consumers. Which AWS cloud advantage satisfies this requirement?
+- Global Footprint is the solution
+
+445 . What should the organization use instead of opening SSH ports and handling SSH keys to remotely access instances?
+- AWS Systems Manager Session Manager is the solution
+
+446 . A client wants to develop and construct a new workload on AWS cloud but lacks the necessary skills in AWS related technologies. Which of the following AWS programs may a client use to accomplish that goal?
+- AWS Partner Network Consulting Partners is the solution
+
+447 . Which AWS solution enables rapid setup and management of a new multi account AWS environment?
+- AWS Control Tower is the solution
+
+448 . A corporation want to connect to AWS from a distant office through a private, low latency connection. Which strategy is advised for meeting these requirements?
+- AWS Direct Connect is the solution
+
+449 .  
+
 ### Notes
 
 - AWS Budgets: Set custom budgets that alert you when you exceed your budgeted threshold

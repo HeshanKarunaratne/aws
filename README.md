@@ -2988,7 +2988,16 @@ Which AWS service or resource should the company use to achieve this goal?
 448 . A corporation want to connect to AWS from a distant office through a private, low latency connection. Which strategy is advised for meeting these requirements?
 - AWS Direct Connect is the solution
 
-449 .  
+449 .  Which AWS services may be protected against typical online exploitations using AWS WAF?
+- Amazon CloudFront and API Gateway are the solutions
+
+450 . Which of the following is the customer responsible for updating and patching according to the aws shared responsibility model
+- Amazon Workspaces virtual Windows desktop is the solution
+
+451 . Which of the following are aws security recommended practices for managing an aws account root user using AWS IAM?
+- Set up MFA for the root user and Delete the root user access keys are the solutions
+
+452 . 
 
 ### Notes
 

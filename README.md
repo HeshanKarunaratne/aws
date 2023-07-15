@@ -1187,7 +1187,28 @@ Create API with Amazon API Gateway and Lambda
     1. Navigate to ECR and create a public repository
     2. You can change the default alias using Registry and request for a custom alias
     3. Can pull without credentials but need AWS credentials to push
-    
+ 
+68 . AWS Congito Authentication for NextJS Webapp
+- Steps
+    ![Diagram](resources/images/services-26.PNG "Diagram")
+    1. Architecture Explanation
+        - S3: Store the profile images
+        - Cognito : Authentication
+        - AppSync: GraphQL API
+        - DynamoDB: Data saving
+    2. Config amplify by creating an IAM user and retrieve access key and secret access key
+        - amplify configure
+    3. Create a next js project
+        - npm install -g create-next-app
+        - npx create-next-app profileApp
+    4. Initialize backend and it will create a directory called amplify to store the templates and configs
+        - amplify init
+    5. Add authentication
+        - amplify add auth
+    6. Push new changes to amplify backend in cloud
+        - amplify push
+    7. Install libraries
+        - npm install aws-amplify @aws-amplify/ui-react
     
 #AWS Theories
 
@@ -1426,7 +1447,7 @@ If CPU < 50% -------------------------> Decrease to 1 server
 - Provide implementations based on best practices to the organization throughout the lifecycle of the project
 
 
-# Cloud Practitioner
+# Cloud Practitioner Q&A
 
 1 . Which AWS services should be used for read/write of constantly changing data?
 - Amazon Glacier is used for archiving and infrequently accessing
@@ -2997,9 +3018,7 @@ Which AWS service or resource should the company use to achieve this goal?
 451 . Which of the following are aws security recommended practices for managing an aws account root user using AWS IAM?
 - Set up MFA for the root user and Delete the root user access keys are the solutions
 
-452 . 
-
-### Notes
+### Cloud Practitioner Notes
 
 - AWS Budgets: Set custom budgets that alert you when you exceed your budgeted threshold
 - AWS Local Zones are data centers located very close to a densely populated area to provide single digit millisecond low latency performance
@@ -3067,3 +3086,8 @@ Cold                                                                         Hot
     - Implement Cloud Financial Management
     - Adopt a consumption model
     - Measure overall efficiency
+    
+# Developer Associate Q&A
+
+
+### Developer Associate Theory

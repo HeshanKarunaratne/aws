@@ -1188,7 +1188,7 @@ Create API with Amazon API Gateway and Lambda
     2. You can change the default alias using Registry and request for a custom alias
     3. Can pull without credentials but need AWS credentials to push
  
-68 . AWS Congito Authentication for NextJS Webapp
+68 . AWS Cognito Authentication for NextJS Webapp
 - Steps
     ![Diagram](resources/images/services-26.PNG "Diagram")
     1. Architecture Explanation
@@ -1209,6 +1209,15 @@ Create API with Amazon API Gateway and Lambda
         - amplify push
     7. Install libraries
         - npm install aws-amplify @aws-amplify/ui-react
+    8. Add graphQL api
+        - amplify add api
+
+69 . How to allow guest users to access web applications  
+- Steps
+    1. AWS AppSync must be verified against any one of the Authorization Types
+        - Cognito User Pool, API Key, IAM, OpenID Connect
+    2. In this example will be using multiple authorization types
+        - Cognito user pool for authenticated users and IAM(identity pool) for non authenticated users
     
 #AWS Theories
 
@@ -3089,5 +3098,114 @@ Cold                                                                         Hot
     
 # Developer Associate Q&A
 
+1 . Amazon Kinesis is used to load data into a stock market monitoring application. The kinesis stream cannot keep up with the incoming data during simulated peak data rates testing. What step will enable Kinesis to handle peak hour traffic?
+- Increase the shard count of the stream using UpdateShardCount
+
+2 . A developer must install a serverless RESTful API on AWS regularly and consistently. Which strategies will be effective?
+- Define a swagger file. Deploy a SAM template that references the swagger file
+- Define an inline swagger definition in a Lambda function. Invoke the Lambda function
+
+3 . What section of the document root must be included in an AWS Cloudformation template to include objects specified by the AWS SAM in addition to Resources?
+- Transform
+
+4 . All data in transit between an EC2 instance and an EBS volume must be secured for a physicians office management application. Which one of the following strategies satisfies this criterion?
+- Enable EBS encryption
+- Leverage OS level encryption
+
+5 . Data is read from a DynamoDB database by an application. The program gets several ProvisionedThroughtputExceeded errors many times a day for a duration of 15 seconds. What should be done with this exception?
+- Retry the failed read requests with exponential backoff
+
+
 
 ### Developer Associate Theory
+
+Write a brief description on below services and functions
+
+~~~text
+• Amazon Athena
+• Amazon Kinesis
+• Amazon OpenSearch Service
+• AWS AppSync
+• Amazon EventBridge (Amazon CloudWatch Events)
+• Amazon Simple Notification Service (Amazon SNS)
+• Amazon Simple Queue Service (Amazon SQS)
+• AWS Step Functions
+• Amazon EC2
+
+• AWS Elastic Beanstalk(PAAS): Quickly deploy and manage web apps on AWS without worrying about the underlying infrastructure
+    - Powered by CloudFormation Templates and it setups ELB, Auto Scaling groups, RDS, CloudWatch monitoring, Blue/Green Deployment, Dockerized enviroments
+    - Deployment Policies: All at once, Rolling, Rolling with additional batch, Immutable
+
+• AWS Lambda
+• AWS Serverless Application Model (AWS SAM)
+• AWS Copilot
+• Amazon Elastic Container Registry (Amazon ECR)
+• Amazon Elastic Container Service (Amazon ECS)
+• Amazon Elastic Kubernetes Services (Amazon EKS)
+• Amazon Aurora 
+• Amazon DynamoDB
+• Amazon ElastiCache
+• Amazon MemoryDB for Redis
+• Amazon RDS
+• AWS Amplify
+• AWS Cloud9
+• AWS CloudShell
+• AWS CodeArtifact
+• AWS CodeBuild
+• AWS CodeCommit
+• AWS CodeDeploy
+• Amazon CodeGuru
+• AWS CodePipeline
+• AWS CodeStar
+• AWS X-Ray
+• AWS AppConfig
+• AWS Cloud Development Kit (AWS CDK)
+• AWS CloudFormation
+• AWS CloudTrail
+• Amazon CloudWatch
+• Amazon CloudWatch Logs
+• AWS Command Line Interface (AWS CLI)
+• AWS Systems Manager
+• Amazon API Gateway
+• Amazon CloudFront
+• Elastic Load Balancing
+• Amazon Route 53
+• Amazon VPC
+• AWS Certificate Manager (ACM)
+• AWS Certificate Manager Private Certificate Authority
+• Amazon Cognito
+• AWS Identity and Access Management (IAM)
+• AWS Key Management Service (AWS KMS)
+• AWS Secrets Manager
+• AWS Security Token Service (AWS STS)
+• AWS WAF
+• Amazon Elastic Block Store (Amazon EBS)
+• Amazon Elastic File System (Amazon EFS)
+• Amazon S3
+• Amazon S3 Glacier
+
+    - Out of scope -
+• AWS Application Discovery Service
+• Amazon AppStream 2.0
+• Amazon Chime
+• Amazon Connect
+• AWS Database Migration Service (AWS DMS)
+• AWS Device Farm
+• Amazon Elastic Transcoder
+• Amazon GameLift
+• Amazon Lex
+• Amazon Machine Learning (Amazon ML)
+• AWS Managed Services (AMS)
+• Amazon Mobile Analytics
+• Amazon Polly
+• Amazon QuickSight
+• Amazon Rekognition
+• AWS Server Migration Service (AWS SMS)
+• AWS Service Catalog
+• AWS Shield Standard
+• AWS Shield Advanced
+• AWS Snow Family
+• AWS Storage Gateway
+• Amazon WorkMail
+• Amazon WorkSpace
+~~~

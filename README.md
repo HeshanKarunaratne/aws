@@ -1218,6 +1218,22 @@ Create API with Amazon API Gateway and Lambda
         - Cognito User Pool, API Key, IAM, OpenID Connect
     2. In this example will be using multiple authorization types
         - Cognito user pool for authenticated users and IAM(identity pool) for non authenticated users
+ 
+70 . Learn to Deploy Containers on AWS
+- Steps
+
+    Approach 1
+    ![Diagram](resources/images/services-27.PNG "Diagram")
+    - Application Load Balancer operates at Layer 7 so that it can access http headers provided by the users
+    - ALB does the service discovery
+    - You can check them and point them to the necessary ECS services
+    
+    Approach 2: Amplify CLI uses this approach
+    ![Diagram](resources/images/services-28.PNG "Diagram")
+    - Since API Gateway is outside the VPC use a VPC Link to communicate with the VPC
+    - Cloud Map is designed to keep track of containers inside a microservice architecture in a highly scalable manner
+
+    1. Will be creating an express API and containerizing it
     
 #AWS Theories
 
@@ -3115,6 +3131,50 @@ Cold                                                                         Hot
 5 . Data is read from a DynamoDB database by an application. The program gets several ProvisionedThroughtputExceeded errors many times a day for a duration of 15 seconds. What should be done with this exception?
 - Retry the failed read requests with exponential backoff
 
+6 . What is the run order of the hooks for in-place deployments in an AWS CodeDeploy deployment?
+- Application Stop -> Download Bundle -> Before Install -> Install -> After Install -> Application Start -> Validate Service
+
+7 . How should access keys be handled in AWS according to best practices?
+- Delete all access keys for the account root user
+- Use Amazon IAM roles instead of access keys where possible
+
+8 . When launching containers in Amazon ECS, where may PortMapping be defined?
+- Task Definition
+
+9 . What are the requirements for configuring container instances in an AWS EB multi container Docker environment?
+- An Amazon ECS task definition
+
+10 . AWS services must be accessed and API calls must be made by an application running on an EC2 instance. What is the SAFEST approach to grant access to AWS services with the least amount of administration overhead?
+- Use EC2 instance profile
+
+11 . Amazon DynamoDB is used by an application tha tis deployed on Amazon EC2. The program makes a REST API request to DynamoDB. Periodically, when the application writes to a DynamoDB table, it gets a ProvisionedThroughputExceededException error. Which solutions will most effectively prevent this error?
+- Modify the application code to perform exponential backoff when the error is received
+- Modify the application to use AWS SDKs for DynamoDB
+
+12 . The application components of a big firm are scattered across several AWS accounts. The organization must gather and display account level trace data? What material should be utilized to achieve these specifications?
+- AWS XRay
+
+13 . What are the best practices for using bespoke libraries in AWS Lambda?
+- Modify the function runtime to include the necessary library
+
+14 . On an EC2 instance, an application is executing. The developer wishes to keep a statistic about his program in Amazon CloudWatch. How should this requirement be implemented optimally?
+- Use the CloudWatch PutMetricData API call to submit a custom metric to CloudWatch. Launch the EC2 instance with the required IAM role to enable the API call
+
+15 . When attempting to start or stop an Amazon EC2 instance using a boto3 script, the developer gets the following error message with "RequestLimitExceeded". What is the developers responsibility in resolving this error message?
+- Implement an exponential backoff algorithm for optimizing the number of API requests made to EC2
+
+16 . Before code is released into the prod environment, the release process workflow of an application needs human review. What is the most effective method to do this using AWS CodePipeline?
+- Use an approval action in a stage
+
+17 . Thousands of sensitive audio and video data must be stored in an S3 bucket. All data written to this bucket must be encrypted according to organizational security rules. How can this policys compliance be ensured?
+- Configure an Amazon S3 bucket policy to prevent the upload of objects that do not contain the x-amz-server-side-encryption head
+
+18 . With production distributed applications created as AWS Lambda functions, a developer must investigate performance issues. Other components of the applications are invoked by these distributed Lambda applications. What is the best way for a developer to discover and resolve the root cause of production performance issues?
+- Use AWS X-Ray then examine the segments and errors
+
+19 . A business is processing records from an Amazon Kinesis data streams using an AWS Lambda function. The firm suddenly noticed that records were being processed slowly. A developer finds that the functions iterator age metric is growing and the Lambda run time is consistently more than expected. Which activities should the developer do to boost the performance of the processor?
+- Increase the number of shards of the Kinesis Data stream
+- Increase the memory that is allocated to the Lambda function
 
 
 ### Developer Associate Theory
@@ -3149,6 +3209,9 @@ Write a brief description on below services and functions
 • Amazon RDS
 • AWS Amplify
 • AWS Cloud9
+    - Metadata: curl -s http://169.254.169.254/latest/meta-data
+    - Manually setting SG: aws ec2 authorize-security-group-ingress --group-id {sg-id} --port 8080 --protocol tcp --cidr {my-ip}/32
+
 • AWS CloudShell
 • AWS CodeArtifact
 • AWS CodeBuild
@@ -3157,7 +3220,8 @@ Write a brief description on below services and functions
 • Amazon CodeGuru
 • AWS CodePipeline
 • AWS CodeStar
-• AWS X-Ray
+• AWS X-Ray: Helps to analyze, debug distributed production applications. Can understand how your application and its underlying services are performing to identify and troubleshoot the root cause of performance issues and errors
+
 • AWS AppConfig
 • AWS Cloud Development Kit (AWS CDK)
 • AWS CloudFormation

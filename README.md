@@ -1234,6 +1234,13 @@ Create API with Amazon API Gateway and Lambda
     - Cloud Map is designed to keep track of containers inside a microservice architecture in a highly scalable manner
 
     1. Will be creating an express API and containerizing it
+    2. Config project to tell that this is a container based amplify project
+        - amplify configure project
+    3. Add API
+        - amplify add api
+    4. Create Dockerfile, docker-compose.yml, app folder and lib folder
+ 
+
     
 #AWS Theories
 
@@ -3176,6 +3183,22 @@ Cold                                                                         Hot
 - Increase the number of shards of the Kinesis Data stream
 - Increase the memory that is allocated to the Lambda function
 
+20 . Data is stored in an S3 bucket by an application operating on EC2 instances. All data must be encrypted in transit, according to security rules. How can the developer encrypt all traffic to the S3 bucket?
+- Create a bucket policy that denies traffic where SecureTransport is false
+
+21 . A considerable amount of read capacity is being used by queries to an Amazon DynamoDB database. There are a high number of huge characteristics in the table. The program does not need the whole set of attribute data. How may DynamoDB expenses be lowered while application performance be maximized?
+- Create a global secondary index with a minimum set of projected attributes
+
+22 . On AWS EB, a gamin firm has created a web portal. Occasionally, the organization must deliver new versions three or four times every day. The organization must rapidly roll out new features to all users. The solutions performance effect must be kept to a minimum and its availability must be maximized. Which solution will satisfy these criteria?
+- Use an immutable deployment policy to deploy to Amazon EC2 instances
+
+23 . A business processes papers that arrive through an Amazon S3 bucket. Through a web user interface, users may upload documents to an S3 bucket. When files are recieved in S3, an AWS Lambda function is executed to handle them, however the Lambda function periodically times out. What happens to the S3 event if the Lambda function is setup with the default settings?
+- The S3 event is discarded after the event is retried twice
+
+24 . Each hour, a business must consume terabytes of data from hunfreds of sources, which arrive practically continuosly throughout the day. The quantity of texts produced changes during the day. For fraud detection and live operating dashboards, messages must be sent in real time.
+- Use Amazon Kinesis Data Streams with Kinesis Client Library to ingest and deliver messages
+
+25 . 
 
 ### Developer Associate Theory
 
@@ -3199,8 +3222,8 @@ Write a brief description on below services and functions
 • AWS Lambda
 • AWS Serverless Application Model (AWS SAM)
 • AWS Copilot
-• Amazon Elastic Container Registry (Amazon ECR)
-• Amazon Elastic Container Service (Amazon ECS)
+• Amazon Elastic Container Registry (Amazon ECR): Fully managed Docker container registry that makes it easy for the developers to store, manage and deploy Docker container images
+• Amazon Elastic Container Service (Amazon ECS): Fully managed container orchestration service. Reliable, scalable way to run containers
 • Amazon Elastic Kubernetes Services (Amazon EKS)
 • Amazon Aurora 
 • Amazon DynamoDB

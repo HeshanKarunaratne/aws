@@ -3198,7 +3198,16 @@ Cold                                                                         Hot
 24 . Each hour, a business must consume terabytes of data from hunfreds of sources, which arrive practically continuosly throughout the day. The quantity of texts produced changes during the day. For fraud detection and live operating dashboards, messages must be sent in real time.
 - Use Amazon Kinesis Data Streams with Kinesis Client Library to ingest and deliver messages
 
-25 . 
+25 . Amazon ECS is used to deploy a microservices application across several containers. A developer want to collect trace information across microservices and view the microservices architecture in order to optimize performance.?
+- Install the AWS XRay daemon on each of the ECS instances
+
+26 . An amazon S3 bucket is used to host a static website. Javascript is used on many HTML pages on the site to retreive photos from another Amazon S3 bucket. When people explore the site, certain photos are not shown. What may be the underlying source of the problem?
+- Cross Origin Resource Sharing must be enabled on the Amazon S3 bucket
+
+27 . Amazon Database is used by a corporation to manage and track orders. The order date is used to split the DynamoDB table. During a sales event, the company receives a large spike in orders, forcing DynamoDB writes to choke, and the used throughput is considerably lower than the permitted throughput. How can this issue be rectified with minimal expenses, according to AWS best practices?
+- Increase the read and write capacity units of the DynamoDB table
+
+28 . 
 
 ### Developer Associate Theory
 

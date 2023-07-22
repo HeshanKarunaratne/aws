@@ -3207,7 +3207,33 @@ Cold                                                                         Hot
 27 . Amazon Database is used by a corporation to manage and track orders. The order date is used to split the DynamoDB table. During a sales event, the company receives a large spike in orders, forcing DynamoDB writes to choke, and the used throughput is considerably lower than the permitted throughput. How can this issue be rectified with minimal expenses, according to AWS best practices?
 - Increase the read and write capacity units of the DynamoDB table
 
-28 . 
+28 . Users will be required to access AWS services and will be able to update their own passwords, according to an application being developed by a business. Which of the following would allow the organization to manage users and authorization while allowing users to change their passwords on their own?
+- Amazon Cognito user pools and identity pools
+
+29 . All PII is stored by a corporation in an Amazon DynamoDB database called PII in Account A. Access to the PII database is required by an application operating on EC2 instance in Account B. Account A's administrator established an IAM role called AccessPII with access credentials to the PII database and added Account B as a trusted entity.
+- Ask an administrator in Account B to allow the EC2 IAM role permission to assume the AccessPII role with predefined service control pc
+- Include the AssumeRole API in the application code logic to obtain credentials to access the PII table
+
+30 . A developer is attempting to use AWS CodeDeploy to deploy a serverless application. The application has been upgraded and requires re-deployment. What file does the developer need to edit to enable CodeDeploy to submit the change?
+- appSpec.yml
+
+31 . An application must handle the clients IP address. The application has been transferred to AWS and is now protected by an ALB. However it seems as if all client IP addresses have become identical. The application must retain its horizontal scalability.
+- Alter the application code to inspect the X-Forwarded-For header. Ensure that the code can work properly if a list of IP addresses is passed in the header
+
+32 . A developer has created a web application that is accessible to customers and is running on an EC2 instance. Every request made to the program is logged. Normally, the program operates without incident, but a traffic surge creates a numerous logs, causing the disk to fill up and run out of memory. According to company policy, all historical logs must be consolidated for analysis. Which long term remedy should the developer use to avoid a recurrence of the issue?
+- Install the Amazon Cloudwatch agent on the instance to send the logs to cloudwatch. Delete the logs from the instance once they are sent to cloudwatch
+
+33 . A business is developing a REST service utilizing an Amazon API gateway integrated with AWS Lambda. for testing reasons, the service must run several versions. What is the MOST Effective approach to do this?
+- Deploy the API versions as unique stages with unique endpoints and use stage variables to provide further context.
+
+34 . A business runs an application that makes use of an Amazon RDS DB instance as the database. A developer must implement database encryption at rest. Which measures should the developer perform in combination to satisfy this requirement?
+- Take a snapshot of the DB instance, and create an encrypted copy of the snapshot
+- Restore the DB instance from the encrypted snapshot
+
+35 . A business is developing a stock trading application. The program requires a latency of less than one milisecond to handle trading requests. The firm stores all trade data in DynamoDB, which is utilized to perform each tradiing request. A development team conducts load testing on the application and discovers that the time required to get data is longer than intended. The development team need a solution that significantly improves data retrieval time with the least amount of work feasible.Which solution satisfies these criteria?
+-  Use DynamoDB Accelerator to cache trading data
+
+36 . 
 
 ### Developer Associate Theory
 
@@ -3232,7 +3258,13 @@ Write a brief description on below services and functions
 • AWS Serverless Application Model (AWS SAM)
 • AWS Copilot
 • Amazon Elastic Container Registry (Amazon ECR): Fully managed Docker container registry that makes it easy for the developers to store, manage and deploy Docker container images
+
 • Amazon Elastic Container Service (Amazon ECS): Fully managed container orchestration service. Reliable, scalable way to run containers
+    - Components of ECS: Cluster, Task Definition(Json file with configurations), Task(Do not remain running once workload is complete), Service(Ensures tasks remaining running), Container Agent
+
+• Amazon Fargate: Serverless containers, pay based on duration and consumption
+    - Cold Starts, Duration as long as you want, Memory 30GB, Pricing Pay for at least 1min and every additional second
+
 • Amazon Elastic Kubernetes Services (Amazon EKS)
 • Amazon Aurora 
 • Amazon DynamoDB
@@ -3253,6 +3285,7 @@ Write a brief description on below services and functions
 • AWS CodePipeline
 • AWS CodeStar
 • AWS X-Ray: Helps to analyze, debug distributed production applications. Can understand how your application and its underlying services are performing to identify and troubleshoot the root cause of performance issues and errors
+    - X-Ray SDK -> X-Ray Daemon -> X-Ray API -> X-Ray Console
 
 • AWS AppConfig
 • AWS Cloud Development Kit (AWS CDK)

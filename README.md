@@ -1243,6 +1243,14 @@ Create API with Amazon API Gateway and Lambda
 71 . Step Functions
 - Steps
     ![Diagram](resources/images/services-29.PNG "Diagram")
+    1. Install serverless and create a project
+        - npm i serverless
+        - sls create -t aws-nodejs
+    2. Initialize npm and add plugin
+        - npm init --y
+        - npm install --save-dev serverless-step-functions
+        
+    
     
 #AWS Theories
 
@@ -3244,6 +3252,29 @@ Cold                                                                         Hot
 38 . Amazon Kinesis Streams is being used by a web application to store clickstream data that may not be utilized for up to 12 hours. How can the developer encrypt data in the Kinesis Streams at rest?
 - Enable server-side encryption in Kinesis Streams
 
+39 . A developer is attempting to monitor the status of an application by running a cron job that returns 1 when the service is up and 0 when it is down. The developer wrote code to publish the custom metrics to Amazon CloudWatch and set an alert using the AWS CLI put metric alarm function. The developer, on the other hand, is unable to issue an alert since the custom metrics are not visible in the CloudWatch interface. What is the source of this problem?
+- THe developer needs to use the put-metric-data command
+
+40 . A developer is responsible for creating and deleting branches. Which particular IAM permissions, based on the concept of least privilege, should be added?
+- codecommit:CreateBranch and codecommit:DeleteBranch
+
+41 . A programmer is developing a REST API that will allow users to add goods to a shopping list. The service is developed on Amazon API Gateway and integrates with AWS Lambda. The shopping list items are sent to the function as query string arguments. How should the developer transform query string parameters to Lambda function arguments?
+- Create a mapping template
+
+42 . Amazon API Gateway is used in a company's new mobile application. As the development team completes a new version of its APIs, a developer must roll out the API modification securely and transparently. What is the SIMPLEST method for a developer to deploy a new version to a restricted number of consumers using API Gateway?
+- Use the canary release deployment option in API Gateway. Direct a percentage of the API traffic using the canarySettings setting
+
+43 . A developer is using S3 to store critical documents that need encryption at rest. At the very least, the encryption keys must be cycled yearly. What is the simplest method for doing this?
+- Use AWS KMS with automatic key rotation
+
+44 . A business delivers API as a service and binds all of its users to a SLA. What should the organization do to ensure compliance with each SLA?
+- Enable default throttling limits for each stage after deploying the APIs
+
+45 . A developer created a static website hosted on Amazon S3 that uses API Gateway and Lambda to conduct web service queries. The site is now displaying an error message that reads as follows. The requested resource does not have an Access-Control-Allow-Origin header. As a result, origin null is denied access. What is the Developers responsibility in resolving this issue?
+- Enable CORS for the method in API Gateway
+
+46 . 
+
 ### Developer Associate Theory
 
 Write a brief description on below services and functions
@@ -3303,7 +3334,8 @@ Write a brief description on below services and functions
 • AWS Cloud Development Kit (AWS CDK)
 • AWS CloudFormation
 • AWS CloudTrail
-• Amazon CloudWatch
+• Amazon CloudWatch: Observe AWS resources and applications on AWS and on premises
+
 • Amazon CloudWatch Logs
 • AWS Command Line Interface (AWS CLI): Control multiple AWS services from the command line and automate them through scripts
 

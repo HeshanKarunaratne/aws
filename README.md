@@ -1240,7 +1240,9 @@ Create API with Amazon API Gateway and Lambda
         - amplify add api
     4. Create Dockerfile, docker-compose.yml, app folder and lib folder
  
-
+71 . Step Functions
+- Steps
+    ![Diagram](resources/images/services-29.PNG "Diagram")
     
 #AWS Theories
 
@@ -3233,7 +3235,14 @@ Cold                                                                         Hot
 35 . A business is developing a stock trading application. The program requires a latency of less than one milisecond to handle trading requests. The firm stores all trade data in DynamoDB, which is utilized to perform each tradiing request. A development team conducts load testing on the application and discovers that the time required to get data is longer than intended. The development team need a solution that significantly improves data retrieval time with the least amount of work feasible.Which solution satisfies these criteria?
 -  Use DynamoDB Accelerator to cache trading data
 
-36 . 
+36 . A company's ecommerce website is experiencing large traffic surges, resulting in database performance issues. Users remark that viewing the website takes an excessive amount of time. A developer want to use Amazon ElastiCache to construct a caching layer. The website must be responsive regardless of whatever product a user visits, and product information and pricing must be updated consistently. Which policy for writing to the cache will meet these requirements?
+- Write to the cache and the backend at the same time
+
+37 . A business is building a web application that will enable workers to submit their profile pictures to a private S3 bucket. There is no restriction on the size of the profile images that should be shown in each time an employee checks in. The images cannot be made publicly available for security reasons. What is a long term feasible solution to this function?
+- Save the picture's S3 key in anDynamoDB table. Use a function to generate a presigned URL every time an employee logs in. Return the URL to the browser.
+
+38 . Amazon Kinesis Streams is being used by a web application to store clickstream data that may not be utilized for up to 12 hours. How can the developer encrypt data in the Kinesis Streams at rest?
+- Enable server-side encryption in Kinesis Streams
 
 ### Developer Associate Theory
 
@@ -3268,7 +3277,10 @@ Write a brief description on below services and functions
 • Amazon Elastic Kubernetes Services (Amazon EKS)
 • Amazon Aurora 
 • Amazon DynamoDB
-• Amazon ElastiCache
+• Amazon ElastiCache: Microsecond latency and scale with in memory caching boosting performance
+    - Reduce costs and eliminate the operational overhead of self managed caching
+    - Adds write throttling, intelligent swap memory management, failover enhancements
+
 • Amazon MemoryDB for Redis
 • Amazon RDS
 • AWS Amplify
@@ -3293,14 +3305,21 @@ Write a brief description on below services and functions
 • AWS CloudTrail
 • Amazon CloudWatch
 • Amazon CloudWatch Logs
-• AWS Command Line Interface (AWS CLI)
+• AWS Command Line Interface (AWS CLI): Control multiple AWS services from the command line and automate them through scripts
+
 • AWS Systems Manager
 • Amazon API Gateway
 • Amazon CloudFront
 • Elastic Load Balancing
-• Amazon Route 53
+• Amazon Route 53: Highly available and scalable cloud Domain Name System(DNS)
+    - 7 Types: Simple, Weighted, Latency Based, Failover, Geolocation, Geo Proximity, Multi-value Answer
+    - Health Check default:30s, can reduce to 10s, CloudWatch alarm can can alert status, Health checks can monitor other health checks as well
+    - Route53 resolver: Route DNS queries between VPC and your network Hybrid environments
+
 • Amazon VPC
-• AWS Certificate Manager (ACM)
+• AWS Certificate Manager (ACM): Provision, manage and deploy public and private SSL/TLS certificates for the use of AWS services
+    - ACMs are attached to ELB, CloudFront, API Gateway, EB
+
 • AWS Certificate Manager Private Certificate Authority
 • Amazon Cognito
 • AWS Identity and Access Management (IAM)

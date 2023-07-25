@@ -3273,7 +3273,22 @@ Cold                                                                         Hot
 45 . A developer created a static website hosted on Amazon S3 that uses API Gateway and Lambda to conduct web service queries. The site is now displaying an error message that reads as follows. The requested resource does not have an Access-Control-Allow-Origin header. As a result, origin null is denied access. What is the Developers responsibility in resolving this issue?
 - Enable CORS for the method in API Gateway
 
-46 . 
+46 . A vast number of tiny messages are ingested by an application and stored in a database. AWS Lambda is used to power the application. A development team is making adjustment to the processing logic of the program. Each message is processing more than 15 minutes in testing. The team is worried the present backend will fail to function properly. Which improvements to the backend system should be implmented to guarantee that each message is treated in the most scalable manner possible?
+- Add the message to an SQS queue. Set up Amazon EC2 instance in an Auto scaling group to poll the queue and process the messages as they arrive
+
+47 . An application developer is tasked with integrating CloudWatch into an on premises environment. According to AWS security best practices, how should the application use CloudWatch?
+- Configure AWS credentials in the application server with an AWS SDK
+
+48 . A business utilizes AWS CodeBuild and AWS CodeCommit to implement a continuous build process. Developers routinely submit code throughout the development period, resulting in large build failures. The firm is looking for a solution that would generate code prior to developers pushing it to the main branch. Which option best fits these criteria in terms of cost effectiveness?
+- Con1figure the CodeBuild agent to build the code in the local system
+
+49 . In an Amazon DynamoDB database, a game holds user game data. Individual users should not have access to the gaming data of other players. How is this possible?
+- Restrict access to specific items based on certain primary key values
+
+50 . A legacy service has a SOAP interface that is XML based. The developer want to use the Amazon API Gateway to expose the services capabilities to external customer. Which approach is necessary to do this?
+- Create a RESTful API with the API Gateway, transform the incoming JSON into a valid XML message for the SOAP interface using mapping templates
+
+51 . 
 
 ### Developer Associate Theory
 
@@ -3353,9 +3368,15 @@ Write a brief description on below services and functions
     - ACMs are attached to ELB, CloudFront, API Gateway, EB
 
 • AWS Certificate Manager Private Certificate Authority
-• Amazon Cognito
+• Amazon Cognito: Decentralized managed Authentication
+    - Cognito User Pool: Allows users to sign in directly to the user pool using Web Identity Federation eg: Facebook, Google, Amazon
+    - Cognito Identity Pool:
+
 • AWS Identity and Access Management (IAM)
-• AWS Key Management Service (AWS KMS)
+• AWS Key Management Service (AWS KMS): Create and manage encryption keys
+    - KMS is supporting HSM(Hardware Security Model) which is tamper proof, it stores keys in memory
+    - KMS supports Symmetric(Uses 256-bit one key to encrypt and decrypt) and Asymmetric(Uses two keys: private and public, RSA key pair that is used for encryption and decryption or signing and verification, but not both)
+
 • AWS Secrets Manager
 • AWS Security Token Service (AWS STS)
 • AWS WAF

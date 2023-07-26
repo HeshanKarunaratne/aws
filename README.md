@@ -3288,7 +3288,41 @@ Cold                                                                         Hot
 50 . A legacy service has a SOAP interface that is XML based. The developer want to use the Amazon API Gateway to expose the services capabilities to external customer. Which approach is necessary to do this?
 - Create a RESTful API with the API Gateway, transform the incoming JSON into a valid XML message for the SOAP interface using mapping templates
 
-51 . 
+51 . As a big state machine, the existing design makes use of several Lambda functions calling one another. The state machines coordination is handled by old bespoke code that is prone to failure. Which AWS service can assist with state machine refactoring and management?
+- AWS Step functions
+
+52 . A business is building a new online game using Amazon ECS platform. The design will have four separate Amazon ECS services, each of which will need unique permissions to various AWS services. By bin packing the containers depending on memory reservation, the business hopes to optimize the utilization of the underlying Amazon EC2 instances. Which configuration would enable the Development team to accomplish these criteria in the most secure manner possible?
+- Create four distinct IAM roles, each containing the required permissions for the associated ECS service, then configure each ECS task definition to reference the associated IAM role
+
+53 . A developer wishes to search and filter log data in order to troubleshoot an application. Amazon CloudWatch Logs stores the application logs. To count exceptions in the application logs, the Developer sets a new metric filter. The logs, on the other hand, return no results. What is the cause for absence of filtered results?
+- CloudWatch Logs only publishes metric data for events that happen after the filter is created
+
+54 . The processing of a SQS message by an application takes longer than planned. What should the developer do to ensure that other instances of the program do not get the same message?
+- Send a ChangeMessageVisibility call to extend Visibility Timeout
+
+55 . A business is deploying AWS resources using AWS CloudFormation templates. The organization requires an upgrade to one of its Amazon Web Services CloudFormation stacks. What can the business do to ascertain the effect of the adjustments on the Operating resources?
+- Investigate the change sets
+
+56 . A developer is trying to upload an object to an S3 bucket that has default encryption enabled using the Amazon S3 PutObject API action. A 400 Bad Request error is sent to the developer. Which of the following is the most probable source of this error?
+- The object exceeds the maximum object size that is allowed
+
+57 . A business uses Amazon EC2 instances to execute a bespoke web application behind an ALB. The instances are managed as part of an Auto Scaling group. The companys development team deploys all services through AWS CloudFormation. When the development team runs a new instance of the program, it takes time to install and setup.
+- Create a prebuild AMI with the application installed and configured
+- Update the launch template resource in the CloudFormation template
+
+58 . An API Gateway an AWS Lambda are used in a serverless application. Where should the Lambda functions session data be stored between function calls?
+- In an DynamoDB table
+
+59 . LAMP stack is used to construct an on premises application. The developer want to host this application on AWS. Which of the following AWS service sets is appropriate for running this stack?
+- Amazon EC2, Amazon Aurora
+
+60 . When a developer calls the Amazon CloudWatch API, he receives HTTP 400 ThrottlingException errors sporadically. When a call is not successful, no data is obtained. Which best practice should be implemented first in order to remedy this issue?
+- Retry the call with exponential backoff
+
+61 . A developer is in the process of developing an event handling system. The developer established a normal Amazon SQS queue to process messages asynchronously. According to quality assurance testing, some events were handled several times. What is the preferred method for preventing events from being handled multiple times?
+- Use a FIFO queue and configurer deduplication
+
+62 . 
 
 ### Developer Associate Theory
 
@@ -3300,8 +3334,14 @@ Write a brief description on below services and functions
 • Amazon OpenSearch Service
 • AWS AppSync
 • Amazon EventBridge (Amazon CloudWatch Events)
-• Amazon Simple Notification Service (Amazon SNS)
-• Amazon Simple Queue Service (Amazon SQS)
+• Amazon Simple Notification Service (Amazon SNS): Subscribe and send notifications via email, webhooks, lambdas, SQS
+    - Publishers: AWS SDK, CLI, CloudWatch, AWS Services
+    - Subscribers: Lambda, SQS, Email, HTTP/S
+
+• Amazon Simple Queue Service (Amazon SQS): Fully managed queuing service that enables you to decouple and scale microservices, distributed systems and serverless applications
+    - Message size: 1byte and 256KB, Can extend if Amazon SQS Extended Client Library for Java(256KB to 2GB)
+    - Retention: Default(4 days), Adjustable from 60s to 14 days
+
 • AWS Step Functions
 • Amazon EC2
 
@@ -3370,7 +3410,7 @@ Write a brief description on below services and functions
 • AWS Certificate Manager Private Certificate Authority
 • Amazon Cognito: Decentralized managed Authentication
     - Cognito User Pool: Allows users to sign in directly to the user pool using Web Identity Federation eg: Facebook, Google, Amazon
-    - Cognito Identity Pool:
+    - Cognito Identity Pool: Provides temporary AWS credentials to access AWS services
 
 • AWS Identity and Access Management (IAM)
 • AWS Key Management Service (AWS KMS): Create and manage encryption keys

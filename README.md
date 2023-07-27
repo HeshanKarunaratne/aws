@@ -3322,7 +3322,16 @@ Cold                                                                         Hot
 61 . A developer is in the process of developing an event handling system. The developer established a normal Amazon SQS queue to process messages asynchronously. According to quality assurance testing, some events were handled several times. What is the preferred method for preventing events from being handled multiple times?
 - Use a FIFO queue and configurer deduplication
 
-62 . 
+62 . A business operates an e-commerce website that makes use of Amazon DynamoDB to dynamically adjust the price of products in real time. At any one moment, numerous changes to price information for a specific product may occur concurrently. This results in the overwriting of the original editors modifications without a thorough review procedure. Which write option in DynamoDB should be used to avoid this overwriting?
+- Conditional writes
+
+63 . A developer must use an AWS CloudFormation template to launch a new AWS Lambda function. Which processes are responsible for deploying Lambda functions?
+- Create an AWS::Lambda::Function resource in the template,then write the code directly inside the CloudFormation template
+- Upload a .ZIP file containing the function code to Amazon S3, then add a reference to it in an AWS::Lambda::Function resource in the template
+
+64 . The developer want to utilize AWS X-Ray to monitor the end-to-end performance of a user request across the whole software stack. The developer modified the program, tested it, and discovered that it is capable of sending traces to AWS X-Ray. The traces, on the other hand, are not accessible when the program is deployed to an EC2 instance. Which of the following is most likely to result in this situation?
+- The X-Ray daemon is not installed on the EC2 instance
+- The instance role does not have xray:PutTraceSegment and xray:PutTelemetryRecords permission
 
 ### Developer Associate Theory
 
@@ -3330,7 +3339,8 @@ Write a brief description on below services and functions
 
 ~~~text
 • Amazon Athena
-• Amazon Kinesis
+• Amazon Kinesis: Scalable, durable, real time data streaming service used to ingest, analyze data in real time from multiple sources
+
 • Amazon OpenSearch Service
 • AWS AppSync
 • Amazon EventBridge (Amazon CloudWatch Events)
@@ -3417,7 +3427,9 @@ Write a brief description on below services and functions
     - KMS is supporting HSM(Hardware Security Model) which is tamper proof, it stores keys in memory
     - KMS supports Symmetric(Uses 256-bit one key to encrypt and decrypt) and Asymmetric(Uses two keys: private and public, RSA key pair that is used for encryption and decryption or signing and verification, but not both)
 
-• AWS Secrets Manager
+• AWS Secrets Manager: Protect secrets needed to access your applications and services. Easily rotate, manage and retrieve database credentials, API keys and other secrets throughout their lifecycle
+    - Enforces encryption at rest by using KMS
+
 • AWS Security Token Service (AWS STS)
 • AWS WAF
 • Amazon Elastic Block Store (Amazon EBS)

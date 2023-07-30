@@ -1250,6 +1250,22 @@ Create API with Amazon API Gateway and Lambda
         - npm init --y
         - npm install --save-dev serverless-step-functions
         
+72 . Amazon Pinpoint: Connect with customers through scalable, targeted multichannel communications
+- Steps
+    1. Add authentication
+        - amplify add auth
+    2. Add pinpoint
+        - amplify add analytics
+    3. Push changes to AWS
+        - amplify push
+    4. Navigate to Pinpoint dashboard
+        - Enable features 
+            1. Click manage in emails and edit identity details
+        - Create user segment
+            1. Add a criteria to separate values
+        - Create journey
+            1. Journey should start when it receives 'AddToCart' event
+    
     
     
 #AWS Theories
@@ -3333,6 +3349,45 @@ Cold                                                                         Hot
 - The X-Ray daemon is not installed on the EC2 instance
 - The instance role does not have xray:PutTraceSegment and xray:PutTelemetryRecords permission
 
+65 . A developer needs to write an AWS CloudFormation template on a local machine and deploy a CloudFormation stack to AWS. What must the developer do to complete these tasks?
+- Install the AWS CLI. Configure the AWS CLI by using an IAM user access key and secret key
+
+66 . A developer needs to use Amazon DynamoDB to store customer orders. The developers company requires all customer data to be encrypted at rest with a key that the company generates. What should the developer do to meet these requirements?
+- Store the key by using AWS KMS. Choose an AWS KMS customer managed key during creation of the DynamoDB table. Provide the ARN of the AWS KMS key.
+
+67 . A company experienced partial downtime the last deployment of a new application. AWS EB split the environments Amazon EC2 instances into batches and deployed a new version one batch at a time after taking them outof service. Therefore, full capacity was not maintained during deployment. The developer plans to release a new version of the application, and is looking for a policy that will maintain full capacity and minimize the impact of the failed deployment. Which deployment policy should the developer use?
+- Immutable
+
+68 . A company is proving services to many downstream consumers. Each consumer may connect to one or many services. This has resulted in a complex architecture that is difficult to manage and does not scale well. The company needs a single interface to manage these services to consumers. Which AWS service should be used to refactor this architecture?
+- Amazon API Gateway
+
+69 . When a developer tries to run an AWS CodeBuild project, it raises an error because the length of all environment variables exceeds the limit for the combined maximum of characters. What is the recommended solution?
+- Use AWS Systems Manager Parameter Store to store large number of environmental variables
+
+70 . A Development team decides to adopt a CICD process using AWS CodePipeline and AWS CodeCommit for a new application. However, management wants a person to review and approve the code before it is deployed to production. How can the development team add a manual approval to the CICD pipeline?
+- Add an approval action to the pipeline. Configure the approval action to publish to an Amazon SNS topic when approval is required. The pipeline execution will stop and wait for an approval
+
+71 . A developer is creating a solution to track an accounts Amazon S3 buckets over time. The developer has created an AWS Lambda function that will run on a schedule. The function will list the accounts S3 buckets and will store the list in an Amazon DynamoDB table. The developer receives a permissions error when the developer runs the function with the AWSLambdaBasicExecutionRole AWS managed policy. Which combination of permissions should the developer use to resolve this error?
+- Permission for the Lambda function to list buckets in Amazon S3
+- Permission for the Lambda function to write in DynamoDB
+
+72 . A company is adding items to an Amazon DynamoDB table from an AWS Lambda function that is written in Python. A developer needs to implement a solution that inserts records in the DynamoDB table and performs automatic retry when the insert fails. Which solution meets these requirements with minimum code changes?
+- Use the AWS SDK for Python(boto3) to call the PutItem operation
+
+73 . A developer is writing an AWS Lambda function. The developer wants to log key events that occur during the Lambda function and include a unique identifier to associate the events with a specific function invocation. Which of the following will help the developer accomplish this objective?
+- Obtain the request identifier from the Lambda context object. Architect the application to write logs to the console
+
+74 . A developer is concerned that the application might become overwhelmed by too many requests. The developer needs to limit the number of requests to the API for all current and future clients. The developer must not change the API, the application or the client code. What should the developer do to meet these requirements?
+- Place the API behind an Amazon API Gateway. Set the per client throttling limits
+
+75 . An ecommerce company wants to redirect users to a country specific website when they enter the example.com website. The web application is using Amazon CloudFront and an ALB with an ECS cluster. The application s domain name resolution is configured in an Amazon Route 53 public hosted zone. Which solution will meet these requirements with the LEAST operational effort?
+- Create a CloudFront function to inspect the CloudFront-Viewer-Country header and return redirect responses to different URLs based on user location
+
+76 . The developer deploys an AWS Lambda function that runs each time a new Amazon S3 bucket is created. The Lambda function is supposed to attach an S3 Lifecycle policy to each new S3 bucket. The developer discovers that newly created S3 buckets have no S3 Lifecycle policy attached. Which AWS service should the developer use to find a possible error in the Lambda Function?
+- CloudWatch
+
+77 . 
+
 ### Developer Associate Theory
 
 Write a brief description on below services and functions
@@ -3372,7 +3427,13 @@ Write a brief description on below services and functions
 
 • Amazon Elastic Kubernetes Services (Amazon EKS)
 • Amazon Aurora 
-• Amazon DynamoDB
+• Amazon DynamoDB: A key-value and document NoSQL database which can guarantee consistent reads and writes at any scale
+    - Fully managed, Multi AZ(3), Multi-master, Backup and restore, In-memory caching
+    - All data is stored on SSD storage and is spread across 3 different AZs
+    - RCU for Strong: eg: 33 reads at 17KB per item -> (20/4)*33= 166RCU
+    - RCU for Eventual: eg: 14 reads at 24KB per item -> (24/4)*(14/2)= 42RCU
+    - WCU: eg: 11 writes at 1KB per item -> (1)*(11)= 11WCU
+
 • Amazon ElastiCache: Microsecond latency and scale with in memory caching boosting performance
     - Reduce costs and eliminate the operational overhead of self managed caching
     - Adds write throttling, intelligent swap memory management, failover enhancements

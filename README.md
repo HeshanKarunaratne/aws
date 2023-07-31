@@ -3386,7 +3386,28 @@ Cold                                                                         Hot
 76 . The developer deploys an AWS Lambda function that runs each time a new Amazon S3 bucket is created. The Lambda function is supposed to attach an S3 Lifecycle policy to each new S3 bucket. The developer discovers that newly created S3 buckets have no S3 Lifecycle policy attached. Which AWS service should the developer use to find a possible error in the Lambda Function?
 - CloudWatch
 
-77 . 
+77 . A company is migrating its on premises database to Amazon RDS for MySQL. The company has read heavy workloads, and wants to make sure it re factors its code to achieve optimum read performance for its queries. How can this objective be met?
+- Add a connection string to use an RDS read replica for read queries
+
+78 . A developer has code that is stored in an S3 bucket. The code must be deployed as an AWS Lambda function across multiple accounts in the same AWS region as the S3 bucket. An AWS CloudFormation template that runs for each account will deploy the Lambda function. What is the most secure way to allow CloudFormation to access the Lambda code in the S3 bucket?
+- Grant the CloudFormation service role the S3 ListBucket and GetObject permissions. Add a bucket policy to Amazon S3 with the principal of "AWS":account-numbers
+
+79 . A developer needs to create an application that supports SAML and authentication with social media providers. It must also allow access to AWS services such as DynamoDB. Which AWS service or feature will meet these requirements with the LEAST amount of additional coding?
+- Cognito identity pools
+
+80 . A developer is designing a serverless application for an ecommerce website. An amazon API Gateway API exposes AWS Lambda functions for billing, payment and user operations. The website fetures shopping carts for the users. The shopping carts must be stored for extended periods of time and will be retrieved frequently by the front end application. The load on the application will vary significantly based on the time of the day and the promotional sales that are offered on the website. The application must be able to scale automatically to meet these changing demands. Which solution will meet these requirements?
+- Store the data objects in Amazon DynamoDB tables. Cache the data objects by using DynamoDB Accelerator
+
+81 . A company is hosting a workshop for external users and wants to share the reference documents with the external users for 7 days. The company stores the reference documents in an Amazon S3 bucket that the company owns. What is the most secure way to share the documents with the external users?
+- Use S3 presigned URLs to share the documents with the external users. Set an expiration time of 7 days
+
+82 . A developer is storing many objects in a single S3 bucket. The developer needs to optimize the S3 bucket for high request rates. How should the developer store the objects to meet this requirement?
+- Store the objects by using object key names distributed across multiple prefixes
+
+83 . A company has a serverless application that uses AWS Lambda functions and AWS Systems Manager parameters to store configuration data. The company moves the Lambda functions inside the VPC and into private subnets. The Lambda functions are now producing errors in their attempts to access Systems Manager parameters. Which solution will allow the Lambda functions to access Systems Manager parameters inside the VPC?
+- Create an interface VPC endpoint for Systems Manager
+
+84 . 
 
 ### Developer Associate Theory
 
@@ -3408,7 +3429,8 @@ Write a brief description on below services and functions
     - Retention: Default(4 days), Adjustable from 60s to 14 days
 
 • AWS Step Functions
-• Amazon EC2
+• Amazon EC2: Choose your OS, Storage, memory, Network throughput, launch and SSH into your server within minutes
+    - General Purpose, Compute Optimized, Memory Optimized, Accelerated Optimized, Storage Optimized
 
 • AWS Elastic Beanstalk(PAAS): Quickly deploy and manage web apps on AWS without worrying about the underlying infrastructure
     - Powered by CloudFormation Templates and it setups ELB, Auto Scaling groups, RDS, CloudWatch monitoring, Blue/Green Deployment, Dockerized enviroments
@@ -3474,7 +3496,9 @@ Write a brief description on below services and functions
     - Health Check default:30s, can reduce to 10s, CloudWatch alarm can can alert status, Health checks can monitor other health checks as well
     - Route53 resolver: Route DNS queries between VPC and your network Hybrid environments
 
-• Amazon VPC
+• Amazon VPC: Provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define
+    - VPCs are region specific, can create upto 5 VPC per region, every region comes with a default VPC, DNS hostnames are disabled by default
+
 • AWS Certificate Manager (ACM): Provision, manage and deploy public and private SSL/TLS certificates for the use of AWS services
     - ACMs are attached to ELB, CloudFront, API Gateway, EB
 

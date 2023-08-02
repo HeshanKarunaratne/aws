@@ -1267,6 +1267,17 @@ Create API with Amazon API Gateway and Lambda
             1. Journey should start when it receives 'AddToCart' event
     
     
+- Steps
+    ![Diagram](resources/images/services-30.PNG "Diagram")
+    1. Install dependencies
+        - aws configure: with administrative access to AWS console
+        - npm install -g aws-cdk
+        - cdk --version
+    2. Initialize CDK project
+        - cdk init --language typescript
+    3. Create Dockerfile
+        - You can create .dockerignore file to ignore files that are not needed for Dockerizing
+    4. Provisioning backend as code
     
 #AWS Theories
 
@@ -3452,7 +3463,33 @@ Cold                                                                         Hot
 - Create a new DB instance from a snapshot of the previous DB instance
 - Create a new Elastic Beanstalk environment that connects to the DB instance
 
-98 . //15
+98 . A company has point-of-sale devices across thousands of retail shops that synchronize sales transactions with a centralized system. The system includes an Amazon API Gateway API that exposes an AWS Lambda function. The Lambda function processes the transactions and stores the transactions in Amazon RDS for MySQL. The number of transactions increases rapidly during the day and is near zero at night. How can a developer increase the elasticity of the system MOST cost-effectively?
+- Create an Amazon Simple Queue Service (Amazon SQS) queue. Publish transactions to the queue. Set the queue to invoke the Lambda function. Set the reserved concurrency of the Lambda function to be less than the number of database connections
+
+99 . A developer is writing an AWS Lambda function. The Lambda function needs to access items that are stored in an Amazon DynamoDB table. What is the MOST secure way to configure this access for the Lambda function?
+- Create an IAM policy that allows access to the DynamoDB table. Attach this policy to the Lambda function's IAM role
+
+100 . A developer is implementing user authentication and authorization for a web application that is hosted on an Amazon EC2 instance. The developer needs to ensure that the user credentials are encrypted and secure when they are stored and transmitted. Which solution will meet these requirements?
+- Use Amazon Cognito to configure a user pool. Use the Amazon Cognito API to authenticate and authorize the users
+
+101 . A company that has multiple offices uses an Amazon DynamoDB table to store employee payroll information. Item attributes consist of employee names, office identifiers, and cumulative daily hours worked The most frequently used query extracts a report of an alphabetical subset of employees for a specific office. Which design of the DynamoDB table primary key will have the MINIMUM performance impact?
+- Partition key on the office identifier and sort key on the employee name
+
+102 . A company hosts a microservices application that uses Amazon API Gateway. AWS Lambda, Amazon Simple Queue Service (Amazon SQS), and Amazon DynamoDB. One of the Lambda functions adds messages to an SQS FIFO queue. When a developer checks the application logs, the developer finds a few duplicated items in a DynamoDB table. The items were inserted by another polling function that processes messages from the queue. What is the MOST likely cause of this issue?      
+- The polling function timeout is greater than the queue visibility timeout.
+
+103 . A development team has been using a builder server that is hosted on an Amazon EC2 instance to perform builds and deployments for the last 3 months. The EC2 instance's instance profile uses an IAM role that contains the Administrator Access managed policy. The development team must replace that policy with a policy that provides only the required permissions. What is the FASTEST way to create a custom 1AM policy for the EC2 instance to meet this requirement?
+- Create a new IAM policy that includes all actions that AWS CloudTrail recorded for the IAM role in the last 3 months
+
+104 . A developer needs to write an AWS CloudFormation template on a local machine and deploy a CloudFormation stack to AWS. What must the developer do to complete these tasks?
+- Install the AWS CLI. Configure the AWS CLI by using an IAM user access key and secret key
+
+105 . A developer is working on a web application that runs on Amazon Elastic Container Service (Amazon ECS) and uses an Amazon DynamoDB table to store data. The application performs a large number of read requests against a small set of the table data. How can the developer improve the performance of these requests?
+- Create a DynamoDB Accelerator (DAX) cluster. Configure the application to use the DAX cluster for DynamoDB requests
+- Increase the read capacity of the DynamoDB table
+
+106 . 23
+
 
 ### Developer Associate Theory
 
@@ -3560,7 +3597,8 @@ Write a brief description on below services and functions
     - Cognito User Pool: Allows users to sign in directly to the user pool using Web Identity Federation eg: Facebook, Google, Amazon
     - Cognito Identity Pool: Provides temporary AWS credentials to access AWS services
 
-• AWS Identity and Access Management (IAM)
+• AWS Identity and Access Management (IAM): Manages access of AWS users and resources
+
 • AWS Key Management Service (AWS KMS): Create and manage encryption keys
     - KMS is supporting HSM(Hardware Security Model) which is tamper proof, it stores keys in memory
     - KMS supports Symmetric(Uses 256-bit one key to encrypt and decrypt) and Asymmetric(Uses two keys: private and public, RSA key pair that is used for encryption and decryption or signing and verification, but not both)
@@ -3568,7 +3606,9 @@ Write a brief description on below services and functions
 • AWS Secrets Manager: Protect secrets needed to access your applications and services. Easily rotate, manage and retrieve database credentials, API keys and other secrets throughout their lifecycle
     - Enforces encryption at rest by using KMS
 
-• AWS Security Token Service (AWS STS)
+• AWS Security Token Service (AWS STS): Web service that enables you to request temporary, limited privilege credentials for IAM users or for federated users
+    - STS will return: Access Key ID, Secret Access Key, Session Token, Expiration
+
 • AWS WAF
 • Amazon Elastic Block Store (Amazon EBS)
 • Amazon Elastic File System (Amazon EFS)

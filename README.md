@@ -1266,6 +1266,13 @@ Create API with Amazon API Gateway and Lambda
         - Create journey
             1. Journey should start when it receives 'AddToCart' event
     
+73 . AWS CDK - Cloud development Kit
+- Benefits over CloudFormation
+    1. Ability to use a preferred language
+    2. Auto completion and inline docs
+    3. Infrastructure Code + Application code
+    4. Ability to use developer friendly CLI
+    5. Ability to use higher level constructs
     
 - Steps
     ![Diagram](resources/images/services-30.PNG "Diagram")

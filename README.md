@@ -3530,6 +3530,9 @@ Write a brief description on below services and functions
     - Deployment Policies: All at once, Rolling, Rolling with additional batch, Immutable
 
 • AWS Lambda
+• AWS Lambda@Edge: To override the behaviour of request and responses
+    - Viewer request, Origin request, Origin response, Viewer response
+
 • AWS Serverless Application Model (AWS SAM)
 • AWS Copilot
 • Amazon Elastic Container Registry (Amazon ECR): Fully managed Docker container registry that makes it easy for the developers to store, manage and deploy Docker container images
@@ -3574,7 +3577,9 @@ Write a brief description on below services and functions
 • AWS AppConfig
 • AWS Cloud Development Kit (AWS CDK)
 • AWS CloudFormation
-• AWS CloudTrail
+• AWS CloudTrail: Logs API calls between AWS services, is a service that enables governance, compliance, operational auditing and risk auditing of AWS account
+    - CloudTrail logs for last 90 days via Event History
+
 • Amazon CloudWatch: Observe AWS resources and applications on AWS and on premises
 
 • Amazon CloudWatch Logs
@@ -3582,7 +3587,9 @@ Write a brief description on below services and functions
 
 • AWS Systems Manager
 • Amazon API Gateway
-• Amazon CloudFront
+• Amazon CloudFront: CDN, Creates cached copies of your website at various edge locations around the world
+    - Origin: Where all of original files are located. eg: S3, EC2, ELB, Route53
+
 • Elastic Load Balancing: Distributes incoming application traffic across multiple targets, such as EC2 instances, containers, Lambda functions
     - ALB are designed to balance HTTP and HTTPS traffic, Operates at Layer 7, Allows you to add routing rules to listeners based on HTTP protocol, WAF can be attached to ALB
     - NLB are designed to balance TCP/UDP, Operates at Layer 4

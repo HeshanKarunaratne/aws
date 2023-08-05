@@ -3495,7 +3495,24 @@ Cold                                                                         Hot
 - Create a DynamoDB Accelerator (DAX) cluster. Configure the application to use the DAX cluster for DynamoDB requests
 - Increase the read capacity of the DynamoDB table
 
-106 . 23
+106 . A developer needs to use Amazon DynamoDB to store customer orders. The developer's company requires all customer data to be encrypted at rest with a key that the company generates. What should the developer do to meet these requirements?
+- Store the key by using AWS Key Management Service (AWS KMS). Choose an AWS KMS customer managed key during creation of the DynamoDB table. Provide the Amazon Resource Name (ARN) of the AWS KMS key
+
+107 . A Developer is migrating an on-premises application to AWS. The application currently takes user uploads and saves them to a local directory on the server. All uploads must be saved and made immediately available to all instances in an Auto Scaling group. Which approach will meet these requirements?
+- Use Amazon S3 and rearchitect the application so all uploads are placed in S3
+
+108 . A developer is creating a script to automate the deployment process for a serverless application. The developer wants to use an existing AWS Serverless Application Model (AWS SAM) template for the application. What should the developer use for the project? 
+- Call aws cloudformation package to create the deployment package. Call aws cloudformation deploy to deploy the package afterward
+- Call sam package to create the deployment package. Call sam deploy to deploy the package afterward
+
+109 . A developer has built a market application that stores pricing data in Amazon DynamoDB with Amazon ElastiCache in front. The prices of items in the market change frequently. Sellers have begun complaining that, after they update the price of an item, the price does not actually change in the product listing. What could be causing this issue?
+- The cache is not being invalidated when the price of the item is changed
+
+110 . The developer is creating a web application that collects highly regulated and confidential user data through a POST request. The web application is served through Amazon CloudFront. User names and phone numbers must be encrypted at the edge and must remain encrypted throughout the entire application stack. What is the MOST secure way to meet these requirements?
+- Use field-level encryption on CloudFront
+
+111 . A Developer has been asked to create an AWS Lambda function that is triggered any time updates are made to items in an Amazon DynamoDB table. The function has been created, and appropriate permissions have been added to the Lambda execution role. Amazon DynamoDB streams have been enabled for the table, but the function is still not being triggered. Which option would enable DynamoDB table updates to trigger the Lambda function?
+- Configure event source mapping for the Lambda function
 
 
 ### Developer Associate Theory

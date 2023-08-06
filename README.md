@@ -3514,6 +3514,22 @@ Cold                                                                         Hot
 111 . A Developer has been asked to create an AWS Lambda function that is triggered any time updates are made to items in an Amazon DynamoDB table. The function has been created, and appropriate permissions have been added to the Lambda execution role. Amazon DynamoDB streams have been enabled for the table, but the function is still not being triggered. Which option would enable DynamoDB table updates to trigger the Lambda function?
 - Configure event source mapping for the Lambda function
 
+112 . A company maintains a REST service using Amazon API Gateway and the API Gateway native API key validation. The company recently launched a new registration page, which allows users to sign up for the service. The registration page creates a new API key using CreateApiKey and sends the new key to the user. When the user attempts to call the API using this key, the user receives a 403 Forbidden error. Existing users are unaffected and can still call the API. What code updates will grant these new users access to the API?
+- The createUsagePlanKey method must be called to associate the newly created API key with the correct usage plan
+
+113 . An application uploads photos to an Amazon S3 bucket. Each photo that is uploaded to the S3 bucket must be resized to a thumbnail image by the application. Each thumbnail image is uploaded with a new name in the same S3 bucket. Which AWS service can a developer configure to directly process each single S3 event for each S3 object upload?
+- AWS Lambda
+
+114 . A company is running a Docker application on Amazon ECS. The application must scale based on user load in the last 15 seconds. How should a Developer instrument the code so that the requirement can be met?
+- Create a high-resolution custom Amazon CloudWatch metric for user activity data, then publish data every 5 seconds
+
+115 . Where should the appspec.yml file be placed in order for AWS CodeDeploy to work?
+- In the root of the application source code directory structure
+
+116 . A Developer is working on an application that handles 10MB documents that contain highly-sensitive data. The application will use AWS KMS to perform client- side encryption. What steps must be followed?
+- Invoke the GenerateDataKey API to retrieve the plaintext version of the data encryption key to encrypt the data
+
+117 . 41
 
 ### Developer Associate Theory
 
@@ -3593,7 +3609,10 @@ Write a brief description on below services and functions
 
 • AWS AppConfig
 • AWS Cloud Development Kit (AWS CDK)
-• AWS CloudFormation
+• AWS CloudFormation: A templating language that defines AWS resources to be provisioned
+    - Direct Updates & Change Sets
+    - Stack updates: Updates with no interupptions(retains physical ID), Update with some interupptions(retains physical ID), Replacement(generates new physical ID)
+
 • AWS CloudTrail: Logs API calls between AWS services, is a service that enables governance, compliance, operational auditing and risk auditing of AWS account
     - CloudTrail logs for last 90 days via Event History
 

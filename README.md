@@ -3550,7 +3550,53 @@ Cold                                                                         Hot
 123 . An application needs to use the IP address of the client in its processing. The application has been moved into AWS and has been placed behind an Application Load Balancer (ALB). However, all the client IP addresses now appear to be the same. The application must maintain the ability to scale horizontally. Based on this scenario, what is the MOST cost-effective solution to this problem?
 - Alter the application code to inspect the X-Forwarded-For header. Ensure that the code can work properly if a list of IP addresses is passed in the header
 
-124 . 48
+124 . A developer tested an application locally and then deployed it to AWS Lambda. While testing the application remotely, the Lambda function fails with an access denied message. How can this issue be addressed?
+- Update the Lambda function's execution role to include the missing permissions
+
+125 . A company is building a compute-intensive application that will run on a fleet of Amazon EC2 instances. The application uses attached Amazon EBS disks for storing data. The application will process sensitive information and all the data must be encrypted. What should a Developer do to ensure the data is encrypted on disk without impacting performance?
+- Configure the Amazon EC2 instance fleet to use encrypted EBS volumes for storing data
+
+126 . A Developer is working on a serverless project based in Java. Initial testing shows a cold start takes about 8 seconds on average for AWS Lambda functions. What should the Developer do to reduce the cold start time?
+- Reduce the deployment package by including only needed modules from the AWS SDK for Java
+- Increase the memory allocation setting for the Lambda function
+
+127 . A developer is storing JSON files in an Amazon S3 bucket. The developer wants to securely share an object with a specific group of people. How can the developer securely provide temporary access to the objects that are stored in the S3 bucket?
+- Use the AWS software development kit (SDK) to generate a presigned URL. Provide the presigned URL
+
+128 . A front-end web application is using Amazon Cognito user pools to handle the user authentication flow. A developer is integrating Amazon DynamoDB into the application using the AWS SDK for JavaScript. How would the developer securely call the API without exposing the access or secret keys?
+- Configure Amazon Cognito identity pools and exchange the JSON Web Token (JWT) for temporary credentials
+
+129 . A Developer must build an application that uses Amazon DynamoDB. The requirements state that the items being stored in the DynamoDB table will be 7KB in size and that reads must be strongly consistent. The maximum read rate is 3 items per second, and the maximum write rate is 10 items per second. How should the Developer size the DynamoDB table to meet these requirements?
+-  Read: 6 read capacity units Write: 70 write capacity units
+
+130 . A company needs to ingest terabytes of data each hour from thousands of sources that are delivered almost continually throughout the day. The volume of messages generated varies over the course of the day. Messages must be delivered in real time for fraud detection and live operational dashboards. Which approach will meet these requirements?
+- Use Amazon Kinesis Data Streams with Kinesis Client Library to ingest and deliver messages
+
+131 . A developer is debugging an AWS Lambda function behind an Amazon API Gateway. Whenever the API Gateway endpoint is called, HTTP status code 200 is returned even though AWS Lambda is recording a 4xx error. What change needs to be made to return a proper error code through the API Gateway?
+- Use a Lambda proxy integration to return HTTP codes and headers
+
+132 . A developer is using Amazon S3 as the event source that invokes a Lambda function when new objects are created in the bucket. The event source mapping information is stored in the bucket notification configuration. The developer is working with different versions of the Lambda function, and has a constant need to update notification configuration so that Amazon S3 invokes the correct version. What is the MOST efficient and effective way to achieve mapping between the S3 event and Lambda?
+- Use a Lambda alias
+
+133 . A company has a multi-tier application that uses Amazon API Gateway, AWS Lambda, and Amazon RDS. The company wants to investigate a slow response time to calls that come from the API Gateway API. What is the MOST operationally efficient way for the company to determine which internal call is causing the slow response times?
+- Use AWS X-Ray
+
+134 . A developer is deploying an application that will store files in an Amazon S3 bucket. The files must be encrypted at rest. The developer wants to automatically replicate the files to an S3 bucket in a different AWS Region for disaster recovery. How can the developer accomplish this task with the LEAST amount of configuration?
+- Encrypt the files by using server-side encryption with S3 managed encryption keys (SSE-S3). Enable S3 bucket replication
+
+135 . A serverless application is using AWS Step Functions to process data and save it to a database. The application needs to validate some data with an external service before saving the data. The application will call the external service from an AWS Lambda function, and the external service will take a few hours to validate the data. The external service will respond to a webhook when the validation is complete. A developer needs to pause the Step Functions workflow and wait for the response from the external service. What should the developer do to meet this requirement?
+- Use the .wait ForTaskToken option in the Lambda function task state. Pass the token in the body
+
+136 . A developer must use AWS X-Ray to monitor an application that is running on an Amazon EC2 instance. The developer has prepared the application by using the X-Ray SDK. What should the developer do to perform the monitoring?
+- Install the X-Ray daemon. Assign an IAM role to the EC2 instance with a policy that allows writes to X-Ray
+
+137 . A developer is designing a full-stack serverless application. Files for the website are stored in an Amazon S3 bucket. AWS Lambda functions that use Amazon API Gateway endpoints return results from an Amazon DynamoDB table. The developer must create a solution that securely provides registration and authentication for the application while minimizing the amount of configuration. Which solution meets these requirements?   
+- Configure an Amazon Cognito identity pool. Map the users with IAM roles that are configured to access the S3 bucket that stores the website
+
+138 . A company has an application that writes files to an Amazon S3 bucket. Whenever there is a new file, an S3 notification event invokes an AWS Lambda function to process the file. The Lambda function code works as expected. However, when a developer checks the Lambda function logs, the developer finds that multiple invocations occur for every file. What is causing the duplicate entries?
+- The Lambda function did not run correctly, and Lambda retried the invocation with a delay
+
+139 . 66
 
 ### Developer Associate Theory
 
@@ -3619,9 +3665,20 @@ Write a brief description on below services and functions
 
 • AWS CloudShell
 • AWS CodeArtifact
-• AWS CodeBuild
-• AWS CodeCommit
-• AWS CodeDeploy
+• AWS CodeBuild: Fully managed build pipeline to create temporary server to build and test code projects
+    - Compiles source code, runs unit tests and produces artifacts that are ready to deploy
+    - CodeBuild uses buildspec.yml and it needs to be in the root of the project folder
+
+• AWS CodeCommit: Fully managed source control service that hosts secure Git based repositories
+
+• AWS CodeDeploy: Fully managed deploy pipeline to deploy to staging or production environments
+    - Can deploy to EC2, On premise, Lambda or ECS
+    - Uses appspec.yml file
+    - In-Place deployment and Blue/Green Deployment
+    - ApplicationStop -> DownloadBundle -> BeforeInstall -> Install -> AfterInstall -> ApplicationStart -> ValidationService -> 
+        BeforeBlockTraffic -> BlockTraffic -> AfterBlockTraffic -> BeforeAllowTraffic -> AllowTraffic -> AfterAllowTraffic
+    - Need to install CodeDeploy agent so that the EC2 instance can report back to CodeDeploy
+
 • Amazon CodeGuru
 • AWS CodePipeline
 • AWS CodeStar
@@ -3629,7 +3686,8 @@ Write a brief description on below services and functions
     - X-Ray SDK -> X-Ray Daemon -> X-Ray API -> X-Ray Console
 
 • AWS AppConfig
-• AWS Cloud Development Kit (AWS CDK)
+• AWS Cloud Development Kit (AWS CDK): Write IaC using an imperative paradigm with your favourite language
+
 • AWS CloudFormation: A templating language that defines AWS resources to be provisioned
     - Direct Updates & Change Sets
     - Stack updates: Updates with no interupptions(retains physical ID), Update with some interupptions(retains physical ID), Replacement(generates new physical ID)

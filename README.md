@@ -3596,7 +3596,41 @@ Cold                                                                         Hot
 138 . A company has an application that writes files to an Amazon S3 bucket. Whenever there is a new file, an S3 notification event invokes an AWS Lambda function to process the file. The Lambda function code works as expected. However, when a developer checks the Lambda function logs, the developer finds that multiple invocations occur for every file. What is causing the duplicate entries?
 - The Lambda function did not run correctly, and Lambda retried the invocation with a delay
 
-139 . 66
+139 . A developer needs to use the AWS CLI on an on-premises development server temporarily to access AWS services while performing maintenance. The developer needs to authenticate to AWS with their identity for several hours. What is the MOST secure way to call AWS CLI commands with the developer's IAM identity?
+- Run the get-session-token CLI command with the developer's IAM user. Use the returned credentials to call the CLI
+
+140 . A developer deployed an application to an Amazon EC2 instance. The application needs to know the public IPv4 address of the instance. How can the application find this information?
+- Query the instance metadata from http://169.254.169.254/latest/meta-data
+
+141 . A developer is designing an AWS Lambda function to perform a maintenance activity. The developer will use Amazon EventBridge (Amazon CloudWatch Events) to invoke the function on an hourly schedule. The developer wants the function to log information at different levels of detail according to the value of a log level variable. The developer must design the function so that the log level can be set without requiring a change to the function code. Which solution will meet these requirements?
+- Set the log level in a Lambda environment variable
+
+142 . A developer is creating a serverless application that uses an AWS Lambda function The developer will use AWS CloudFormation to deploy the application The application will write logs to Amazon CloudWatch Logs. The developer has created a log group in a CloudFormation template for the application to use. The developer needs to modify the CloudFormation template to make the name of the log group available to the application at runtime. Which solution will meet this requirement?
+- Pass the log group's Amazon Resource Name (ARN) as an environment variable to the Lambda function
+
+143 . A company is running an application on Amazon Elastic Container Service (Amazon ECS). When the company deploys a new version of the application, the company initially needs to expose 10% of live traffic to the new version. After a period of time, the company needs to immediately route all the remaining live traffic to the new version. Which ECS deployment should the company use to meet these requirements?
+- Blue/green with canary
+
+144 . A microservices application is deployed across multiple containers in Amazon Elastic Container Service (Amazon ECS). To improve performance, a developer wants to capture trace information between the microservices and visualize the microservices architecture. Which solution will meet these requirements?
+- Build the container from the amazon/aws-xray-daemon base image. Use the AWS X-Ray SDK to instrument the application
+
+145 . A developer notices timeouts from the AWS CLI when the developer runs list commands. What should the developer do to avoid these timeouts?
+- Use the --page-size parameter to request a smaller number of items
+
+146 . A developer has created a web API that uses Amazon Elastic Container Service (Amazon ECS) and an Application Load Balancer (ALB). An Amazon CloudFront distribution uses the API as an origin for web clients. The application has received millions of requests with a JSON Web Token (JWT) that is not valid in the authorization header. The developer has scaled out the application to handle the unauthenticated requests. What should the developer do to reduce the number of unauthenticated requests to the API?
+- Create a CloudFront function for the distribution Use the crypto module in the function to validate the JWT
+
+147 . A developer has created on AWS Lambda function tool uses 15 MB of memory. When the developer runs the code natively on a laptop that has 4 cores, the function runs within 100 ms. When the developer deploys the code as a Lambda function with 128 MB of memory, the first run takes 3 seconds. Subsequent runs take more than 500 ms to finish. The developer needs to improve the performance of the Lambda function so that the function runs consistently in less than 100 ms, excluding the initial startup time. Which solution will meet this requirement?
+- Increase the memory of the Lambda function
+
+148 . A developer wants to use AWS Elastic Beanstalk to test a new version of on application in a test environment. Which deployment method offers the FASTEST deployment?
+- All at once
+
+149 . A developer has built an application that inserts data into an Amazon DynamoDB table. The table is configured to use provisioned capacity. The application is deployed on a burstable nano Amazon EC2 Instance. The application logs show that the application has been failing because of a ProvisionedThroughputExceedException error. Which actions should the developer take to resolve this issue?
+- Reduce the frequency of requests to DynamoDB by implement ng exponential backoff
+- Change the capacity mode of the DynamoDB table from provisioned to on-demand
+
+150 . 84
 
 ### Developer Associate Theory
 

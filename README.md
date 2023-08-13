@@ -1285,6 +1285,44 @@ Create API with Amazon API Gateway and Lambda
     3. Create Dockerfile
         - You can create .dockerignore file to ignore files that are not needed for Dockerizing
     4. Provisioning backend as code
+
+74 . AWS Organizations Hands-on
+- AWS Organizations helps you centrally manage and govern AWS accounts
+- There are 2 modes
+    1. Consolidated Billing mode: Only to get a Consolidated bill
+    2. All Feature mode: Manage all accounts and get Consolidated billing as well
+- SCPs don't grant any permissions like IAM, it only specify the maximum permissions for the Organizational Unit   
+- If you activate All feature mode you cannot go back to consolidated billing mode
+- SCPs do not apply to master account but for OUs and Accounts for users and roles
+- If the master account turned off the sharing then RI and savings plans are not shared with member accounts 
+
+- Steps
+    1. Log in to root user account and create an organization. It will become the master account
+    2. Organization Structure 
+    ~~~text
+          Root
+          |
+          |- Organizational Unit 1
+          |- Organizational Unit 2
+          |- Master Account 
+    ~~~
+    3. There are 3 ways to access newly created accounts from Organizational structure
+        - Using root user
+        - Switch Roles feature
+            - Create an IAM user
+            - Log in as IAM user(This user have admin priviledges)
+            - Setting up SCP to prevent any user(root user as well) from leaving the organization
+                - Navigate to master account and click service control policies
+                - If there is an explicit deny at any level even though there is AWSFullAccess given, deny policy will be prioritize
+        - Using AWS SSO
+    4. Can create tag policies and check it from AWS Resource Groups
+        - We can set key and respected values for that key
+        - We can group resources based on tags
+    5. How to use SSO to access AWS Organization
+        - Navigate to AWS SSO
+        - You can use the user portal to anyone who needs to access AWS accounts. Users need not to be IAM users for that
+        - AWS SSO acts as a Identity store
+    6. Deploy CloudFormation StackSets across Organization or Organizational Units across multiple regions
     
 #AWS Theories
 
@@ -3714,7 +3752,8 @@ Write a brief description on below services and functions
     - Need to install CodeDeploy agent so that the EC2 instance can report back to CodeDeploy
 
 • Amazon CodeGuru
-• AWS CodePipeline
+• AWS CodePipeline: A fully managed CI/CD pipeline to setup automatic deployments
+
 • AWS CodeStar
 • AWS X-Ray: Helps to analyze, debug distributed production applications. Can understand how your application and its underlying services are performing to identify and troubleshoot the root cause of performance issues and errors
     - X-Ray SDK -> X-Ray Daemon -> X-Ray API -> X-Ray Console

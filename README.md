@@ -3668,7 +3668,66 @@ Cold                                                                         Hot
 - Reduce the frequency of requests to DynamoDB by implement ng exponential backoff
 - Change the capacity mode of the DynamoDB table from provisioned to on-demand
 
-150 . 84
+150 . A developer is deploying on application on Amazon EC2 instances that run in Account A. In certain cases, this application needs to read data from a private Amazon S3 bucket in Account B. The developer must provide the application access to the S3 bucket without exposing the S3 bucket to anyone else. Which combination of actions should the developer take to meet these requirements?
+- Update the instance profile IAM role in Account A with S3 read permissions
+- Configure the bucket policy in Account B to grant permissions to the instance profile role
+
+151 . A developer at a company recently created a serverless application to process and show data from business reports. The application's user interface (UI) allows users to select and start processing the flies. The UI displays a message when the result is available to view. The application uses AWS Step Functions with AWS Lambda functions to process the files. The developer used Amazon API Gateway and Lambda functions to create an API to support the UI. The company's UI team reports that the request to process a file s often returning timeout errors because of the size or complexity of the files. The UI team wants the API to provide an immediate response so that the UI can display a message while the files are being processed. The backend process that is invoked by the API needs to send an email message when the report processing is complete. What should the developer do to configure the API to meet these requirements?
+- Change the API Gateway route to add an X-Amz-Invocation-Type header with a static value of 'Event' in the integration request. Deploy the API Gateway stage to apply the changes.
+
+152 . A company is migrating its on-premises database to Amazon RDS for MySQL. The company has read-heavy workloads, and wants to make sure it re-factors its code to achieve optimum read performance for its queries. How can this objective be met?
+- Add a connection string to use an RDS read replica for read queries
+
+153 . A developer received the following error message during an AWS CloudFormation deployment: DELETE_FAILED (The following resource(s) failed to delete: ASGInstanceRolel2345678) Which action should the developer take to resolve this error?
+- Modify the CloudFormation template to retain the ASGInstanceRolel2345678 resource. Then manually delete the resource after deployment
+
+154 . An application runs on multiple EC2 instances behind an ELB. Where is the session data best written so that it can be served reliably across multiple requests?
+- Write data to Amazon ElastiCache
+
+155 . A company is using continuous integration/continuous delivery (CI/CD) systems. A developer must automate the deployment of an application software package to Amazon EC2 instances and virtual servers that run on premises. Which AWS service should the developer use to meet these requirements?
+- AWS CodeDeploy
+
+156 . A software company is using AWS CodeBuild to build an application. The buildspec runs the application build and creates a Docker image that contains the application. The company needs to push the Docker image to Amazon Elastic Container Registry (Amazon ECR) only upon the completion of each successful build. Which solution meets these requirements?
+- Change the buildspec by adding a post_build phase that uses the commands block to push the Docker image
+
+157 . A company is using Amazon RDS as the backend database for its application. After a recent marketing campaign, a surge of read requests to the database increased the latency of data retrieval from the database. The company has decided to implement a caching layer in front of the database. The cached content must be encrypted and must be highly available. Which solution will meet these requirements?
+- Amazon ElastiCache for Redis in cluster mode
+
+158 . A company has an application that runs on AWS Elastic Beanstalk in a load-balanced environment. The company needs to update the instance types in the environment to a more recent generation of instance types. The company must minimize downtime during the deployment of this configuration change. Which deployment options will meet these requirements?
+- Immutable 
+- Rolling based on Health
+
+159 . Given the source code for an AWS Lambda function in the local file store.py containing a handler function called get_store and the following AWS CloudFormation template:
+- Use aws cloudformation package to upload the source code to an Amazon S3 bucket and produce a modified CloudFormation template
+
+160 . A company is developing a report implemented using AWS Step Functions. Amazon CloudWatch shows errors in the Step Functions task state machine. To troubleshoot each task, the state input needs to be included along with the error message in the state output. Which coding practice can preserve both the original input and the error for the state?
+- Use ResultPath in a Catch statement to include the error with the original input
+
+161 . A developer is receiving HTTP 400: ThrottlingException errors intermittently when calling the Amazon CloudWatch API. When a call fails, no data is retrieved. What best practice should first be applied to address this issue?
+- Retry the call with exponential backoff
+
+162 . A company has an online order website that uses Amazon DynamoDB to store item inventory. A sample of the inventory object is as follows: A developer needs to reduce all inventory prices by 100 as long as the resulting price would not be less than 500. What should the developer do to make this change with the LEAST number of calls to DynamoDB?
+- Perform a DynamoDB UpdateItem operation with a condition expression of "Price >= 600
+
+163 . A company is using an AWS Lambda function to process records from an Amazon Kinesis data stream. The company recently observed slow processing of the records. A developer notices that the iterator age metric for the function is increasing and that the Lambda run duration is constantly above normal. Which actions should the developer take to increase the processing speed?
+- Increase the number of shards of the Kinesis data stream
+- Increase the memory that is allocated to the Lambda function
+
+164 . A developer is making changes to a custom application that uses AWS Elastic Beanstalk. Which solutions will update the Elastic Beanstalk environment with the new application version after the developer completes the changes?
+- Package the application code into a .zip file. Use the AWS Management Console to upload the zip file and deploy the packaged application
+- Package the application code into a .zip file. Use the AWS CLI to create a new application version from the .zip file and to update the environment
+
+165 . A company has an application where reading objects from Amazon S3 is based on the type of user. The user types are registered user and guest user. The company has 25,000 users and is growing. Information is pulled from an S3 bucket depending on the user type. Which approaches are recommended to provide access to both user types?
+- Use Amazon Cognito to provide access using authenticated and unauthenticated roles
+- Use the AWS IAM service and let the application assume the different roles using the AWS Security Token Service (AWS STS) AssumeRole action depending on the type of user and provide read access to Amazon S3 using the assumed role
+
+166 . A developer is writing a new AWS Serverless Application Model (AWS SAM) template with a new AWS Lambda function. The Lambda function runs complex code. The developer wants to test the Lambda function with more CPU power. What should the developer do to meet this requirement?
+- Increase the memory
+
+167 . 106
+
+
+
 
 ### Developer Associate Theory
 

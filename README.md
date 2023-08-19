@@ -3724,8 +3724,24 @@ Cold                                                                         Hot
 166 . A developer is writing a new AWS Serverless Application Model (AWS SAM) template with a new AWS Lambda function. The Lambda function runs complex code. The developer wants to test the Lambda function with more CPU power. What should the developer do to meet this requirement?
 - Increase the memory
 
-167 . 106
+167 . A developer uses a single AWS CloudFormation template to configure the test environment and the production environment for an application. The developer handles environment-specific requirements in the CloudFormation template. The developer decides to update the Amazon EC2 Auto Scaling launch template with new Amazon Machine Images (AMIs) for each environment. The CloudFormation update for the new AMIs is successful in the test environment, but the update fails in the production environment. What are the possible causes of the CloudFormation update failure in the production environment?
+- The new AMIs do not fulfill the specified conditions in the CloudFormation template
+- CloudFormation does not have sufficient IAM permissions to make the changes
 
+168 . A developer is creating a serverless web application and maintains different branches of code. The developer wants to avoid updating the Amazon API Gateway target endpoint each time a new code push is performed. What solution would allow the developer to perform a code push efficiently, without the need to update the API Gateway?
+- Create aliases and versions in AWS Lambda
+
+169 . A developer needs to deploy an application running on AWS Fargate using Amazon ECS. The application has environment variables that must be passed to a container for the application to initialize. How should the environment variables be passed to the container?
+- Define an array that includes the environment variables under the environment parameter within the task definition
+
+170 . A developer must extend an existing application that is based on the AWS Serverless Application Model (AWS SAM). The developer has used the AWS SAM CLI to create the project. The project contains different AWS Lambda functions. Which combination of commands must the developer use to redeploy the AWS SAM application?
+- sam build
+- sam deploy
+
+171 . A developer manages an application that interacts with Amazon RDS. After observing slow performance with read queries, the developer implements Amazon ElastiCache to update the cache immediately following the primary database update. What will be the result of this approach to caching?
+- The cache will become large and expensive because the infrequently requested data is also written to the cache
+
+172 . 111
 
 
 

@@ -3741,9 +3741,41 @@ Cold                                                                         Hot
 171 . A developer manages an application that interacts with Amazon RDS. After observing slow performance with read queries, the developer implements Amazon ElastiCache to update the cache immediately following the primary database update. What will be the result of this approach to caching?
 - The cache will become large and expensive because the infrequently requested data is also written to the cache
 
-172 . 111
+172 . A developer has a stateful web server on-premises that is being migrated to AWS. The developer must have greater elasticity in the new design. How should the developer re-factor the application to make it more elastic?
+- Use an ELB with an Auto Scaling group
+- Store session state data in an Amazon DynamoDB table
 
+173 . A developer has a legacy application that is hosted on-premises. Other applications hosted on AWS depend on the on-premises application for proper functioning.In case of any application errors, the developer wants to be able to use Amazon CloudWatch to monitor and troubleshoot all applications from one place. How can the developer accomplish this?
+- Download the CloudWatch agent to the on-premises server. Configure the agent to use IAM user credentials with permissions for CloudWatch
 
+174 . A developer is designing a serverless application with two AWS Lambda functions to process photos. One Lambda function stores objects in an Amazon S3 bucket and stores the associated metadata in an Amazon DynamoDB table. The other Lambda function fetches the objects from the S3 bucket by using the metadata from the DynamoDB table. Both Lambda functions use the same Python library to perform complex computations and are approaching the quota for the maximum size of zipped deployment packages. What should the developer do to reduce the size of the Lambda deployment packages with the LEAST operational overhead?
+- Create a Lambda layer with the required Python library. Use the Lambda layer in both Lambda functions
+
+175 . A developer is adding a feature to a client-side application so that users can upload videos to an Amazon S3 bucket. What is the MOST secure way to give the application the ability to write files to the S3 bucket?
+- Configure the API layer of the application to have a new endpoint that creates signed URLs that allow an object to be put into the S3 bucket. Generate a presigned URL through this API call in the client application. Upload the video by using the signed URL
+
+176 . A developer needs to build and deploy a serverless application that has an API that mobile clients will use. The API will use Amazon DynamoDB and Amazon OpenSearch Service (Amazon Elasticsearch Service) as data sources. Responses that are sent to the clients will contain aggregated data from both data sources. The developer must minimize the number of API endpoints and must minimize the number of API calls that are required to retrieve the necessary data. Which solution should the developer use to meet these requirements?
+- GraphQL API on AWS AppSync
+
+177 . A Lambda function processes data before sending it to a downstream service. Each piece of data is approximately 1MB in size. After a security audit, the function is now required to encrypt the data before sending it downstream. Which API call is required to perform the encryption?
+- Use the KMS GenerateDataKey API to get an encryption key
+
+178 . A company has a web application that runs on Amazon EC2 instances with a custom Amazon Machine Image (AMI). The company uses AWS CloudFormation to provision the application. The application runs in the us-east-1 Region, and the company needs to deploy the application to the us-west-1 Region. An attempt to create the AWS CloudFormation stack in us-west-1 fails. An error message states that the AMI ID does not exist. A developer must resolve this error with a solution that uses the least amount of operational overhead. Which solution meets these requirements?
+- Copy the custom AMI from us-east-1 to us-west-1. Update the AWS CloudFormation template for us-west-1 to refer to AMI ID for the copied AMI. Relaunch the stack
+
+179 . A developer wants to run a PHP website with an NGINX proxy and package them as Docker containers in one environment. The developer wants a managed environment with automated provisioning and load balancing. The developer cannot change the configuration and must minimize operational overhead. How should the developer build the website to meet these requirements?
+- Create a new application in AWS Elastic Beanstalk that is preconfigured for a multicontainer Docker environment. Upload the code, and deploy it to a web server environment.
+
+180 . A company has a website that displays a daily newsletter. When a user visits the website, an AWS Lambda function processes the browser's request and queries the company's on-premises database to obtain the current newsletter. The newsletters are stored in English. The Lambda function uses the Amazon Translate TranslateText API operation to translate the newsletters, and the translation is displayed to the user. Due to an increase in popularity, the website's response time has slowed. The database is overloaded. The company cannot change the database and needs a solution that improves the response time of the Lambda function. Which solution meets these requirements?
+- Cache the translated newsletters in the Lambda /tmp directory
+
+181 . A developer is creating an AWS CloudFormation template for an application. The application includes an Amazon RDS database. The password to be set for the resource's MasterUserPassword property is already stored in AWS Secrets Manager. How can the developer reference the value of the password in the CloudFormation template?
+- Use the secretsmanager dynamic reference by specifying the appropriate reference-key segment
+
+182 . An application is using Amazon DynamoDB as its data store, and should be able to read 100 items per second as strongly consistent reads. Each item is 5 KB in size. To what value should the table's provisioned read throughput be set?
+- 200 read capacity units
+
+183 . 123
 
 ### Developer Associate Theory
 

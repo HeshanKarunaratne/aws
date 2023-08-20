@@ -3836,7 +3836,15 @@ Write a brief description on below services and functions
     - Adds write throttling, intelligent swap memory management, failover enhancements
 
 • Amazon MemoryDB for Redis
-• Amazon RDS
+• Amazon RDS: A managed relational database service. Supports multiple SQL engines, easy to scale, backup and secure
+    - Supports Amazon Aurora, MySQL, MariaDB, PostgreSQL, Oracle, Microsoft SQL Server
+    - When you turn on encryption it will also encrypt automated backups, snapshots and read replicas
+    - Automated Backups retention between 1 and 35 days, enabled by default, all data is stored inside S3, no additional charge for backup storage
+    - Backup data is never restored overtop of an existing instance, when you restore an RDS instance from an Automated or manual snapshot a new instance is created for the restored database(Will have a new DNS endpoint)
+    - Can have upto 5 read replicas with different DNS endpoints, you can have Multi-AZ replicas, Cross-Region replicas and even replicas of other read replicas
+    - S3 Transfer Acceleration: Fast and secure transfer of files over long distances between your end users and S3 bucket
+    - MFA Delete can only be enabled under these conditions: The AWS CLI must be used to turn on MFA, the bucket must have versioning turned on, Only the bucket owner logged in as Root user can delete objects from the bucket
+
 • AWS Amplify
 • AWS Cloud9
     - Metadata: curl -s http://169.254.169.254/latest/meta-data
@@ -3861,7 +3869,8 @@ Write a brief description on below services and functions
 • Amazon CodeGuru
 • AWS CodePipeline: A fully managed CI/CD pipeline to setup automatic deployments
 
-• AWS CodeStar
+• AWS CodeStar: Quickly develop, build and deploy applications on AWS
+
 • AWS X-Ray: Helps to analyze, debug distributed production applications. Can understand how your application and its underlying services are performing to identify and troubleshoot the root cause of performance issues and errors
     - X-Ray SDK -> X-Ray Daemon -> X-Ray API -> X-Ray Console
 
@@ -3921,7 +3930,15 @@ Write a brief description on below services and functions
 • AWS WAF
 • Amazon Elastic Block Store (Amazon EBS)
 • Amazon Elastic File System (Amazon EFS)
-• Amazon S3
+• Amazon S3: Object based storage service, serverless storage
+    - Can store data from 0Bytes to 5TB
+    - Storage classes: 
+        1. Standard (99.99% Available, 11 9s Durability, Replicates atleast in 3 Azs) 
+        2. Standard IA (Cheaper if accessed once a month, retrieval fee is applied)
+        3. One Zone IA (Objects exist in One AZ, 99.5% Available, retrieval fee is applied)
+        4. Glacier (Cold storage, retrieval of data can take minutes to hours)
+        5. Glacier Deep Archive (Lowest cost storage, Data retrieval time is 12 hours)
+
 • Amazon S3 Glacier
 
     - Out of scope -

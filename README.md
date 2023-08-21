@@ -3775,7 +3775,30 @@ Cold                                                                         Hot
 182 . An application is using Amazon DynamoDB as its data store, and should be able to read 100 items per second as strongly consistent reads. Each item is 5 KB in size. To what value should the table's provisioned read throughput be set?
 - 200 read capacity units
 
-183 . 123
+183 . A developer created a Lambda function for a web application backend. When testing the Lambda function from the AWS Lambda console, the developer can see that the function is being run, but there is no log data being generated in Amazon CloudWatch Logs, even after several minutes. What could cause this situation?
+- The execution role for the Lambda function is missing permissions to write log data to the CloudWatch Logs
+
+184 . A developer has created a new IAM user that has the s3:PutObject permission to write to a specific Amazon S3 bucket. The S3 bucket uses server-side encryption with AWS KMS managed keys (SSE-KMS) as the default encryption. When an application uses the access key and secret key of the IAM user to call the PutObject API operation, the application receives an access denied error. What should the developer do to resolve this error?
+- Update the policy of the IAM user to allow the kms:GenerateDataKey action
+
+185 . A static website is hosted in an Amazon S3 bucket. Several HTML pages on the site use JavaScript to download images from another Amazon S3 bucket. These images are not displayed when users browse the site. What is the possible cause for the issue?
+- Cross Origin Resource Sharing must be enabled on the Amazon S3 bucket
+
+186 . An application needs to encrypt data that is written to Amazon S3 where the keys are managed in an on-premises data center, and the encryption is handled byS3. Which type of encryption should be used?
+- Use server-side encryption with customer-provided keys
+
+187 . A developer is building a serverless application that is based on AWS Lambda. The developer initializes the AWS software development kit (SDK) outside of theLambda handler function. What is the PRIMARY benefit of this action?
+- Takes advantage of runtime environment reuse
+
+188 . A developer is testing a Docker-based application that uses the AWS SDK to interact with Amazon DynamoDB. In the local development environment, the application has used IAM access keys. The application is now ready for deployment onto an ECS cluster. How should the application authenticate with AWS services in production?
+- Configure an ECS task IAM role for the application to use
+
+189 . A developer has created an AWS Lambda function to provide notification through Amazon Simple Notification Service (Amazon SNS) whenever a file is uploaded to Amazon S3 that is larger than 50 MB. The developer has deployed and tested the Lambda function by using the CLI. However, when the event notification is added to the S3 bucket and a 3,000 MB file is uploaded, the Lambda function does not launch. Which of the following is a possible reason for the Lambda function's inability to launch?
+- The resource-based policy for the Lambda function does not have the required permissions to be invoked by Amazon S3
+
+190 . 131
+
+
 
 ### Developer Associate Theory
 

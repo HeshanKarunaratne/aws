@@ -3831,7 +3831,13 @@ Write a brief description on below services and functions
     - Powered by CloudFormation Templates and it setups ELB, Auto Scaling groups, RDS, CloudWatch monitoring, Blue/Green Deployment, Dockerized enviroments
     - Deployment Policies: All at once, Rolling, Rolling with additional batch, Immutable
 
-• AWS Lambda
+• AWS Lambda: Run code without provisioning or managing servers. Servers automatically start and stop when needed
+    - Pay per invocation
+    - Can run 1000 Lambdas concurrently
+    - Can store temporary files in /tmp directory and and can hold 500MB
+    - Set timeout to be a maximum of 15 minutes
+
+
 • AWS Lambda@Edge: To override the behaviour of request and responses
     - Viewer request, Origin request, Origin response, Viewer response
 
@@ -3857,6 +3863,10 @@ Write a brief description on below services and functions
 • Amazon ElastiCache: Microsecond latency and scale with in memory caching boosting performance
     - Reduce costs and eliminate the operational overhead of self managed caching
     - Adds write throttling, intelligent swap memory management, failover enhancements
+    - Caches are optimized for fast retrieval but data is not durable
+    - ElastiCache supports 2 open source engines:
+        1. Redis
+        2. Memcached
 
 • Amazon MemoryDB for Redis
 • Amazon RDS: A managed relational database service. Supports multiple SQL engines, easy to scale, backup and secure
@@ -3964,10 +3974,11 @@ Write a brief description on below services and functions
     - Can access temporary files using presign urls    
     - Generating presign url: aws s3 presign s3://{bucket_name}/{object_name} --expires-in 300
     - Security in transit done over SSL
+    - You need to enable versioning in source and destination buckets for Cross Region Replication
     - SSE(Server Side Encryption)
         1. SSE-AES: S3 handles the key, uses AES-256 algorithm
         2. SSE-KMS: Envelope encryption via AWS KMS and you manage the key
-        3. SSE-C: Customer provides the key
+        3. SSE-C: Customer provides and manages the key
  
 • Amazon S3 Glacier
 

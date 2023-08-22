@@ -3961,7 +3961,14 @@ Write a brief description on below services and functions
         3. One Zone IA (Objects exist in One AZ, 99.5% Available, retrieval fee is applied)
         4. Glacier (Cold storage, retrieval of data can take minutes to hours)
         5. Glacier Deep Archive (Lowest cost storage, Data retrieval time is 12 hours)
-
+    - Can access temporary files using presign urls    
+    - Generating presign url: aws s3 presign s3://{bucket_name}/{object_name} --expires-in 300
+    - Security in transit done over SSL
+    - SSE(Server Side Encryption)
+        1. SSE-AES: S3 handles the key, uses AES-256 algorithm
+        2. SSE-KMS: Envelope encryption via AWS KMS and you manage the key
+        3. SSE-C: Customer provides the key
+ 
 • Amazon S3 Glacier
 
     - Out of scope -

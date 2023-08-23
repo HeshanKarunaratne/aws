@@ -3796,9 +3796,16 @@ Cold                                                                         Hot
 189 . A developer has created an AWS Lambda function to provide notification through Amazon Simple Notification Service (Amazon SNS) whenever a file is uploaded to Amazon S3 that is larger than 50 MB. The developer has deployed and tested the Lambda function by using the CLI. However, when the event notification is added to the S3 bucket and a 3,000 MB file is uploaded, the Lambda function does not launch. Which of the following is a possible reason for the Lambda function's inability to launch?
 - The resource-based policy for the Lambda function does not have the required permissions to be invoked by Amazon S3
 
-190 . 131
+190 . A company stores documents in Amazon S3 with default settings. A new regulation requires the company to encrypt the documents at rest, rotate the encryption keys annually, and keep a record of when the encryption keys were rotated. The company does not want to manage the encryption keys outside of AWS. Which solution will meet these requirements?
+- Use server-side encryption with AWS KMS managed encryption keys (SSE-KMS
 
+191 . A developer has discovered that an application responsible for processing messages in an Amazon SQS queue is routinely falling behind. The application is capable of processing multiple messages in one invocation, but is only receiving one message at a time. What should the developer do to increase the number of messages the application receives?
+- Call the ReceiveMessage API to set MaxNumberOfMessages to a value greater than the default of 1
 
+192 . A developer is using an Amazon Kinesis Data Firehose delivery stream to store data in Amazon S3. Before storing the data in Amazon S3, the developer wants to enrich the data by combining the data with data from an Amazon DynamoDB table. How can the developer implement the data enrichment?
+- Create a Kinesis Data Firehose data transformation by using an AWS Lambda function
+
+193 . 134
 
 ### Developer Associate Theory
 
@@ -3835,8 +3842,10 @@ Write a brief description on below services and functions
     - Pay per invocation
     - Can run 1000 Lambdas concurrently
     - Can store temporary files in /tmp directory and and can hold 500MB
-    - Set timeout to be a maximum of 15 minutes
-
+    - Set timeout to be a maximum of 15 minutes and memory upto 3008 MB
+    - Lambda Aliases allow you to give specific versions a friendlier name when you are accessing the lambda programmatically
+    - Lambda Layers: Pull in additional code and content in the form of layers. A layer is a ZIP archive that contains libraries, custom runtime and other dependencies. You can use libraries in your function without needing to include them in your deployment package
+    - Can have upto 5 layers attached to a function and unzipped deployment package size limit cant exceed 250MB
 
 • AWS Lambda@Edge: To override the behaviour of request and responses
     - Viewer request, Origin request, Origin response, Viewer response
@@ -3923,7 +3932,9 @@ Write a brief description on below services and functions
 • AWS Command Line Interface (AWS CLI): Control multiple AWS services from the command line and automate them through scripts
 
 • AWS Systems Manager
-• Amazon API Gateway
+• Amazon API Gateway: Fully managed service to create, publish, maintain, monitor and secure APIs at any scale
+
+
 • Amazon CloudFront: CDN, Creates cached copies of your website at various edge locations around the world
     - Origin: Where all of original files are located. eg: S3, EC2, ELB, Route53
 

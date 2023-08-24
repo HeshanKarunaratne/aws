@@ -3805,7 +3805,23 @@ Cold                                                                         Hot
 192 . A developer is using an Amazon Kinesis Data Firehose delivery stream to store data in Amazon S3. Before storing the data in Amazon S3, the developer wants to enrich the data by combining the data with data from an Amazon DynamoDB table. How can the developer implement the data enrichment?
 - Create a Kinesis Data Firehose data transformation by using an AWS Lambda function
 
-193 . 134
+193 . A company created an application to consume and process data. The application uses Amazon Simple Queue Service (Amazon SQS) and AWS Lambda functions. The application is currently working as expected, but it occasionally receives several messages that it cannot process properly. The company needs to clear these messages to prevent the queue from becoming blocked. A developer must implement a solution that makes queue processing always operational. The solution must give the company the ability to defer the messages with errors and save these messages for further analysis. What is the MOST operationally efficient solution that meets these requirements?
+- Create a new SQS queue. Set the new queue as a dead-letter queue for the application queue. Configure the Maximum Receives setting
+
+194 . An application running on multiple Amazon EC2 instances pulls messages from a standard Amazon SQS queue. A requirement for the application is that all messages must be encrypted at rest. Developers are instructed to use methods that allow for centralized key management and minimize possible support requirements whenever possible. Which of the following solutions supports these requirements?
+- Create an SQS queue, and encrypt the queue by using server-side encryption with AWS KMS
+
+195 . A company is running a web application that is using Amazon Cognito for authentication. The company does not want to use multi-factor authentication (MFA) for all the visitors every time, but the company's security team has concerns about compromised credentials. The development team needs to configure mandatory MFA only when suspicious sign-in attempts are detected. Which Amazon Cognito feature will meet these requirements?
+- Adaptive authentication
+
+196 . A company has a two-tier application running on an Amazon EC2 server that handles all of its AWS based e-commerce activity. During peak times, the backend servers that process orders are overloaded with requests. This results in some orders failing to process. A developer needs to create a solution that will re-factor the application. Which steps will allow for more flexibility during peak times, while still remaining cost-effective?
+- Implement an Amazon SQS queue to decouple the front-end and backend servers
+- Modify the backend servers to pull from an Amazon SQS queue
+
+197 . A developer is designing an Amazon DynamoDB table for an application. The application will store user information that includes a unique identifier and an email address for each user. The application must be able to query the table by using either the unique identifier or the email address. How should the developer design the DynamoDB table to meet these requirements?
+- For the primary key of the table, specify the unique identifier as the partition key. Create a global secondary index (GSI) based on the email address
+
+198 . 141
 
 ### Developer Associate Theory
 
@@ -3830,7 +3846,8 @@ Write a brief description on below services and functions
     - Message size: 1byte and 256KB, Can extend if Amazon SQS Extended Client Library for Java(256KB to 2GB)
     - Retention: Default(4 days), Adjustable from 60s to 14 days
 
-• AWS Step Functions
+• AWS Step Functions: Coordinate multiple AWS services into serverless workflows
+
 • Amazon EC2: Choose your OS, Storage, memory, Network throughput, launch and SSH into your server within minutes
     - General Purpose, Compute Optimized, Memory Optimized, Accelerated Optimized, Storage Optimized
 
@@ -3933,7 +3950,9 @@ Write a brief description on below services and functions
 
 • AWS Systems Manager
 • Amazon API Gateway: Fully managed service to create, publish, maintain, monitor and secure APIs at any scale
-
+    - Throttle requests to help prevent attacks, scalable, send each API endpoint to a different target, maintain multiple versions
+    - Stages are versions of APIs
+    - CORS is always enforced by the client
 
 • Amazon CloudFront: CDN, Creates cached copies of your website at various edge locations around the world
     - Origin: Where all of original files are located. eg: S3, EC2, ELB, Route53

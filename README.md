@@ -3821,7 +3821,96 @@ Cold                                                                         Hot
 197 . A developer is designing an Amazon DynamoDB table for an application. The application will store user information that includes a unique identifier and an email address for each user. The application must be able to query the table by using either the unique identifier or the email address. How should the developer design the DynamoDB table to meet these requirements?
 - For the primary key of the table, specify the unique identifier as the partition key. Create a global secondary index (GSI) based on the email address
 
-198 . 141
+198 . A developer has an application that asynchronously invokes an AWS Lambda function. The developer wants to store messages that resulted in failed invocations of the Lambda function so that the application can retry the call later. What should the developer do to accomplish this goal with the LEAST operational overhead?
+- Implement a dead-letter queue for discarded messages. Set the dead-letter queue as an event source for the Lambda function
+
+199 . A developer is writing an application in Python. The application runs on AWS Lambda. The application generates a file and needs to upload this file to Amazon S3. The developer must implement this upload functionality with the least possible change to the application code. Which solution meets these requirements?
+- Use the AWS SDK for Python that is installed in the Lambda environment to upload the file
+
+200 . An application that is hosted on an Amazon EC2 instance needs access to files that are stored in an Amazon S3 bucket. The application lists the objects that are stored in the S3 bucket and displays a table to the user. During testing, a developer discovers that the application does not show any objects in the list. What is the MOST secure way to resolve this issue?
+- Update the IAM instance profile that is attached to the EC2 instance to include the S3:ListBucket permission for the S3 bucket
+
+201 . A developer needs to implement a cache to store data that an application frequently queries from an Amazon RDS for MySQL database. The data structures that will be cached include sets and sorted sets. How should the developer implement the cache to achieve the LOWEST latency?
+- Create an Amazon ElastiCache for Redis instance. Use a Redis client library to cache the data
+
+202 . A developer creates an AWS Lambda function to publish a message to an Amazon Simple Notification Service (Amazon SNS) topic. All message content must be encrypted in transit and at rest between Lambda and Amazon SNS. A part of the Lambda execution role is as follows:Which combination of steps should the developer take to meet these requirements?
+- Enable server-side encryption on the SNS topic
+- Add a Deny statement to the Lambda execution role. Specify the SNS topic ARN as the resource. Specify "aws:SecureTransport": "false" as the condition
+
+203 . A developer is using an AWS Key Management Service (AWS KMS) customer master key (CMK) with imported key material to encrypt data in Amazon S3. The developer accidentally deletes the key material of the CMK and is unable to decrypt the data. How can the developer decrypt the data that was encrypted by the CMK?
+- Reimport the same key material to the CMK
+
+204 . A developer needs to launch a new Amazon EC2 instance by using the AWS CLI. Which AWS CLI command should the developer use to meet this requirement?
+- aws ec2 run instances
+
+205 . A development team uses AWS Elastic Beanstalk for application deployment. The development team has configured the application version lifecycle policy to limit the number of application versions to 25. However, even with the application version lifecycle policy, the source bundle is deleted from the Amazon S3 source bucket. What should the development team do in the Elastic Beanstalk application version lifecycle settings to retain the source code in the S3 bucket?
+- Update the Elastic Beanstalk application version lifecycle policy to retain the source bundle in Amazon S3
+
+206 . A development team is building a new application that will run on Amazon EC2 and use Amazon DynamoDB as a storage layer. The developers all have assigned IAM user accounts in the same IAM group. The developers currently can launch EC2 instances, and they need to be able to launch EC2 instances with an instance role allowing access to Amazon DynamoDB. Which AWS IAM changes are needed when creating an instance role to provide this functionality?
+- Create an IAM permissions policy attached to the role that allows access to DynamoDAdd a trust policy to the role that allows Amazon EC2 to assume the role. Attach a permissions policy to the development group in AWS IAM that allows developers to use the iam:PassRole permission for the role
+
+207 . A banking application processes thousands of transactions each second. Each transaction payload must have end-to-end encryption. The application encrypts each transaction locally by using the AWS Key Management Service (AWS KMS) GenerateDataKey operation. A developer is testing the application and receives a ThrottlingException error. Which actions are best practices to resolve this error?
+- Use the LocalCryptoMatenalsCache feature of the AWS Encryption SDK encryption library
+- Create a case in the AWS Support Center to increase the quota for the account
+
+208 . A developer has code that is stored in an Amazon S3 bucket. The code must be deployed as an AWS Lambda function across multiple accounts in the same AWS Region as the S3 bucket. An AWS CloudFormation template that runs for each account will deploy the Lambda function. What is the MOST secure way to allow CloudFormation to access the Lambda code in the S3 bucket?
+- Grant the CloudFormation service role the S3 ListBucket and GetObject permissions. Add a bucket policy to Amazon S3 with the pnncipal of "AWS": \[account numbers\]
+
+209 . A company is migrating a legacy application to a serverless application on AWS. The legacy application consists of a set of web services that are exposed by an Amazon API Gateway API. A developer needs to replace the existing implementation of web services with AWS Lambda functions. The developer needs to test a new version of the API that uses the functions in production. The developer must minimize the impact of the testing on the application's users. Which solution will meet these requirements?
+- Create a development stage for the new version of the API. Use a canary deployment
+
+210 . A developer needs to modify an application architecture to meet new functional requirements. Application data is stored in Amazon DynamoDB and processed for analysis in a nightly batch. The system analysts do not want to wait until the next day to view the processed data and have asked to have it available in near-real time. Which application architecture pattern would enable the data to be processed as it is received?
+- Event driven
+
+211 . A company is migrating a web application from on premises to AWS. The company needs to move session storage from the application code to a shared service as part of the migration. The session storage data must be encrypted at rest. Which AWS services meet these requirements?
+- Amazon Elasticache for Redis
+- Amazon DynamoDB
+
+212 . A gaming application stores scores for players in an Amazon DynamoDB table that has four attributes user_id, user_name, user_score and user_rank. The users are allowed to update their names only. A user is authenticated by web identity federation. Which set of conditions should be added in the policy attached to the role for the dynamodb:PutItem API call?
+- "Condition" : { "ForAllValues:StringEquals" : { "dynamodb:LeadingKeys" : \[ "${www.amazon.com:user_id}" \], "dynamodb:Attributes" : \[ "user_name" \] } }
+
+213 . A developer is storing many objects in a single Amazon S3 bucket. The developer needs to optimize the S3 bucket for high request rates. How should the developer store the objects to meet this requirement?
+- Store the objects by using object key names distributed across multiple prefixes
+
+214 . A company has a serverless application that uses AWS Lambda functions and AWS Systems Manager parameters to store configuration data. The company moves the Lambda functions inside the VPC and into private subnets. The Lambda functions are now producing errors in their attempts to access Systems Manager parameters. Which solution will allow the Lambda functions to access Systems Manager parameters inside the VPC?
+- Create an interface VPC endpoint for Systems Manager
+
+215 . A research company has a website that is used once each day to perform scientific calculations based on inputs that are submitted through a webpage. The calculations are CPU intensive. An AWS Lambda function performs the calculations once each day. Users occasionally receive errors because of Lambda function timeouts. Which change will reduce the Lambda function's runtime duration?
+- Configure Lambda to run the function with a larger memory value
+
+216 . A developer is creating an application. New users of the application must be able to create an account and register by using their own social media accounts. Which AWS service or resource should the developer use to meet these requirements?
+- Cognito user pools
+
+217 . A developer wants to use AWS CodeDeploy to deploy an Amazon Elastic Container Service (Amazon ECS) service. What are the MINIMUM properties required in the 'resources' section of the AppSpec file for CodeDeploy to deploy the ECS service successfully?
+- TaskDefinition, ContainerName, and ContainerPort
+
+218 . A company has deployed a single-page application on AWS. The application stores assets in an Amazon S3 bucket. The application has an Amazon CloudFront distribution that is configured with the S3 bucket as the origin. Amazon API Gateway APIs access AWS Lambda functions that store information in an Amazon DynamoDB table. The application ingests a payload that includes 20 fields of sensitive data. Which combination of steps should a developer take to protect the sensitive data through its entire lifecycle in AWS?
+- Create a Lambda@Edge function to encrypt data when CloudFront processes a client request. Configure the distribution to invoke the Lambda@Edge function when the origin request event occurs
+- Generate an AWS Key Management Service (AWS KMS) customer managed key that Lambda@Edge can use
+
+219 . A developer is writing an application that stores data in an Amazon DynamoDB table by using the Putltem API operation. The table has a partition key of streamID and has a sort key of seqID. The developer needs to make sure that the Putltem invocation does not overwrite the existing partition key and sort key. Which condition expression will maintain the uniqueness of the partition key and the sort key?
+- condition = 'attribute_not_exists(streamID) AND attribute_not_exists(seqID)'
+
+220 . A developer has created an AWS Lambda function that is written in Python. The Lambda function reads data from objects in Amazon S3 and writes data to an Amazon DynamoDB table. The function is successfully invoked from an S3 event notification when an object is created. However, the function fails when it attempts to write to the DynamoDB table. What is the MOST likely cause of this issue?
+- The Lambda function does not have IAM permissions to write to DynamoDB
+
+221 . A developer supports an application that accesses data in an Amazon DynamoDB table. One of the item attributes is expiration Date in the timestamp format. The application uses this attribute to find items, archive them, and remove them from the table based on the timestamp value. The application will be decommissioned soon, and the developer must find another way to implement this functionality. The developer needs a solution that will require the least amount of code to write. Which solution will meet these requirements?
+- Enable TTL on the expirationDate attribute in the table. Create a DynamoDB stream. Create an AWS Lambda function to process the deleted items. Create a DynamoDB trigger for the Lambda function
+
+222 . A company has developed a new serverless application using AWS Lambda functions that will be deployed using the AWS Serverless Application Model (AWS SAM) CLI. Which step should the developer complete prior to deploying the application?
+- Bundle the serverless application using a SAM package
+
+223 . A developer is working on an ecommerce website. The developer wants to review server logs without logging in to each of the application servers individually. The website runs on multiple Amazon EC2 instances, is written in Python, and needs to be highly available. How can the developer update the application to meet these requirements with MINIMUM changes?
+- Install the unified Amazon CloudWatch agent on the EC2 instances. Configure the agent to push the application logs to CloudWatch
+
+224 . A company needs an event-management platform to accept registrations for an upcoming event. The platform must perform a single invocation of an existing AWS Lambda function 10 minutes after a user completes a new account registration. Which solution will meet these requirements?
+- Send a message to an Amazon Simple Queue Service (Amazon SQS) delay queue. Set the queue to 600 seconds. Configure the Lambda function with the queue as an event source
+
+225 . How would a developer notify users when a new item is written to a DynamoDB table without affecting the provisioned throughput?
+- Set up a DynamoDB stream to trigger a Lambda function that sends an SNS notification to users
+
+226 . 171
+
 
 ### Developer Associate Theory
 

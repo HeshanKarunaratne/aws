@@ -4054,7 +4054,27 @@ Which solution would help achieve these objectives?
 - Server-side encryption with AWS KMS managed keys (SSE-KMS
 
 269 . An AWS Lambda function that Is running in a test environment is not working property. However, there is no error associated with the Lambda function in the Amazon CloudWatch logs for the account. The Lambda function's permissions do not include a resource-based policy. The Lambda function's execution role has properly configured trust relationships and has no permissions policies attached. Which action should a developer take to allow logs for the Lambda function to appear in CloudWatch?
-- Attach the AWSLambda8asicExecutionRole managed policy to the Lambda function's execution role
+- Attach the AWSLambdaBasicExecutionRole managed policy to the Lambda function's execution role
+
+270 . A Development team would like to migrate their existing application code from a GitHub repository to AWS CodeCommit. What needs to be created before they can migrate a cloned repository to CodeCommit over HTTPS?
+- A set of Git credentials generated from IAM
+
+271 . A Developer is building a three-tier web application that should be able to handle a minimum of 5000 requests per minute. Requirements state that the web tier should be completely stateless while the application maintains session state for the users. How can session data be externalized, keeping latency at the LOWEST possible value?
+- Create an Amazon ElastiCache, Memcached cluster, then implement session handling at the application level to leverage the cluster for session data storage
+
+272 . A Developer is building a web application that uses Amazon API Gateway to expose an AWS Lambda function to process requests from clients. During testing, the Developer notices that the API Gateway times out even though the Lambda function finishes under the set time limit. Which of the following API Gateway metrics in Amazon CloudWatch can help the Developer troubleshoot the issue?
+- IntegrationLatency and CacheMissCount
+
+273 . An application deployed on AWS Elastic Beanstalk experiences increased error rates during deployments of new application versions, resulting in service degradation for users. The Development team believes that this is because of the reduction in capacity during the deployment steps. The team would like to change the deployment policy configuration of the environment to an option that maintains full capacity during deployment while using the existing instances. Which deployment policy will meet these requirements while using the existing instances?
+- Rolling with additional batch
+
+274 . A Developer is building a mobile application and needs any update to user profile data to be pushed to all devices accessing the specific identity. The Developer does not want to manage a back end to maintain the user profile data. What is the MOST efficient way for the Developer to achieve these requirements using Amazon Cognito?
+- Use Cognito Sync.
+
+275 . A company uses Amazon DynamoDB for managing and tracking orders. The DynamoDB table is partitioned based on the order date. The company receives a huge increase in orders during a sales event, causing DynamoDB writes to throttle, and the consumed throughput is far below the provisioned throughput. According to AWS best practices, how can this issue be resolved with MINIMAL costs?
+- Add a random number suffix to the partition key values
+
+276 . 
 
 ### Developer Associate Theory
 

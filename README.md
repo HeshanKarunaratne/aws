@@ -4074,7 +4074,59 @@ Which solution would help achieve these objectives?
 275 . A company uses Amazon DynamoDB for managing and tracking orders. The DynamoDB table is partitioned based on the order date. The company receives a huge increase in orders during a sales event, causing DynamoDB writes to throttle, and the consumed throughput is far below the provisioned throughput. According to AWS best practices, how can this issue be resolved with MINIMAL costs?
 - Add a random number suffix to the partition key values
 
-276 . 
+276 . An AWS Lambda function must read data from an Amazon RDS MySQL database in a VPC and also reach a public endpoint over the internet to get additional data. Which steps must be taken to allow the function to access both the RDS resource and the public endpoint?
+- Modify the default configuration for the Lambda function to associate it with an Amazon VPC private subnet
+- Add a NAT Gateway to the VPC
+
+277 . A Developer writes an AWS Lambda function and uploads the code in a .ZIP file to Amazon S3. The Developer makes changes to the code and uploads a new .ZIP file to Amazon S3. However, Lambda executes the earlier code. How can the Developer fix this in the LEAST disruptive way?
+- Call the update-function-code API
+
+278 . A company needs to secure its existing website running behind an Elastic Load Balancer. The website’s Amazon EC2 instances are CPU-constrained. What should be done to secure the website while not increasing the CPU load on the EC2 web servers?
+- Configure SSL certificates on an Elastic Load Balancer
+- Configure an Elastic Load Balancer with SSL termination
+
+279 . How should custom libraries be utilized in AWS Lambda?
+- Install the library locally and upload a ZIP file of the Lambda function
+
+280 . An application running on Amazon EC2 instances must access objects within an Amaon S3 busket that are encrypted using server-side encryption using AWS KMS encryption keys (SSEKMS). The application must have access to the customer master key (CMK) to decrypt the objects. Which combination of steps will grant the application access?
+- Grant access to the key in the IAM EC2 role attached to the application’s EC2 instances
+- Write a key policy that enables IAM policies to grant access to the key
+
+281 . A stock market monitoring application uses Amazon Kinesis for data ingestion. During simulated tests of peak data rates, the Kinesis stream cannot keep up with the incoming data. What step will allow Kinesis to accommodate the traffic during peak hours?
+- Increase the shard count of the stream using UpdateShardCount
+
+282 . A company has an AWS CloudFormation template that is stored as a single file. The template is able to launch and create a full infrastructure stack. Which best practice would increase the maintainability of the template?
+- Use nested stacks for common template patterns
+
+283 . A development team is using AWS Elastic Beanstalk to deploy a two-tier application that consists of a load-balanced web tier and an Amazon RDS database tier in production. The team would like to separate the RDS instance from the Elastic Beanstalk. How can this be accomplished?
+- Recreate a new Elastic Beanstalk environment without Amazon RDS
+
+284 . A social media company is using Amazon Cognito in order to synchronize profiles across different mobile devices, to enable end users to have a seamless experience. Which of the following configurations can be used to silently notify users whenever an update is available on all other devices?
+- Use the push synchronization feature with the appropriate IAM role
+
+285 . A Developer must trigger an AWS Lambda function based on the item lifecycle activity in an Amazon DynamoDB table. How can the Developer create the solution?
+- Enable a DynamoDB stream, and trigger the Lambda function synchronously from the stream
+
+286 . The Developer for a retail company must integrate a fraud detection solution into the order processing solution. The fraud detection solution takes between ten and thirty minutes to verify an order. At peak, the web site can receive one hundred orders per minute. What is the most scalable method to add the fraud detection solution to the order processing pipeline?
+- Add all new orders to an SQS queue. Configure an Auto Scaling group that uses the queue depth metric as its unit of scale to launch a dynamically-sized fleet of EC2 instances spanning multiple AZs with the fraud detection solution installed on them to pull orders from this queue. Update the order with a pass or fails status
+
+287 . A set of APIs are exposed to customers using the Amazon API Gateway. These APIs have caching enabled on the API Gateway. Customers have asked for an option to invalidate this cache for each of the APIs. What action can be taken to allow API customers to invalidate the API Cache?
+- Ask customers to pass an HTTP header called Cache-Control:max-age=0
+
+288 . A Developer must repeatedly and consistently deploy a serverless RESTful API on AWS. Which techniques will work?
+- Deploy a SAM template with an inline Swagger definition
+- Define a Swagger file. Deploy a SAM template that references the Swagger file
+
+289 . A customer wants to deploy its source code on an AWS Elastic Beanstalk environment. The customer needs to perform deployment with minimal outage and should only use existing instances to retain application access log. What deployment policy would satisfy these requirements?
+- Rolling
+
+290 . An existing serverless application processes uploaded image files. The process currently uses a single Lambda function that takes an image file, performs the processing, and stores the file in Amazon S3. Users of the application now require thumbnail generation of the images. Users want to avoid any impact to the time it takes to perform the image uploads. How can thumbnail generation be added to the application, meeting user requirements while minimizing changes to existing code?
+- Create an S3 event notification with a Lambda function destination. Create a new Lambda function to generate and store thumbnails.
+
+291 . An application overwrites an object in Amazon S3, and then immediately reads the same object. Why would the application sometimes retrieve the old version of the object?
+- S3 overwrite PUTS are eventually consistent, so the application may read the old object
+
+292 . 
 
 ### Developer Associate Theory
 

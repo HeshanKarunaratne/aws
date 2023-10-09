@@ -4126,7 +4126,41 @@ Which solution would help achieve these objectives?
 291 . An application overwrites an object in Amazon S3, and then immediately reads the same object. Why would the application sometimes retrieve the old version of the object?
 - S3 overwrite PUTS are eventually consistent, so the application may read the old object
 
-292 . 
+292 . Amazon S3 has the following structure: S3://BUCKET/FOLDERNAME/FILENAME.zip Which S3 best practice would optimize performance with thousands of PUT request each second to a single bucket?
+- Prefix folder names with random hex hashes; for example, s3://BUCKET/23a6-FOLDERNAME/FILENAME.zip
+
+293 . During non-peak hours, a Developer wants to minimize the execution time of a full Amazon DynamoDB table scan without affecting normal workloads. The workloads average half of the strongly consistent read capacity units during non-peak hours. How would the Developer optimize this scan?
+- Use parallel scans while limiting the rate
+
+294 . An application is designed to use Amazon SQS to manage messages from many independent senders. Each sender’s messages must be processed in the order they are received. Which SQS feature should be implemented by the Developer?
+- Configure each sender with a unique MessageGroupId
+
+295 . An application has hundreds of users. Each user may use multiple devices to access the application. The Developer wants to assign unique identifiers to these users regardless of the device they use. Which of the following methods should be used to obtain unique identifiers?
+- Implement developer-authenticated identities by using Amazon Cognito, and get credentials for these identities
+
+296 . A Developer is trying to make API calls using SDK. The IAM user credentials used by the application require multi-factor authentication for all API calls. Which method the Developer use to access the multi-factor authentication protected API?
+- GetSessionToken
+
+297 . An application is running on a cluster of Amazon EC2 instances. While trying to read objects stored within a single Amazon S3 bucket that are encrypted with server-side encryption with AWS KMS managed keys (SSE-KMS), the application receives the following error:
+Service: AWSKMS; Status Code: 400; Error Code: ThrottlingException; Which combination of steps should be taken to prevent this failure?
+- Contact AWS Support to request an AWS KMS rate limit increase
+- Perform error retries with exponential backoff in the application code
+
+298 . A Developer has created a new AWS IAM user that has s3 putObject permission to write to a specific Amazon S3 bucket. This S3 bucket uses server-side encryption with AWS KMS managed (SSE-KMS) as the default encryption. Using the access key and secret key of the IAM user, the application received an access denied error when calling the PutObject API. How can this issue be resolved?
+- Update the policy of the IAM user to allow the kms:GenerateDataKey action
+
+299 . A company is developing an application that will be accessed through the Amazon API Gateway REST API. Registered users should be the only ones who can access certain resources of this API. The token being used should expire automatically and needs to be refreshed periodically. How can a Developer meet these requirements?
+- Create an Amazon Cognito user pool, configure the Cognito Authorizer in API Gateway, and use the identity or access token
+
+300 . A Developer has created an S3 bucket s3://mycoolapp and has enabled server across logging that points to the folder s3://mycoolapp/logs. The Developer moved 100 KB of Cascading Style Sheets (CSS) documents to the folder s3://mycoolapp/css, and then stopped work. When the developer came back a few days later, the bucket was 50 GB. What is the MOST likely cause of this situation?
+- Logging into the same bucket caused exponential log growth
+
+301 . An application takes 40 seconds to process instructions received in an Amazon SQS message. Assuming the SQS queue is configured with the default VisibilityTimeout value, what is the BEST way, upon receiving a message, to ensure that no other instances can retrieve a message that has already been processed or is currently being processed?
+- Use the ChangeMessageVisibility API to increase the VisibilityTimeout, then use the DeleteMessage API to delete the message
+
+302 . A serverless application uses an API Gateway and AWS Lambda. Where should the Lambda function store its session information across function calls?
+- In an Amazon DynamoDB table
+
 
 ### Developer Associate Theory
 
